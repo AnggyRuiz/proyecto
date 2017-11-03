@@ -161,7 +161,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                     }
 
                 } else {
-                    JOptionPane.showMessageDialog(null, "El usuario no ha sido encontrado");
+                    JOptionPane.showMessageDialog(null, "El usuario no ha sido encontradoooooo");
                 }
             }
             if (usuario.equals(usuario1) && (contraseña.equals(contraseña1))) {
