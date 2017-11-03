@@ -10,5 +10,5 @@ package Controlador;
  * @author Gabriela Machado
  */
 public class CtlJuego {
-    
+    JKGDHJAG
 }
