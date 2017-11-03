@@ -157,7 +157,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                     for (int i = 0; i < usuarioA.size(); i++) {
                         contraseña1 = usuarioA.get(0);
                         usuario1 = usuarioA.get(2);
-                        idUsu = Integer.parseInt(usuarioA.get(0));
+                        idUsu = Integer.parseInt(usuarioA.get(7));
                     }
 
                 } else {
