@@ -23,7 +23,7 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
      * Creates new form FrmRegistrar
      */
     CtlUsuario controladorUsuario;
-    
+
     public FrmRegistrarUsu() {
         initComponents();
         controladorUsuario = new CtlUsuario();
@@ -217,13 +217,20 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
 
         if (controladorUsuario.SolicitudGuardar(codigo, nombre, nombreUsuario, password, correo, telefono, tipoUsuario, semestre)) {
             JOptionPane.showMessageDialog(null, "se ha registrado el Usuario");
-//            listar();
-//            limpiar();
+            limpiar();
         } else {
             JOptionPane.showMessageDialog(this, "El código o el nombre de usuario ya existe");
         }
     }//GEN-LAST:event_btnRegistrarseActionPerformed
 
+    public void limpiar (){
+        txtNombre.setText("");
+        txtNombreU.setText("");
+        txtCodigo.setText("");
+        txtCorreo.setText("");
+        txtTelefono.setText("");
+        txtSemestre.setText("");
+    }
     /**
      * @param args the command line arguments
      */
