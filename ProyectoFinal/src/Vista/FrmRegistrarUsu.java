@@ -90,15 +90,15 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel6.setText("CONTRASEÑA:");
 
-        txtNombre.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        txtNombre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        txtCorreo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        txtCorreo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        txtTelefono.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        txtTelefono.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        txtSemestre.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        txtSemestre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        txtNombreU.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        txtNombreU.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         btnVolver.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         btnVolver.setForeground(new java.awt.Color(0, 153, 153));
@@ -121,7 +121,7 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel7.setText("CÓDIGO:");
 
-        txtCodigo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        txtCodigo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setText("La contraseña será su código");
@@ -135,13 +135,13 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel3)
                             .addComponent(jLabel4)
                             .addComponent(jLabel5)
                             .addComponent(jLabel6)
-                            .addComponent(jLabel7))
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel1))
                         .addGap(149, 149, 149)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(txtNombreU, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
@@ -160,7 +160,7 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(119, Short.MAX_VALUE)
+                .addContainerGap(123, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
