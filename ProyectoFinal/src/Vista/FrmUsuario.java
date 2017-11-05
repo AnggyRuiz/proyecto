@@ -318,9 +318,7 @@ public class FrmUsuario extends javax.swing.JFrame {
 
             if (controladorUsuario.SolicitudModificar(idUsu, semestre, nombre, nombreUsuario, correo, telefono, nombreUsuario, semestre)) {
                 JOptionPane.showMessageDialog(this, "Modificado exitosamente");
-//                limpiar();
-////                listar();
-
+                lblNombreUsu.setText(txtNombre.getText());
             } else {
                 JOptionPane.showMessageDialog(this, "Error al modificar");
             }
@@ -349,8 +347,6 @@ public class FrmUsuario extends javax.swing.JFrame {
         }
 
     }
-    
-   
 
     /**
      * @param args the command line arguments

@@ -58,7 +58,7 @@ public class CtlUsuario {
     }
     
     public boolean SolicitudModificar(int codigo, String password, String nombre, String nombreUsuario, String correo, String telefono, String tipoUsuario, String semestre) {
-        Usuario usuario = new Usuario(codigo, password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre);
+        Usuario usuario = new Usuario(codigo, "", nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre);
         DAOGenerico usuarioDAO = new DAOGenerico();
         String objeto = convertirGson(usuario);
         return usuarioDAO.modificar(objeto, tabla);
