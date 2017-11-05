@@ -26,9 +26,8 @@ public class FrmUsuario extends javax.swing.JFrame {
     CtlUsuario controladorUsuario;
 
     public FrmUsuario() {
-        System.out.println(idUsu);
         initComponents();
-   //     setear(idUsu);
+        int id2 = idUsu;
         setLocationRelativeTo(null);
         controladorUsuario = new CtlUsuario();
         setResizable(false);
@@ -39,6 +38,7 @@ public class FrmUsuario extends javax.swing.JFrame {
         fondo.setIcon(uno);
         getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
         fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
+        buscarUsuario(id2);
     }
 
     /**
@@ -314,7 +314,7 @@ public class FrmUsuario extends javax.swing.JFrame {
 //        listar();
     }//GEN-LAST:event_btnModificarActionPerformed
 
-    public void setear(int id) {
+    public void buscarUsuario(int id) {
         
         ArrayList<String> usuarioB = controladorUsuario.solicitudSet(id);
         if (usuarioB.size() > 0) {
