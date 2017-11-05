@@ -316,7 +316,7 @@ public class FrmUsuario extends javax.swing.JFrame {
             telefono = txtTelefono.getText();
             semestre = txtSemestre.getText();
 
-            if (controladorUsuario.SolicitudModificar(0, nombre, nombreUsuario, semestre, correo, telefono, nombreUsuario, semestre)) {
+            if (controladorUsuario.SolicitudModificar(semestre, nombre, nombreUsuario, correo, telefono, nombreUsuario, semestre, idUsu)) {
                 JOptionPane.showMessageDialog(this, "Modificado exitosamente");
 //                limpiar();
 ////                listar();
@@ -336,12 +336,12 @@ public class FrmUsuario extends javax.swing.JFrame {
         lblNombreUsu.setText(usuarioB.get(1));
         if (usuarioB.size() > 0) {
             for (int i = 0; i < usuarioB.size(); i++) {
-                txtNombre.setText(usuarioB.get(1));
-                lblCodigo.setText(usuarioB.get(7) + "");
-                txtCorreo.setText(usuarioB.get(3) + "");
-                txtTelefono.setText(usuarioB.get(4) + "");
-                txtSemestre.setText(usuarioB.get(6) + "");
-                txtNombreU.setText(usuarioB.get(2) + "");
+                txtNombre.setText(usuarioB.get(2));
+                lblCodigo.setText(usuarioB.get(0) + "");
+                txtCorreo.setText(usuarioB.get(4) + "");
+                txtTelefono.setText(usuarioB.get(5) + "");
+                txtSemestre.setText(usuarioB.get(7) + "");
+                txtNombreU.setText(usuarioB.get(3) + "");
             }
 
         } else {

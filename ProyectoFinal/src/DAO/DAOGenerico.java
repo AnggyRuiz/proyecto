@@ -114,7 +114,9 @@ public class DAOGenerico extends ClsConexion {
             }
         }
         consulta += " where " + listCampos.get(0) + "='" + listValores.get(0) + "';";
+        System.out.println(consulta);
         return super.ejecutar(consulta);
+        
     }
 
     public boolean eliminar(String objeto, String tabla, Object variable) {

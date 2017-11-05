@@ -6,13 +6,14 @@ package Modelo;
  */
 public class Usuario {
 
-    String password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre;
     int codigo;
+    String password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre;
 
     public Usuario() {
     }
 
-    public Usuario(String password, String nombre, String nombreUsuario, String correo, String telefono, String tipoUsuario, String semestre, int codigo) {
+    public Usuario(int codigo, String password, String nombre, String nombreUsuario, String correo, String telefono, String tipoUsuario, String semestre) {
+        this.codigo = codigo;
         this.password = password;
         this.nombre = nombre;
         this.nombreUsuario = nombreUsuario;
@@ -20,7 +21,6 @@ public class Usuario {
         this.telefono = telefono;
         this.tipoUsuario = tipoUsuario;
         this.semestre = semestre;
-        this.codigo = codigo;
     }
 
     public int getCodigo() {
@@ -29,6 +29,14 @@ public class Usuario {
 
     public void setCodigo(int codigo) {
         this.codigo = codigo;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getNombre() {
@@ -45,14 +53,6 @@ public class Usuario {
 
     public void setNombreUsuario(String nombreUsuario) {
         this.nombreUsuario = nombreUsuario;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getCorreo() {
