@@ -166,18 +166,19 @@ public class FrmUsuario extends javax.swing.JFrame {
                                 .addGap(98, 98, 98))
                             .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
                         .addComponent(jButton2)
                         .addGap(32, 32, 32)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel9)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblNombreUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(233, 233, 233))
+                .addComponent(lblNombreUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(224, 224, 224))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -276,7 +277,7 @@ public class FrmUsuario extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 586, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnVolverUsuario)
@@ -309,14 +310,17 @@ public class FrmUsuario extends javax.swing.JFrame {
 //            if (txtCodigoTema.getText().equals("") && txtNombreTema.getText().equals(" ")) {
 //                JOptionPane.showMessageDialog(null, "Primero debe buscar");
 //            } else {
-            String nombre, nombreUsuario, correo, telefono, semestre;
+//            int codigo;
+            String password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre;    
             nombre = txtNombre.getText();
             nombreUsuario = txtNombreU.getText();
             correo = txtCorreo.getText();
             telefono = txtTelefono.getText();
             semestre = txtSemestre.getText();
+            password = lblCodigo.getText();
+            tipoUsuario = "2";
 
-            if (controladorUsuario.SolicitudModificar(idUsu, semestre, nombre, nombreUsuario, correo, telefono, nombreUsuario, semestre)) {
+            if (controladorUsuario.SolicitudModificar(idUsu, password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre)) {
                 JOptionPane.showMessageDialog(this, "Modificado exitosamente");
                 lblNombreUsu.setText(txtNombre.getText());
             } else {
@@ -331,7 +335,7 @@ public class FrmUsuario extends javax.swing.JFrame {
     public void buscarUsuario(int id) {
 
         ArrayList<String> usuarioB = controladorUsuario.solicitudSet(id);
- //lblNombreUsu.setText(usuarioB.get(3));
+        lblNombreUsu.setText(usuarioB.get(2));
         if (usuarioB.size() > 0) {
             for (int i = 0; i < usuarioB.size(); i++) {
                 txtNombre.setText(usuarioB.get(2));

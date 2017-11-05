@@ -210,7 +210,6 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
 
     private void btnRegistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarseActionPerformed
         int codigo;
-        String no;
         String nombre, nombreUsuario, password, correo, telefono, tipoUsuario, semestre;
         codigo = Integer.parseInt(txtCodigo.getText());
         nombre = txtNombre.getText();
@@ -221,9 +220,10 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
         tipoUsuario = "2";
         semestre = txtSemestre.getText();
 
-        if (controladorUsuario.SolicitudGuardar(codigo, nombre, nombreUsuario, password, correo, telefono, tipoUsuario, semestre)) {
+        if (controladorUsuario.SolicitudGuardar(codigo, password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre)) {
             JOptionPane.showMessageDialog(null, "se ha registrado el Usuario");
             limpiar();
+            FrmPrincipal.idUsu = codigo;
             dispose();
             new FrmUsuario().setVisible(true);
         } else {
