@@ -161,7 +161,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                     }
 
                 } else {
-                    JOptionPane.showMessageDialog(null, "El usuario no ha sido encontradoooooo");
+                    JOptionPane.showMessageDialog(null, "El usuario no ha sido encontrado");
                 }
             }
             if (usuario.equals(usuario1) && (contraseña.equals(contraseña1))) {
@@ -173,6 +173,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
             }
 
         }
+        
+        System.out.println(idUsu);
 
     }//GEN-LAST:event_btnIngresarActionPerformed
 

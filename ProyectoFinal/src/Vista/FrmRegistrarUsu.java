@@ -224,6 +224,8 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
         if (controladorUsuario.SolicitudGuardar(codigo, nombre, nombreUsuario, password, correo, telefono, tipoUsuario, semestre)) {
             JOptionPane.showMessageDialog(null, "se ha registrado el Usuario");
             limpiar();
+            dispose();
+            new FrmUsuario().setVisible(true);
         } else {
             JOptionPane.showMessageDialog(this, "El código o el nombre de usuario ya existe");
         }

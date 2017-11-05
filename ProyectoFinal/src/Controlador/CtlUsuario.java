@@ -50,8 +50,8 @@ public class CtlUsuario {
         return usuarioDAO.buscar(objeto, tabla, password);
     }
 
-    public ArrayList<String> solicitudSet(String idUsu) {
-        Usuario usuario = new Usuario(idUsu, "", "", "", "", "", "", 0);
+    public ArrayList<String> solicitudSet(int idUsu) {
+        Usuario usuario = new Usuario("", "", "", "", "", "", "", idUsu);
         DAOGenerico usuarioDAO = new DAOGenerico();
         String objeto = convertirGson(usuario);
         return usuarioDAO.buscar(objeto, tabla, idUsu);

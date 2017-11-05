@@ -24,8 +24,9 @@ public class FrmUsuario extends javax.swing.JFrame {
      * Creates new form FrmUsuario
      */
     CtlUsuario controladorUsuario;
-    
+
     public FrmUsuario() {
+        System.out.println(idUsu);
         initComponents();
    //     setear(idUsu);
         setLocationRelativeTo(null);
@@ -313,21 +314,22 @@ public class FrmUsuario extends javax.swing.JFrame {
 //        listar();
     }//GEN-LAST:event_btnModificarActionPerformed
 
-    public void setear(int idUsu) {
-        ArrayList<String> usuarioB = controladorUsuario.solicitudVerificarContraseñaUsuario("2");
+    public void setear(int id) {
+        
+        ArrayList<String> usuarioB = controladorUsuario.solicitudSet(id);
         if (usuarioB.size() > 0) {
-                for (int i = 0; i < usuarioB.size(); i++) {
-                    txtNombre.setText(usuarioB.get(1));
-                    lblCodigo.setText(usuarioB.get(0) + "");
-                    txtCorreo.setText(usuarioB.get(4) + "");
-                    txtTelefono.setText(usuarioB.get(5) + "");
-                    txtSemestre.setText(usuarioB.get(7) + "");
-                    txtNombreU.setText(usuarioB.get(2) + "");
-                }
-
-            } else {
-                JOptionPane.showMessageDialog(null, "rayos");
+            for (int i = 0; i < usuarioB.size(); i++) {
+                txtNombre.setText(usuarioB.get(1));
+                lblCodigo.setText(usuarioB.get(0) + "");
+                txtCorreo.setText(usuarioB.get(4) + "");
+                txtTelefono.setText(usuarioB.get(5) + "");
+                txtSemestre.setText(usuarioB.get(7) + "");
+                txtNombreU.setText(usuarioB.get(2) + "");
             }
+
+        } else {
+            JOptionPane.showMessageDialog(null, "rayos");
+        }
 
     }
 
