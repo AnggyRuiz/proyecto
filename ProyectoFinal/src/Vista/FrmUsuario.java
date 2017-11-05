@@ -323,7 +323,6 @@ public class FrmUsuario extends javax.swing.JFrame {
                     txtTelefono.setText(usuarioB.get(5) + "");
                     txtSemestre.setText(usuarioB.get(7) + "");
                     txtNombreU.setText(usuarioB.get(2) + "");
-                    txtPassword.setText(usuarioB.get(3) + "");
                 }
 
             } else {
