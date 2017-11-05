@@ -30,9 +30,9 @@ public class CtlUsuario {
         return objeto;
     }
 
-    public boolean SolicitudGuardar(int codigo, String nombre, String nombrUsuario, String password, String correo, String telefono, String tipoUsuario, String semestre) {
+    public boolean SolicitudGuardar(int codigo, String password, String nombre, String nombreUsuario, String correo, String telefono, String tipoUsuario, String semestre) {
 
-        Usuario usuario = new Usuario(codigo, password, nombre, nombrUsuario, correo, telefono, tipoUsuario, semestre);
+        Usuario usuario = new Usuario(codigo, password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre);
         DAOGenerico usuarioDAO = new DAOGenerico();
         String objeto = convertirGson(usuario);
         return usuarioDAO.guardar(objeto, tabla);
@@ -57,7 +57,7 @@ public class CtlUsuario {
         return usuarioDAO.buscar(objeto, tabla, idUsu);
     }
     
-    public boolean SolicitudModificar(String password, String nombre, String nombreUsuario, String correo, String telefono, String tipoUsuario, String semestre, int codigo) {
+    public boolean SolicitudModificar(int codigo, String password, String nombre, String nombreUsuario, String correo, String telefono, String tipoUsuario, String semestre) {
         Usuario usuario = new Usuario(codigo, password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre);
         DAOGenerico usuarioDAO = new DAOGenerico();
         String objeto = convertirGson(usuario);

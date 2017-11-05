@@ -155,9 +155,9 @@ public class FrmPrincipal extends javax.swing.JFrame {
             if (usuario.equals(controladorUsuario.solicitudVerificarUsuario(usuario))) {
                 if (usuarioA.size() > 0) {
                     for (int i = 0; i < usuarioA.size(); i++) {
-                        contraseña1 = usuarioA.get(0);
-                        usuario1 = usuarioA.get(2);
-                        idUsu = Integer.parseInt(usuarioA.get(7));
+                        contraseña1 = usuarioA.get(1);
+                        usuario1 = usuarioA.get(3);
+                        idUsu = Integer.parseInt(usuarioA.get(0));
                     }
 
                 } else {

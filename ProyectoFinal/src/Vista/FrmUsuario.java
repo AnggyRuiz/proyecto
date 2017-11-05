@@ -316,7 +316,7 @@ public class FrmUsuario extends javax.swing.JFrame {
             telefono = txtTelefono.getText();
             semestre = txtSemestre.getText();
 
-            if (controladorUsuario.SolicitudModificar(semestre, nombre, nombreUsuario, correo, telefono, nombreUsuario, semestre, idUsu)) {
+            if (controladorUsuario.SolicitudModificar(idUsu, semestre, nombre, nombreUsuario, correo, telefono, nombreUsuario, semestre)) {
                 JOptionPane.showMessageDialog(this, "Modificado exitosamente");
 //                limpiar();
 ////                listar();
