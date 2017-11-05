@@ -51,7 +51,7 @@ public class CtlUsuario {
     }
 
     public ArrayList<String> solicitudSet(int idUsu) {
-        Usuario usuario = new Usuario(idUsu, "", "", "", "", "", "", "");;
+        Usuario usuario = new Usuario(idUsu, "", "", "", "", "", "", "");
         DAOGenerico usuarioDAO = new DAOGenerico();
         String objeto = convertirGson(usuario);
         return usuarioDAO.buscar(objeto, tabla, idUsu);

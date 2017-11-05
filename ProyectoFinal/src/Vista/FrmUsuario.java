@@ -331,7 +331,7 @@ public class FrmUsuario extends javax.swing.JFrame {
     public void buscarUsuario(int id) {
 
         ArrayList<String> usuarioB = controladorUsuario.solicitudSet(id);
-        lblNombreUsu.setText(usuarioB.get(2));
+ //lblNombreUsu.setText(usuarioB.get(3));
         if (usuarioB.size() > 0) {
             for (int i = 0; i < usuarioB.size(); i++) {
                 txtNombre.setText(usuarioB.get(2));
