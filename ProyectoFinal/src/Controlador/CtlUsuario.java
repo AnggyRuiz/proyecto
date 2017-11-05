@@ -56,4 +56,11 @@ public class CtlUsuario {
         String objeto = convertirGson(usuario);
         return usuarioDAO.buscar(objeto, tabla, idUsu);
     }
+    
+    public boolean SolicitudModificar(int codigo, String nombre, String nombrUsuario, String password, String correo, String telefono, String tipoUsuario, String semestre) {
+        Usuario usuario = new Usuario(password, nombre, nombrUsuario, correo, telefono, tipoUsuario, semestre, codigo);
+        DAOGenerico usuarioDAO = new DAOGenerico();
+        String objeto = convertirGson(usuario);
+        return usuarioDAO.modificar(objeto, tabla);
+    }
 }
