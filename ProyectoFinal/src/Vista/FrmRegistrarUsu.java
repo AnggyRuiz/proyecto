@@ -229,9 +229,9 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnRegistrarseActionPerformed
 
-    private int limite  = 9;
+ 
     private void txtCodigoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoKeyTyped
-        if (txtCodigo.getText().length() == limite) {
+        if (txtCodigo.getText().length() == 9) {
             evt.consume();
         }
     }//GEN-LAST:event_txtCodigoKeyTyped
