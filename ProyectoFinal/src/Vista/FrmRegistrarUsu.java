@@ -122,6 +122,11 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
         jLabel7.setText("CÓDIGO:");
 
         txtCodigo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtCodigo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCodigoKeyTyped(evt);
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setText("La contraseña será su código");
@@ -224,7 +229,14 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnRegistrarseActionPerformed
 
-    public void limpiar (){
+    private int limite  = 9;
+    private void txtCodigoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoKeyTyped
+        if (txtCodigo.getText().length() == limite) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtCodigoKeyTyped
+
+    public void limpiar() {
         txtNombre.setText("");
         txtNombreU.setText("");
         txtCodigo.setText("");
@@ -232,6 +244,7 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
         txtTelefono.setText("");
         txtSemestre.setText("");
     }
+
     /**
      * @param args the command line arguments
      */
