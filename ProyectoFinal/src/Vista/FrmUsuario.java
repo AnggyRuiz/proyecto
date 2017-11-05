@@ -320,10 +320,10 @@ public class FrmUsuario extends javax.swing.JFrame {
         if (usuarioB.size() > 0) {
             for (int i = 0; i < usuarioB.size(); i++) {
                 txtNombre.setText(usuarioB.get(1));
-                lblCodigo.setText(usuarioB.get(0) + "");
-                txtCorreo.setText(usuarioB.get(4) + "");
-                txtTelefono.setText(usuarioB.get(5) + "");
-                txtSemestre.setText(usuarioB.get(7) + "");
+                lblCodigo.setText(usuarioB.get(7) + "");
+                txtCorreo.setText(usuarioB.get(3) + "");
+                txtTelefono.setText(usuarioB.get(4) + "");
+                txtSemestre.setText(usuarioB.get(6) + "");
                 txtNombreU.setText(usuarioB.get(2) + "");
             }
 
