@@ -5,9 +5,11 @@
  */
 package Controlador;
 
+import static Controlador.CtlMultiple.tabla;
 import DAO.DAOGenerico;
 import Modelo.PreguntaUnica;
 import com.google.gson.Gson;
+import java.util.ArrayList;
 
 /**
  *
@@ -34,6 +36,11 @@ public class CtlUnica {
         DAOGenerico usuarioDAO = new DAOGenerico();
         String objeto = convertirGson(unica);
         return usuarioDAO.guardar(objeto, tabla);
+    }
+    
+    public ArrayList solicitudBuscarFiltrado(String caracter, String nombreColumna) {
+        DAOGenerico preguntaMDAO = new DAOGenerico();
+        return preguntaMDAO.buscarPreguntas(nombreColumna, tabla, caracter);
     }
     
 //    public ArrayList<String> SolicitudBuscar(int idTema) {

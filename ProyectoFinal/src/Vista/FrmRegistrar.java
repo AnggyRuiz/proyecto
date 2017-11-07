@@ -910,25 +910,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
     }//GEN-LAST:event_btnGuardarUnicaActionPerformed
 
     private void btnBuscarUnicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarUnicaActionPerformed
-        try {
-            int cedula = Integer.parseInt(JOptionPane.showInputDialog("ingrese el código del tema que desea buscar"));
-            ArrayList<String> tema = controladorTema.SolicitudBuscar(cedula);
-
-            if (tema.size() > 0) {
-                for (int i = 0; i < tema.size(); i++) {
-                    txtCodigoTema.setText(tema.get(0));
-                    txtNombreTema.setText(tema.get(1) + "");
-                    txtCodigoTema.setEnabled(false);
-                }
-
-            } else {
-                JOptionPane.showMessageDialog(null, "El tema no ha sido encontrado");
-            }
-        } catch (Exception e) {
-            System.err.println(e);
-        }
-
-        combo1();
+        new FrmBuscarPreguntas().setVisible(true);
     }//GEN-LAST:event_btnBuscarUnicaActionPerformed
 
     private void cbCorrectasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCorrectasActionPerformed

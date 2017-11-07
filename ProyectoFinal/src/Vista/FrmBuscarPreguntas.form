@@ -131,6 +131,9 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtEnunciadoBuscar">
+      <Events>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtEnunciadoBuscarKeyReleased"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -39,7 +39,7 @@ public class CtlMultiple {
         return preguntaMDAO.guardar(objeto, tabla);
     }
 
-    public ArrayList solicitudbuscarFiltrado(String caracter, String nombreColumna) {
+    public ArrayList solicitudBuscarFiltrado(String caracter, String nombreColumna) {
         DAOGenerico preguntaMDAO = new DAOGenerico();
         return preguntaMDAO.buscarPreguntas(nombreColumna, tabla, caracter);
     }

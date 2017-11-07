@@ -6,6 +6,7 @@
 package Vista;
 
 import Controlador.CtlMultiple;
+import Controlador.CtlUnica;
 import java.awt.Font;
 import java.util.ArrayList;
 
@@ -19,6 +20,7 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
      * Creates new form FrmBuscarPreguntas
      */
     CtlMultiple controladorMultiple = new CtlMultiple();
+    CtlUnica controladorUnica = new CtlUnica();
     String cadena = "";
 
     public FrmBuscarPreguntas() {
@@ -81,6 +83,12 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
             }
         });
 
+        txtEnunciadoBuscar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtEnunciadoBuscarKeyReleased(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -136,12 +144,20 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
     }//GEN-LAST:event_txtTemaBuscarKeyTyped
 
     private void txtTemaBuscarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTemaBuscarKeyReleased
-        // TODO add your handling code here:
-
         ArrayList<String> buscar = new ArrayList<>();
-        buscar = controladorMultiple.solicitudbuscarFiltrado(txtTemaBuscar.getText(), "tema_idtema");
+        buscar = controladorMultiple.solicitudBuscarFiltrado(txtTemaBuscar.getText(), "tema_idtema");
+        buscar = controladorUnica.solicitudBuscarFiltrado(txtTemaBuscar.getText(), "tema_idtema");
         listar(buscar);
     }//GEN-LAST:event_txtTemaBuscarKeyReleased
+
+    private void txtEnunciadoBuscarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEnunciadoBuscarKeyReleased
+        ArrayList<String> buscar = new ArrayList<>();
+        buscar = controladorMultiple.solicitudBuscarFiltrado(txtEnunciadoBuscar.getText(), "enunciado");
+        buscar = controladorUnica.solicitudBuscarFiltrado(txtEnunciadoBuscar.getText(), "enunciado");
+        
+        listar(buscar);
+    }//GEN-LAST:event_txtEnunciadoBuscarKeyReleased
+    
     private void listar(ArrayList<String> buscar) {
         jTableBuscar.setModel(controladorMultiple.listarM(buscar));
     }
