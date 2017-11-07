@@ -116,7 +116,7 @@ public class DAOGenerico extends ClsConexion {
         consulta += " where " + listCampos.get(0) + "='" + listValores.get(0) + "';";
         System.out.println(consulta);
         return super.ejecutar(consulta);
-        
+
     }
 
     public boolean eliminar(String objeto, String tabla, Object variable) {
@@ -189,6 +189,26 @@ public class DAOGenerico extends ClsConexion {
         return nombreUsuario;
     }
 
+    public ArrayList buscarPreguntas(String nombreColumna, String nombreTabla, String caracter) {
+        ArrayList<String> buscar = new ArrayList<>();
+        String consulta = "SELECT Tema_idTema, enunciado FROM " + nombreTabla + " WHERE " + nombreColumna + " LIKE '" + caracter + "%'";
+        super.ejecutarRetorno(consulta);
+
+        try {
+            while (resultadoDB.next()) {
+                for (int i = 1; i < resultadoDB.getMetaData().getColumnCount()+1; i++) {
+                    buscar.add(resultadoDB.getString(i));
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("algo fallo :v");
+        }
+        System.out.println(buscar);
+        System.out.println(consulta);
+
+        return buscar;
+    }
+
 //    public ArrayList<String> verificarContraseña(String objeto, String tabla, String cb, String cbP, Object contraseña) {
 //        JsonParser parser = new JsonParser();
 //        JsonObject jobject = parser.parse(objeto).getAsJsonObject();
@@ -210,5 +230,4 @@ public class DAOGenerico extends ClsConexion {
 //        }
 //        return dao;
 //    }
-
 }

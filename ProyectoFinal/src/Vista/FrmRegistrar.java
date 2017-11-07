@@ -394,9 +394,19 @@ public class FrmRegistrar extends javax.swing.JFrame {
 
         jButton7.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jButton7.setText("BUSCAR");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton8.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jButton8.setText("MODIFICAR");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jButton9.setText("ELIMINAR");
@@ -577,6 +587,11 @@ public class FrmRegistrar extends javax.swing.JFrame {
 
         jButton4.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jButton4.setText("MODIFICAR");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton6.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jButton6.setText("ELIMINAR");
@@ -857,7 +872,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
         }
         enunciado = txtEnunciadoMultiple.getText();
 
-        if (controladorMultiple.SolicitudGuardar(opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, idTema)) {
+        if (controladorMultiple.solicitudGuardar(opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, idTema)) {
             JOptionPane.showMessageDialog(null, "se ha registrado la pregunta");
             listar();
 //            limpiar();
@@ -955,6 +970,20 @@ public class FrmRegistrar extends javax.swing.JFrame {
     private void txt4MultipleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt4MultipleActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt4MultipleActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new FrmBuscarPreguntas().setVisible(true);
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     public void combo1() {
         cbTemaUnica.setModel(CtlTema.solicitudListarCombo());
