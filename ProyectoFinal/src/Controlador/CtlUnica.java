@@ -43,6 +43,11 @@ public class CtlUnica {
         return preguntaMDAO.buscarPreguntas(nombreColumna, tabla, caracter);
     }
     
+    public ArrayList solicitudPreguntas(String enunciado) {
+        DAOGenerico preguntaMDAO = new DAOGenerico();
+        return preguntaMDAO.setPreguntas(enunciado, tabla);
+    }
+    
 //    public ArrayList<String> SolicitudBuscar(int idTema) {
 //        
 //        Tema tema = new Tema(idTema, "");

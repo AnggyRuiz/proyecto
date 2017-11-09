@@ -9,6 +9,10 @@ import Controlador.CtlMultiple;
 import Controlador.CtlUnica;
 import java.awt.Font;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JLayeredPane;
+import javax.swing.JPanel;
 
 /**
  *
@@ -22,10 +26,23 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
     CtlMultiple controladorMultiple = new CtlMultiple();
     CtlUnica controladorUnica = new CtlUnica();
     String cadena = "";
+    public static ArrayList<String> datos = new ArrayList<>();
+    
+  //  FrmRegistrar.JTabbedPane4
 
     public FrmBuscarPreguntas() {
         initComponents();
+        setLocationRelativeTo(null);
+        setResizable(false);
+        System.out.println(this.getSize());
+        ((JPanel) getContentPane()).setOpaque(false);
+        ImageIcon uno = new ImageIcon(this.getClass().getResource("/Imagenes/bb.png"));
+        JLabel fondo = new JLabel();
+        fondo.setIcon(uno);
+        getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
+        fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
         jTableBuscar.getTableHeader().setFont(new Font("Gill Sans Ultra Bold Condensed", 0, 16));
+        txtPregunta.setEnabled(false);
     }
 
     /**
@@ -37,12 +54,21 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblPregunta = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableBuscar = new javax.swing.JTable();
         txtTemaBuscar = new javax.swing.JTextField();
         txtEnunciadoBuscar = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        btnCancelar = new javax.swing.JButton();
+        btnSeleccionar = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtPregunta = new javax.swing.JTextArea();
+
+        lblPregunta.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,11 +76,12 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
         jLabel1.setText("Enunciado:");
 
         jLabel2.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
-        jLabel2.setText("Codigo tema:");
+        jLabel2.setText("Código:");
 
         jTableBuscar.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
         jTableBuscar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null},
                 {null, null},
                 {null, null},
                 {null, null},
@@ -64,6 +91,11 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
                 "TEMA", "ENUNCIADO"
             }
         ));
+        jTableBuscar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTableBuscarMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTableBuscar);
 
         txtTemaBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -89,6 +121,33 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
+        jLabel3.setText("Escribe el código o el enunciado de la pregunta que quieres buscar:");
+
+        btnCancelar.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
+        btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
+
+        btnSeleccionar.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
+        btnSeleccionar.setText("Seleccionar");
+        btnSeleccionar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSeleccionarActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
+        jLabel4.setText("Pregunta:");
+
+        txtPregunta.setColumns(20);
+        txtPregunta.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
+        txtPregunta.setRows(5);
+        jScrollPane2.setViewportView(txtPregunta);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -96,33 +155,58 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
+                        .addGap(127, 127, 127)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1))
-                        .addGap(143, 143, 143)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtTemaBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
-                            .addComponent(txtEnunciadoBuscar)))
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addGap(122, 122, 122)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtEnunciadoBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTemaBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 509, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(37, Short.MAX_VALUE))
+                        .addGap(29, 29, 29)
+                        .addComponent(btnCancelar)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 61, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jScrollPane2)
+                            .addGap(18, 18, 18)
+                            .addComponent(btnSeleccionar))
+                        .addComponent(jLabel3)))
+                .addGap(62, 62, 62))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtTemaBuscar)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(91, 91, 91)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtTemaBuscar))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtEnunciadoBuscar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(btnSeleccionar)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnCancelar)
+                .addGap(32, 32, 32))
         );
 
         pack();
@@ -157,6 +241,25 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
         
         listar(buscar);
     }//GEN-LAST:event_txtEnunciadoBuscarKeyReleased
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        dispose();
+        new FrmRegistrar().setVisible(true);
+      //  JTabbedPane4;
+    }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void btnSeleccionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeleccionarActionPerformed
+        String pregunta;
+        pregunta = txtPregunta.getText();
+        datos = controladorUnica.solicitudPreguntas(pregunta);
+        System.out.println(datos);
+        dispose();
+        new FrmRegistrar().setVisible(true);
+    }//GEN-LAST:event_btnSeleccionarActionPerformed
+
+    private void jTableBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableBuscarMouseClicked
+        txtPregunta.setText(jTableBuscar.getValueAt(jTableBuscar.getSelectedRow(), 1).toString());
+    }//GEN-LAST:event_jTableBuscarMouseClicked
     
     private void listar(ArrayList<String> buscar) {
         jTableBuscar.setModel(controladorMultiple.listarM(buscar));
@@ -198,11 +301,18 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnSeleccionar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTableBuscar;
+    private javax.swing.JLabel lblPregunta;
     private javax.swing.JTextField txtEnunciadoBuscar;
+    private javax.swing.JTextArea txtPregunta;
     private javax.swing.JTextField txtTemaBuscar;
     // End of variables declaration//GEN-END:variables
 }

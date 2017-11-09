@@ -8,6 +8,7 @@ package Vista;
 import Controlador.CtlMultiple;
 import Controlador.CtlTema;
 import Controlador.CtlUnica;
+import static Vista.FrmBuscarPreguntas.datos;
 import java.awt.Font;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
     CtlTema controladorTema;
     CtlUnica controladorUnica;
     CtlMultiple controladorMultiple;
+    
 
     public FrmRegistrar() {
         initComponents();
@@ -46,6 +48,17 @@ public class FrmRegistrar extends javax.swing.JFrame {
         fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
         System.out.println(this.getSize());
         jTableTema.getTableHeader().setFont(new Font("Gill Sans Ultra Bold Condensed", 0, 16)); 
+        if(!datos.isEmpty()){
+            jTabbedPane4.setSelectedIndex(1);
+            jTabbedPane5.setSelectedIndex(1);
+            txtEnunciadoUnica.setText(datos.get(6));
+            txt1Unica.setText(datos.get(1));
+            txt2Unica.setText(datos.get(2));
+            txt3Unica.setText(datos.get(3));
+            txt4Unica.setText(datos.get(4));
+            cbCorrectaUnica.setSelectedItem(datos.get(5));
+
+        }
 //
 //        txt1.setEnabled(false);
 //        txt2.setEnabled(false);
@@ -530,7 +543,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
                     .addComponent(jButton8)
                     .addComponent(jButton7)
                     .addComponent(btnGuardarMultiple))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane5.addTab("Pregunta Múltiple", jPanel8);
@@ -768,6 +781,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         dispose();
         new FrmPrincipal().setVisible(true);
+  
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void btnGuardarTemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarTemaActionPerformed
@@ -1066,7 +1080,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTabbedPane jTabbedPane4;
+    public javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTabbedPane jTabbedPane5;
     private javax.swing.JTable jTableTema;
     private javax.swing.JTextField jTextField2;
