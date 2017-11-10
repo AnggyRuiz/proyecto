@@ -27,10 +27,10 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
     CtlUnica controladorUnica = new CtlUnica();
     String cadena = "";
     public static ArrayList<String> datos = new ArrayList<>();
-    
-  //  FrmRegistrar.JTabbedPane4
+    String tipo;
 
-    public FrmBuscarPreguntas() {
+    //  FrmRegistrar.JTabbedPane4
+    public FrmBuscarPreguntas(String tipoPregunta) {
         initComponents();
         setLocationRelativeTo(null);
         setResizable(false);
@@ -43,6 +43,7 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
         fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
         jTableBuscar.getTableHeader().setFont(new Font("Gill Sans Ultra Bold Condensed", 0, 16));
         txtPregunta.setEnabled(false);
+        tipo = tipoPregunta;
     }
 
     /**
@@ -229,8 +230,11 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
 
     private void txtTemaBuscarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTemaBuscarKeyReleased
         ArrayList<String> buscar = new ArrayList<>();
-        buscar = controladorMultiple.solicitudBuscarFiltrado(txtTemaBuscar.getText(), "tema_idtema");
-        buscar = controladorUnica.solicitudBuscarFiltrado(txtTemaBuscar.getText(), "tema_idtema");
+        if (tipo.equals("Unica")) {
+            buscar = controladorUnica.solicitudBuscarFiltrado(txtTemaBuscar.getText(), "tema_idtema");
+        } else if (tipo.equals("Multiple")) {
+            buscar = controladorMultiple.solicitudBuscarFiltrado(txtTemaBuscar.getText(), "tema_idtema");
+        }
         listar(buscar);
     }//GEN-LAST:event_txtTemaBuscarKeyReleased
 
@@ -238,14 +242,14 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
         ArrayList<String> buscar = new ArrayList<>();
         buscar = controladorMultiple.solicitudBuscarFiltrado(txtEnunciadoBuscar.getText(), "enunciado");
         buscar = controladorUnica.solicitudBuscarFiltrado(txtEnunciadoBuscar.getText(), "enunciado");
-        
+
         listar(buscar);
     }//GEN-LAST:event_txtEnunciadoBuscarKeyReleased
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         dispose();
         new FrmRegistrar().setVisible(true);
-      //  JTabbedPane4;
+        //  JTabbedPane4;
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnSeleccionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeleccionarActionPerformed
@@ -260,45 +264,11 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
     private void jTableBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableBuscarMouseClicked
         txtPregunta.setText(jTableBuscar.getValueAt(jTableBuscar.getSelectedRow(), 1).toString());
     }//GEN-LAST:event_jTableBuscarMouseClicked
-    
+
     private void listar(ArrayList<String> buscar) {
         jTableBuscar.setModel(controladorMultiple.listarM(buscar));
     }
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmBuscarPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmBuscarPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmBuscarPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmBuscarPreguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new FrmBuscarPreguntas().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;

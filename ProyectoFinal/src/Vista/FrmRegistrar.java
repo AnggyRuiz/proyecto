@@ -49,6 +49,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
         System.out.println(this.getSize());
         jTableTema.getTableHeader().setFont(new Font("Gill Sans Ultra Bold Condensed", 0, 16)); 
         if(!datos.isEmpty()){
+            
             jTabbedPane4.setSelectedIndex(1);
             jTabbedPane5.setSelectedIndex(1);
             txtEnunciadoUnica.setText(datos.get(6));
@@ -924,7 +925,8 @@ public class FrmRegistrar extends javax.swing.JFrame {
     }//GEN-LAST:event_btnGuardarUnicaActionPerformed
 
     private void btnBuscarUnicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarUnicaActionPerformed
-        new FrmBuscarPreguntas().setVisible(true);
+        new FrmBuscarPreguntas("Unica").setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnBuscarUnicaActionPerformed
 
     private void cbCorrectasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCorrectasActionPerformed
@@ -970,7 +972,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         dispose();
-        new FrmBuscarPreguntas().setVisible(true);
+        new FrmBuscarPreguntas("Multiple").setVisible(true);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
