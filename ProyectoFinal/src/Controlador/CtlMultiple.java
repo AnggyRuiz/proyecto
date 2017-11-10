@@ -22,8 +22,8 @@ public class CtlMultiple {
     }
 
     public static String tabla = "preguntamultiple";
-//    public static String id = "idTema";
-//    public static String descripcion = "descripcion";
+    public static String cbID = "idTema";
+    public static String cb = "descripcion";
 
     public String convertirGson(PreguntaMultiple multiple) {
         Gson gson = new Gson();

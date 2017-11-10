@@ -19,10 +19,10 @@ public class CtlUnica {
 
     public CtlUnica() {
     }
-    
+
     public static String tabla = "preguntaunica";
-//    public static String id = "idTema";
-//    public static String descripcion = "descripcion";
+    public static String cbID = "idTema";
+    public static String cb = "descripcion";
 
     public String convertirGson(PreguntaUnica unica) {
         Gson gson = new Gson();
@@ -37,17 +37,22 @@ public class CtlUnica {
         String objeto = convertirGson(unica);
         return usuarioDAO.guardar(objeto, tabla);
     }
-    
+
     public ArrayList solicitudBuscarFiltrado(String caracter, String nombreColumna) {
         DAOGenerico preguntaMDAO = new DAOGenerico();
         return preguntaMDAO.buscarPreguntas(nombreColumna, tabla, caracter);
     }
-    
+
     public ArrayList solicitudPreguntas(String enunciado) {
         DAOGenerico preguntaMDAO = new DAOGenerico();
         return preguntaMDAO.setPreguntas(enunciado, tabla);
     }
-    
+
+    public String solicitudBuscarId(String enunciado) {
+        DAOGenerico preguntaMDAO = new DAOGenerico();
+        return preguntaMDAO.buscarCombo(tabla, cb, cbID, enunciado);
+    }
+
 //    public ArrayList<String> SolicitudBuscar(int idTema) {
 //        
 //        Tema tema = new Tema(idTema, "");
@@ -92,5 +97,4 @@ public class CtlUnica {
 //        return modelTabla;
 //    }
 //    
-    
 }
