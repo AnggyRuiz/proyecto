@@ -134,16 +134,22 @@ public class FrmJuego extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setOpaque(false);
 
+        jLabel2.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel2.setText("Pregunta: ");
 
+        jLabel3.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel3.setText("Enunciado");
 
+        jLabel4.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel4.setText("Opción 1");
 
+        jLabel5.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel5.setText("Opción 2");
 
+        jLabel6.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel6.setText("Opción 3");
 
+        jLabel7.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel7.setText("Opción 4");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -182,23 +188,29 @@ public class FrmJuego extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addGap(29, 29, 29)
                 .addComponent(jLabel7)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("1", jPanel1);
 
         jPanel2.setOpaque(false);
 
+        jLabel8.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel8.setText("Pregunta: ");
 
+        jLabel9.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel9.setText("Enunciado");
 
+        jLabel10.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel10.setText("Opción 1");
 
+        jLabel11.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel11.setText("Opción 2");
 
+        jLabel12.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel12.setText("Opción 3");
 
+        jLabel13.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel13.setText("Opción 4");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -237,23 +249,29 @@ public class FrmJuego extends javax.swing.JFrame {
                 .addComponent(jLabel12)
                 .addGap(29, 29, 29)
                 .addComponent(jLabel13)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("2", jPanel2);
 
         jPanel3.setOpaque(false);
 
+        jLabel14.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel14.setText("Pregunta: ");
 
+        jLabel15.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel15.setText("Enunciado");
 
+        jLabel16.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel16.setText("Opción 1");
 
+        jLabel17.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel17.setText("Opción 2");
 
+        jLabel18.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel18.setText("Opción 3");
 
+        jLabel19.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel19.setText("Opción 4");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -292,23 +310,29 @@ public class FrmJuego extends javax.swing.JFrame {
                 .addComponent(jLabel18)
                 .addGap(29, 29, 29)
                 .addComponent(jLabel19)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("3", jPanel3);
 
         jPanel4.setOpaque(false);
 
+        jLabel20.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel20.setText("Pregunta: ");
 
+        jLabel21.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel21.setText("Enunciado");
 
+        jLabel22.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel22.setText("Opción 1");
 
+        jLabel23.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel23.setText("Opción 2");
 
+        jLabel24.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel24.setText("Opción 3");
 
+        jLabel25.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel25.setText("Opción 4");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -347,23 +371,29 @@ public class FrmJuego extends javax.swing.JFrame {
                 .addComponent(jLabel24)
                 .addGap(29, 29, 29)
                 .addComponent(jLabel25)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("4", jPanel4);
 
         jPanel5.setOpaque(false);
 
+        jLabel26.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel26.setText("Pregunta: ");
 
+        jLabel27.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel27.setText("Enunciado");
 
+        jLabel28.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel28.setText("Opción 1");
 
+        jLabel29.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel29.setText("Opción 2");
 
+        jLabel30.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel30.setText("Opción 3");
 
+        jLabel31.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel31.setText("Opción 4");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -402,23 +432,29 @@ public class FrmJuego extends javax.swing.JFrame {
                 .addComponent(jLabel30)
                 .addGap(29, 29, 29)
                 .addComponent(jLabel31)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("5", jPanel5);
 
         jPanel6.setOpaque(false);
 
+        jLabel32.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel32.setText("Pregunta: ");
 
+        jLabel33.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel33.setText("Enunciado");
 
+        jLabel34.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel34.setText("Opción 1");
 
+        jLabel35.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel35.setText("Opción 2");
 
+        jLabel36.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel36.setText("Opción 3");
 
+        jLabel37.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel37.setText("Opción 4");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -457,23 +493,29 @@ public class FrmJuego extends javax.swing.JFrame {
                 .addComponent(jLabel36)
                 .addGap(29, 29, 29)
                 .addComponent(jLabel37)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("6", jPanel6);
 
         jPanel7.setOpaque(false);
 
+        jLabel38.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel38.setText("Pregunta: ");
 
+        jLabel39.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel39.setText("Enunciado");
 
+        jLabel40.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel40.setText("Opción 1");
 
+        jLabel41.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel41.setText("Opción 2");
 
+        jLabel42.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel42.setText("Opción 3");
 
+        jLabel43.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel43.setText("Opción 4");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -512,23 +554,29 @@ public class FrmJuego extends javax.swing.JFrame {
                 .addComponent(jLabel42)
                 .addGap(29, 29, 29)
                 .addComponent(jLabel43)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("7", jPanel7);
 
         jPanel8.setOpaque(false);
 
+        jLabel44.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel44.setText("Pregunta: ");
 
+        jLabel45.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel45.setText("Enunciado");
 
+        jLabel46.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel46.setText("Opción 1");
 
+        jLabel47.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel47.setText("Opción 2");
 
+        jLabel48.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel48.setText("Opción 3");
 
+        jLabel49.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel49.setText("Opción 4");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
@@ -567,23 +615,29 @@ public class FrmJuego extends javax.swing.JFrame {
                 .addComponent(jLabel48)
                 .addGap(29, 29, 29)
                 .addComponent(jLabel49)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("8", jPanel8);
 
         jPanel9.setOpaque(false);
 
+        jLabel50.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel50.setText("Pregunta: ");
 
+        jLabel51.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel51.setText("Enunciado");
 
+        jLabel52.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel52.setText("Opción 1");
 
+        jLabel53.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel53.setText("Opción 2");
 
+        jLabel54.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel54.setText("Opción 3");
 
+        jLabel55.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel55.setText("Opción 4");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
@@ -622,23 +676,29 @@ public class FrmJuego extends javax.swing.JFrame {
                 .addComponent(jLabel54)
                 .addGap(29, 29, 29)
                 .addComponent(jLabel55)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("9", jPanel9);
 
         jPanel10.setOpaque(false);
 
+        jLabel56.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel56.setText("Pregunta: ");
 
+        jLabel57.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel57.setText("Enunciado");
 
+        jLabel58.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel58.setText("Opción 1");
 
+        jLabel59.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel59.setText("Opción 2");
 
+        jLabel60.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel60.setText("Opción 3");
 
+        jLabel61.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel61.setText("Opción 4");
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
@@ -677,7 +737,7 @@ public class FrmJuego extends javax.swing.JFrame {
                 .addComponent(jLabel60)
                 .addGap(29, 29, 29)
                 .addComponent(jLabel61)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("10", jPanel10);
