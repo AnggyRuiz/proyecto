@@ -27,7 +27,7 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
     CtlUnica controladorUnica = new CtlUnica();
     String cadena = "";
     public static ArrayList<String> datos = new ArrayList<>();
-    String tipo;
+    public static String tipo;
 
     //  FrmRegistrar.JTabbedPane4
     public FrmBuscarPreguntas(String tipoPregunta) {
@@ -255,7 +255,11 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
     private void btnSeleccionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeleccionarActionPerformed
         String pregunta;
         pregunta = txtPregunta.getText();
-        datos = controladorUnica.solicitudPreguntas(pregunta);
+        if (tipo.equals("Unica")) {
+            datos = controladorUnica.solicitudPreguntas(pregunta);
+        } else {
+            datos = controladorMultiple.solicitudPreguntas(pregunta);
+        }
         System.out.println(datos);
         dispose();
         new FrmRegistrar().setVisible(true);

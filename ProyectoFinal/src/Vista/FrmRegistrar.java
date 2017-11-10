@@ -9,6 +9,7 @@ import Controlador.CtlMultiple;
 import Controlador.CtlTema;
 import Controlador.CtlUnica;
 import static Vista.FrmBuscarPreguntas.datos;
+import static Vista.FrmBuscarPreguntas.tipo;
 import java.awt.Font;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -27,7 +28,6 @@ public class FrmRegistrar extends javax.swing.JFrame {
     CtlTema controladorTema;
     CtlUnica controladorUnica;
     CtlMultiple controladorMultiple;
-    
 
     public FrmRegistrar() {
         initComponents();
@@ -47,18 +47,47 @@ public class FrmRegistrar extends javax.swing.JFrame {
         getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
         fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
         System.out.println(this.getSize());
-        jTableTema.getTableHeader().setFont(new Font("Gill Sans Ultra Bold Condensed", 0, 16)); 
-        if(!datos.isEmpty()){
-            
+        jTableTema.getTableHeader().setFont(new Font("Gill Sans Ultra Bold Condensed", 0, 16));
+        if (!datos.isEmpty()) {
             jTabbedPane4.setSelectedIndex(1);
-            jTabbedPane5.setSelectedIndex(1);
-            txtEnunciadoUnica.setText(datos.get(6));
-            txt1Unica.setText(datos.get(1));
-            txt2Unica.setText(datos.get(2));
-            txt3Unica.setText(datos.get(3));
-            txt4Unica.setText(datos.get(4));
-            cbCorrectaUnica.setSelectedItem(datos.get(5));
+            if (tipo.equals("Unica")) {
+                cbTemaUnica.setSelectedItem(controladorTema.solicitudBuscarId(datos.get(7)));
+                jTabbedPane5.setSelectedIndex(1);
+                txtEnunciadoUnica.setText(datos.get(6));
+                txt1Unica.setText(datos.get(1));
+                txt2Unica.setText(datos.get(2));
+                txt3Unica.setText(datos.get(3));
+                txt4Unica.setText(datos.get(4));
+                cbCorrectaUnica.setSelectedItem(datos.get(5));
+            } else if(tipo.equals("Multiple")){
+                System.out.println("vida hijuepuchaaaaa");
+                jTabbedPane5.setSelectedIndex(0);
+                cbTemaMultiple.setSelectedItem(controladorTema.solicitudBuscarId(datos.get(7)));                
+                txtEnunciadoMultiple.setText(datos.get(6));
+                txt1Multiple.setText(datos.get(1));
+                txt2Multiple.setText(datos.get(2));
+                txt3Multiple.setText(datos.get(3));
+                txt4Multiple.setText(datos.get(4));
+//                cbCorrectas.setSelectedItem(datos.get(5));
+                String[] arregloRespuestas = datos.get(5).split(";");
 
+                if (arregloRespuestas.length == 2) {
+                    cbCorrectas.setSelectedIndex(1);
+                    txt1.setText(arregloRespuestas[0]);
+                    txt2.setText(arregloRespuestas[1]);
+                } else if (arregloRespuestas.length == 3) {
+                    cbCorrectas.setSelectedIndex(2);
+                    txt1.setText(arregloRespuestas[0]);
+                    txt2.setText(arregloRespuestas[1]);
+                    txt3.setText(arregloRespuestas[2]);
+                } else if (arregloRespuestas.length == 4) {
+                    cbCorrectas.setSelectedIndex(3);
+                    txt1.setText(arregloRespuestas[0]);
+                    txt2.setText(arregloRespuestas[1]);
+                    txt3.setText(arregloRespuestas[2]);
+                    txt4.setText(arregloRespuestas[3]);
+                }
+            }
         }
 //
 //        txt1.setEnabled(false);
@@ -782,7 +811,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         dispose();
         new FrmPrincipal().setVisible(true);
-  
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void btnGuardarTemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarTemaActionPerformed
@@ -876,7 +905,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
         opcion2 = txt2Multiple.getText();
         opcion3 = txt3Multiple.getText();
         opcion4 = txt4Multiple.getText();
-        cantidad = cbCorrectas.getSelectedItem()+"";
+        cantidad = cbCorrectas.getSelectedItem() + "";
         opcionesCorrectas = null;
         if ("2".equals(cantidad)) {
             opcionesCorrectas = txt1.getText() + ";" + txt2.getText();
@@ -896,9 +925,9 @@ public class FrmRegistrar extends javax.swing.JFrame {
         }
 
         combo1();
-        
+
 //        
-        
+
     }//GEN-LAST:event_btnGuardarMultipleActionPerformed
 
     private void btnGuardarUnicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarUnicaActionPerformed

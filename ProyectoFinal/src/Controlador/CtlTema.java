@@ -19,6 +19,7 @@ public class CtlTema {
     public static String id = "idTema";
     public static String descripcion = "descripcion";
     
+    
     public CtlTema() {
 
     }
@@ -89,5 +90,10 @@ public class CtlTema {
     public static DefaultComboBoxModel solicitudListarCombo() {
         DAOGenerico DAO = new DAOGenerico();
         return DAO.llenarCombo(tabla, descripcion);
+    }
+    
+    public String solicitudBuscarId(String enunciado) {
+        DAOGenerico preguntaMDAO = new DAOGenerico();
+        return preguntaMDAO.buscarCombo(tabla, id, descripcion, enunciado);
     }
 }

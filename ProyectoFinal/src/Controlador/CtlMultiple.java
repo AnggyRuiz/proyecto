@@ -59,7 +59,7 @@ public class CtlMultiple {
         return modelo;
     }
     
-     public ArrayList solicitudPreguntasM(String enunciado) {
+     public ArrayList solicitudPreguntas(String enunciado) {
         DAOGenerico preguntaMDAO = new DAOGenerico();
         return preguntaMDAO.setPreguntas(enunciado, tabla);
     }
