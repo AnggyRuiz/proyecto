@@ -43,13 +43,15 @@ public class FrmJuego extends javax.swing.JFrame {
         buttonGroup1.add(rdb4);
 
         ArrayList<String> cargarU = controladorUnica.solicitudCargarPreguntas();
+        System.out.println(cargarU);
         ArrayList<String> cargarM = controladorMultiple.solicitudCargarPreguntas();
+        System.out.println(cargarM);
         ArrayList<String> cargarTodo = new ArrayList<>();
         for (int i = 0; i < cargarU.size(); i++) {
             cargarTodo.add(cargarU.get(i));
             cargarTodo.add(cargarM.get(i));
         }
-
+        cargarPreguntas(cargarTodo);
     }
 
     /**
