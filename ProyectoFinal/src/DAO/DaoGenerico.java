@@ -253,8 +253,8 @@ public class DaoGenerico extends Conexion {
         String consulta = " SELECT * FROM " + tabla + " WHERE " + id + " = " + id2;
         super.ejecutarRetorno(consulta);
         try {
-            while (resultadoDB.next()) {
-                for (int i = 0; i < resultadoDB.getMetaData().getColumnCount(); i++) {
+            if (resultadoDB.next()) {
+                for (int i = 1; i < resultadoDB.getMetaData().getColumnCount()-1; i++) {
                     buscar.add(resultadoDB.getString(""));
                 }
             }
