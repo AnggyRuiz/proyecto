@@ -269,7 +269,7 @@ public class FrmUsuario extends javax.swing.JFrame {
         jTabbedPane1.addTab("HISTORIAL", jPanel3);
 
         btnVolverUsuario.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
-        btnVolverUsuario.setText("cerrar sesión");
+        btnVolverUsuario.setText("CERRAR SESIÓN");
         btnVolverUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVolverUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
