@@ -5,6 +5,8 @@
  */
 package Controlador;
 
+import static Controlador.CtlUnica.id;
+import static Controlador.CtlUnica.tabla;
 import DAO.DAOGenerico;
 import Modelo.PreguntaMultiple;
 import com.google.gson.Gson;
@@ -24,6 +26,7 @@ public class CtlMultiple {
     public static String tabla = "preguntamultiple";
     public static String cbID = "idTema";
     public static String cb = "descripcion";
+    public static String id = "idPreguntaMultiple";
 
     public String convertirGson(PreguntaMultiple multiple) {
         Gson gson = new Gson();
@@ -31,9 +34,9 @@ public class CtlMultiple {
         return objeto;
     }
 
-    public boolean solicitudGuardar(String opcion1, String opcion2, String opcion3, String opcion4, String opcionesCorrectas, String enunciado, int tema_idTema) {
+    public boolean solicitudGuardar(String opcion1, String opcion2, String opcion3, String opcion4, String opcionesCorrectas, String enunciado, String idTipo, int tema_idTema) {
 
-        PreguntaMultiple multiple = new PreguntaMultiple(opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, tema_idTema);
+        PreguntaMultiple multiple = new PreguntaMultiple(opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, idTipo, tema_idTema);
         DAOGenerico preguntaMDAO = new DAOGenerico();
         String objeto = convertirGson(multiple);
         return preguntaMDAO.guardar(objeto, tabla);
@@ -49,7 +52,7 @@ public class CtlMultiple {
         DefaultTableModel modelo = new DefaultTableModel();
         String nombreColumnas[] = {"tema", "enunciado"};
         modelo = new DefaultTableModel(new Object[][]{}, nombreColumnas);
-        for (int i = 0; i < num; i+=2) {
+        for (int i = 0; i < num; i += 2) {
             modelo.addRow(new Object[]{
                 buscar.get(i),
                 buscar.get(i + 1)
@@ -58,9 +61,19 @@ public class CtlMultiple {
         }
         return modelo;
     }
-    
-     public ArrayList solicitudPreguntas(String enunciado) {
+
+    public ArrayList solicitudPreguntas(String enunciado) {
         DAOGenerico preguntaMDAO = new DAOGenerico();
         return preguntaMDAO.setPreguntas(enunciado, tabla);
+    }
+
+    public ArrayList solicitudCargarPreguntas() {
+        DAOGenerico preguntaUDAO = new DAOGenerico();
+        return preguntaUDAO.cargarPreguntas(tabla, id);
+    }
+
+    public ArrayList solicitudBuscar(String id2) {
+        DAOGenerico preguntaUDAO = new DAOGenerico();
+        return preguntaUDAO.buscar(tabla, id, id2);
     }
 }

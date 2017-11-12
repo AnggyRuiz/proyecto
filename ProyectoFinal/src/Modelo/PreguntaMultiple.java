@@ -10,21 +10,19 @@ package Modelo;
  * @author Gabriela Machado
  */
 public class PreguntaMultiple {
-    
-    String opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado;
+
+    String opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, idTipo;
     int tema_idTema;
 
-    public PreguntaMultiple(String opcion1, String opcion2, String opcion3, String opcion4, String opcionesCorrectas, String enunciado, int tema_idTema) {
+    public PreguntaMultiple(String opcion1, String opcion2, String opcion3, String opcion4, String opcionesCorrectas, String enunciado, String idTipo, int tema_idTema) {
         this.opcion1 = opcion1;
         this.opcion2 = opcion2;
         this.opcion3 = opcion3;
         this.opcion4 = opcion4;
         this.opcionesCorrectas = opcionesCorrectas;
         this.enunciado = enunciado;
+        this.idTipo = idTipo;
         this.tema_idTema = tema_idTema;
-    }
-
-    public PreguntaMultiple() {
     }
 
     public String getOpcion1() {
@@ -75,6 +73,14 @@ public class PreguntaMultiple {
         this.enunciado = enunciado;
     }
 
+    public String getIdTipo() {
+        return idTipo;
+    }
+
+    public void setIdTipo(String idTipo) {
+        this.idTipo = idTipo;
+    }
+
     public int getTema_idTema() {
         return tema_idTema;
     }
@@ -83,6 +89,4 @@ public class PreguntaMultiple {
         this.tema_idTema = tema_idTema;
     }
 
-    
-    
 }

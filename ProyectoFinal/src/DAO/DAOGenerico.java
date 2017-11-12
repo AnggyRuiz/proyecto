@@ -196,7 +196,7 @@ public class DAOGenerico extends ClsConexion {
 
         try {
             while (resultadoDB.next()) {
-                for (int i = 1; i < resultadoDB.getMetaData().getColumnCount()+1; i++) {
+                for (int i = 1; i < resultadoDB.getMetaData().getColumnCount() + 1; i++) {
                     buscar.add(resultadoDB.getString(i));
                 }
             }
@@ -211,12 +211,12 @@ public class DAOGenerico extends ClsConexion {
 
     public ArrayList setPreguntas(String enunciado, String nombreTabla) {
         ArrayList<String> buscar = new ArrayList<>();
-        String consulta = "SELECT * FROM " + nombreTabla + " WHERE enunciado = '" + enunciado + "'" ;
+        String consulta = "SELECT * FROM " + nombreTabla + " WHERE enunciado = '" + enunciado + "'";
         super.ejecutarRetorno(consulta);
 
         try {
             while (resultadoDB.next()) {
-                for (int i = 1; i < resultadoDB.getMetaData().getColumnCount()+1; i++) {
+                for (int i = 1; i < resultadoDB.getMetaData().getColumnCount() + 1; i++) {
                     buscar.add(resultadoDB.getString(i));
                 }
             }
@@ -228,7 +228,40 @@ public class DAOGenerico extends ClsConexion {
 
         return buscar;
     }
-    
+
+    public ArrayList cargarPreguntas(String tabla, String id) {
+        ArrayList<String> cargar = new ArrayList<>();
+        String consulta = "SELECT" + id + "FROM" + tabla + " ORDER BY RAND() LIMIT";
+        super.ejecutarRetorno(consulta);
+        try {
+            while (resultadoDB.next()) {
+                for (int i = 0; i < resultadoDB.getRow(); i++) {
+                    cargar.add(resultadoDB.getString(id));
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("algo fallo :v");
+        }
+        return cargar;
+    }
+
+    public ArrayList buscar(String tabla, String id, String id2) {
+        ArrayList<String> buscar = new ArrayList<>();
+        String consulta = "SELECT * FROM" + tabla + "WHERE" + id + "=" + id2;
+        super.ejecutarRetorno(consulta);
+        try {
+            if (resultadoDB.next()) {
+                for (int i = 0; i < resultadoDB.getMetaData().getColumnCount(); i++) {
+                    buscar.add(resultadoDB.getString(""));
+                }
+            }
+            
+        } catch (Exception e) {
+            System.out.println("algo fallo :v");
+        }
+        return buscar;
+    }
+
 //    public ArrayList<String> verificarContraseña(String objeto, String tabla, String cb, String cbP, Object contraseña) {
 //        JsonParser parser = new JsonParser();
 //        JsonObject jobject = parser.parse(objeto).getAsJsonObject();

@@ -10,21 +10,19 @@ package Modelo;
  * @author Gabriela Machado
  */
 public class PreguntaUnica {
-    
-    String opcion1, opcion2, opcion3, opcion4, opcionCorrecta, enunciado;
+
+    String opcion1, opcion2, opcion3, opcion4, opcionCorrecta, enunciado, idTipo;
     int Tema_idTema;
 
-    public PreguntaUnica(String opcion1, String opcion2, String opcion3, String opcion4, String opcionCorrecta, String enunciado, int Tema_idTema) {
+    public PreguntaUnica(String opcion1, String opcion2, String opcion3, String opcion4, String opcionCorrecta, String enunciado, String idTipo, int Tema_idTema) {
         this.opcion1 = opcion1;
         this.opcion2 = opcion2;
         this.opcion3 = opcion3;
         this.opcion4 = opcion4;
         this.opcionCorrecta = opcionCorrecta;
         this.enunciado = enunciado;
+        this.idTipo = idTipo;
         this.Tema_idTema = Tema_idTema;
-    }
-
-    public PreguntaUnica() {
     }
 
     public String getOpcion1() {
@@ -75,6 +73,14 @@ public class PreguntaUnica {
         this.enunciado = enunciado;
     }
 
+    public String getIdTipo() {
+        return idTipo;
+    }
+
+    public void setIdTipo(String idTipo) {
+        this.idTipo = idTipo;
+    }
+
     public int getTema_idTema() {
         return Tema_idTema;
     }
@@ -82,5 +88,5 @@ public class PreguntaUnica {
     public void setTema_idTema(int Tema_idTema) {
         this.Tema_idTema = Tema_idTema;
     }
-    
+
 }
