@@ -7,7 +7,7 @@ package Controlador;
 
 import static Controlador.CtlUnica.id;
 import static Controlador.CtlUnica.tabla;
-import DAO.DAOGenerico;
+import DAO.DaoGenerico;
 import Modelo.PreguntaMultiple;
 import com.google.gson.Gson;
 import com.sun.org.apache.bcel.internal.generic.RETURN;
@@ -37,13 +37,13 @@ public class CtlMultiple {
     public boolean solicitudGuardar(String opcion1, String opcion2, String opcion3, String opcion4, String opcionesCorrectas, String enunciado, int tema_idTema, int idTipo) {
 
         PreguntaMultiple multiple = new PreguntaMultiple(opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, tema_idTema, idTipo);
-        DAOGenerico preguntaMDAO = new DAOGenerico();
+        DaoGenerico preguntaMDAO = new DaoGenerico();
         String objeto = convertirGson(multiple);
         return preguntaMDAO.guardar(objeto, tabla);
     }
 
     public ArrayList solicitudBuscarFiltrado(String caracter, String nombreColumna) {
-        DAOGenerico preguntaMDAO = new DAOGenerico();
+        DaoGenerico preguntaMDAO = new DaoGenerico();
         return preguntaMDAO.buscarPreguntas(nombreColumna, tabla, caracter);
     }
 
@@ -63,17 +63,17 @@ public class CtlMultiple {
     }
 
     public ArrayList solicitudPreguntas(String enunciado) {
-        DAOGenerico preguntaMDAO = new DAOGenerico();
+        DaoGenerico preguntaMDAO = new DaoGenerico();
         return preguntaMDAO.setPreguntas(enunciado, tabla);
     }
 
     public ArrayList solicitudCargarPreguntas() {
-        DAOGenerico preguntaUDAO = new DAOGenerico();
+        DaoGenerico preguntaUDAO = new DaoGenerico();
         return preguntaUDAO.cargarPreguntas(tabla, id);
     }
 
     public ArrayList solicitudBuscar(String id2) {
-        DAOGenerico preguntaUDAO = new DAOGenerico();
+        DaoGenerico preguntaUDAO = new DaoGenerico();
         return preguntaUDAO.buscar(tabla, id, id2);
     }
 }

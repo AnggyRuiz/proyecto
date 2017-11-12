@@ -6,7 +6,7 @@
 package Controlador;
 
 import static Controlador.CtlMultiple.tabla;
-import DAO.DAOGenerico;
+import DAO.DaoGenerico;
 import Modelo.PreguntaUnica;
 import com.google.gson.Gson;
 import java.util.ArrayList;
@@ -34,37 +34,37 @@ public class CtlUnica {
     public boolean SolicitudGuardar(String opcion1, String opcion2, String opcion3, String opcion4, String opcionCorrecta, String enunciado, int Tema_idTema, int idTipo) {
 
         PreguntaUnica unica = new PreguntaUnica(opcion1, opcion2, opcion3, opcion4, opcionCorrecta, enunciado, Tema_idTema, idTipo);
-        DAOGenerico usuarioDAO = new DAOGenerico();
+        DaoGenerico usuarioDAO = new DaoGenerico();
         String objeto = convertirGson(unica);
         return usuarioDAO.guardar(objeto, tabla);
     }
 
     public ArrayList solicitudBuscarFiltrado(String caracter, String nombreColumna) {
-        DAOGenerico preguntaUDAO = new DAOGenerico();
+        DaoGenerico preguntaUDAO = new DaoGenerico();
         return preguntaUDAO.buscarPreguntas(nombreColumna, tabla, caracter);
     }
 
     public ArrayList solicitudPreguntas(String enunciado) {
-        DAOGenerico preguntaMDAO = new DAOGenerico();
+        DaoGenerico preguntaMDAO = new DaoGenerico();
         return preguntaMDAO.setPreguntas(enunciado, tabla);
     }
 
     public ArrayList solicitudCargarPreguntas() {
-        DAOGenerico preguntaUDAO = new DAOGenerico();
+        DaoGenerico preguntaUDAO = new DaoGenerico();
         return preguntaUDAO.cargarPreguntas(tabla, id);
     }
 
 //    
 //    public boolean SolicitudModificar(int idTema, String descripcion) {
 //        Tema tema = new Tema(idTema, descripcion);
-//        DAOGenerico temaDAO = new DAOGenerico();
+//        DaoGenerico temaDAO = new DaoGenerico();
 //        String objeto = convertirGson(tema);
 //        return temaDAO.modificar(objeto, tabla);
 //    }
 //    
 //    public boolean SolicitudEliminar(int idTema) {
 //        Tema tema = new Tema();
-//        DAOGenerico temaDAO = new DAOGenerico();
+//        DaoGenerico temaDAO = new DaoGenerico();
 //        String objeto = convertirGson(tema);
 //        return temaDAO.eliminar(objeto, tabla, idTema);
 //    }
@@ -76,7 +76,7 @@ public class CtlUnica {
 //
 //        modelTabla = new DefaultTableModel(new Object[][]{}, nombreColumnas);
 //
-//        DAOGenerico usuarioDAO = new DAOGenerico();
+//        DaoGenerico usuarioDAO = new DaoGenerico();
 //        ResultSet atributos = usuarioDAO.listar(tabla);
 //
 //        try {

@@ -15,7 +15,7 @@ import java.sql.Statement;
  *
  * @author Gabriela Machado
  */
-public class ClsConexion {
+public class Conexion {
     
     protected String driver = "com.mysql.jdbc.Driver"; //nombre del driver
     protected String connectString = "jdbc:mysql://localhost:3306/proyecto"; //ubicacion de la base de datos, para postgres esta es por defecto

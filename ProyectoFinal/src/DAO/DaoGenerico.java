@@ -5,7 +5,7 @@
  */
 package DAO;
 
-import Modelo.ClsConexion;
+import Modelo.Conexion;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import java.sql.ResultSet;
@@ -19,7 +19,7 @@ import javax.swing.DefaultComboBoxModel;
  *
  * @author Gabriela Machado
  */
-public class DAOGenerico extends ClsConexion {
+public class DaoGenerico extends Conexion {
 
     public boolean guardar(String objeto, String tabla) {
         System.out.println(objeto);
