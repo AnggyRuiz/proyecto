@@ -252,6 +252,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
 
         btnGuardarTema.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         btnGuardarTema.setText("GUARDAR");
+        btnGuardarTema.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGuardarTema.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarTemaActionPerformed(evt);
@@ -260,6 +261,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
 
         btnBuscarTema.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         btnBuscarTema.setText("BUSCAR");
+        btnBuscarTema.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBuscarTema.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarTemaActionPerformed(evt);
@@ -268,6 +270,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
 
         btnModificarTema.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         btnModificarTema.setText("MODIFICAR");
+        btnModificarTema.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnModificarTema.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnModificarTemaActionPerformed(evt);
@@ -276,6 +279,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
 
         btnEliminarTema.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         btnEliminarTema.setText("ELIMINAR");
+        btnEliminarTema.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEliminarTema.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarTemaActionPerformed(evt);
@@ -284,6 +288,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jButton1.setText("LIMPIAR");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -307,10 +312,6 @@ public class FrmRegistrar extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(178, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(345, 345, 345))
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
@@ -333,8 +334,11 @@ public class FrmRegistrar extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(btnModificarTema)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnEliminarTema)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(btnEliminarTema))))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(238, 238, 238)
+                        .addComponent(jButton1)))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -353,11 +357,11 @@ public class FrmRegistrar extends javax.swing.JFrame {
                     .addComponent(btnBuscarTema)
                     .addComponent(btnModificarTema)
                     .addComponent(btnEliminarTema))
-                .addGap(29, 29, 29)
+                .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addGap(28, 28, 28)
+                .addGap(32, 32, 32)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("TEMAS", jPanel5);
@@ -429,6 +433,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
 
         btnGuardarMultiple.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         btnGuardarMultiple.setText("GUARDAR");
+        btnGuardarMultiple.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGuardarMultiple.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarMultipleActionPerformed(evt);
@@ -437,6 +442,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
 
         jButton7.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jButton7.setText("BUSCAR");
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -445,6 +451,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
 
         jButton8.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jButton8.setText("MODIFICAR");
+        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -453,9 +460,11 @@ public class FrmRegistrar extends javax.swing.JFrame {
 
         jButton9.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jButton9.setText("ELIMINAR");
+        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton3.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jButton3.setText("LIMPIAR");
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -614,6 +623,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
 
         btnGuardarUnica.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         btnGuardarUnica.setText("GUARDAR");
+        btnGuardarUnica.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGuardarUnica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarUnicaActionPerformed(evt);
@@ -622,6 +632,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
 
         btnBuscarUnica.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         btnBuscarUnica.setText("BUSCAR");
+        btnBuscarUnica.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBuscarUnica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarUnicaActionPerformed(evt);
@@ -630,6 +641,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
 
         jButton4.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jButton4.setText("MODIFICAR");
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -638,12 +650,14 @@ public class FrmRegistrar extends javax.swing.JFrame {
 
         jButton6.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jButton6.setText("ELIMINAR");
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         cbCorrectaUnica.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         cbCorrectaUnica.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una opción correcta", "1", "2", "3", "4" }));
 
         jButton2.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jButton2.setText("LIMPIAR");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -778,6 +792,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
 
         jButton5.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jButton5.setText("VOLVER");
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);

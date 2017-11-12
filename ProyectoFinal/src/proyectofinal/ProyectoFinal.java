@@ -1,6 +1,7 @@
 
 package proyectofinal;
 
+import Vista.FrmInicioJuego;
 import Vista.FrmPrincipal;
 
 /**
@@ -11,7 +12,7 @@ public class ProyectoFinal {
 
     
     public static void main(String[] args) {
-        new FrmPrincipal().setVisible(true);
+        new FrmInicioJuego().setVisible(true);
         // TODO code application logic here
     }
     

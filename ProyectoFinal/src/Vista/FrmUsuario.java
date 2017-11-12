@@ -74,8 +74,6 @@ public class FrmUsuario extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel10 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
         btnVolverUsuario = new javax.swing.JButton();
 
         jTextField2.setText("jTextField2");
@@ -123,6 +121,7 @@ public class FrmUsuario extends javax.swing.JFrame {
 
         btnModificar.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         btnModificar.setText("MODIFICAR");
+        btnModificar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnModificarActionPerformed(evt);
@@ -132,6 +131,7 @@ public class FrmUsuario extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 0, 51));
         jButton2.setText("CANCELAR CUENTA");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -267,35 +267,9 @@ public class FrmUsuario extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("HISTORIAL", jPanel3);
 
-        jButton1.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
-        jButton1.setText("Jugar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(243, 243, 243)
-                .addComponent(jButton1)
-                .addContainerGap(263, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(176, 176, 176)
-                .addComponent(jButton1)
-                .addContainerGap(382, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("JUGAR", jPanel2);
-
         btnVolverUsuario.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         btnVolverUsuario.setText("VOLVER");
+        btnVolverUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVolverUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVolverUsuarioActionPerformed(evt);
@@ -366,11 +340,6 @@ public class FrmUsuario extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnModificarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        dispose();
-        new FrmJuego().setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     public void buscarUsuario(int id) {
 
         ArrayList<String> usuarioB = controladorUsuario.solicitudSet(id);
@@ -429,7 +398,6 @@ public class FrmUsuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnModificar;
     private javax.swing.JButton btnVolverUsuario;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -441,7 +409,6 @@ public class FrmUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;

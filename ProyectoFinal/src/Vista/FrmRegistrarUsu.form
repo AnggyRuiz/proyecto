@@ -209,6 +209,9 @@
           <Color blue="99" green="99" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="VOLVER"/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Cursor de Mano"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVolverActionPerformed"/>
@@ -223,6 +226,9 @@
           <Color blue="99" green="99" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="REGISTRASE"/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Cursor de Mano"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarseActionPerformed"/>

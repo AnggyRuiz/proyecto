@@ -176,12 +176,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="178" max="32767" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="345" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
@@ -210,8 +205,12 @@
                                   </Group>
                               </Group>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="238" max="-2" attributes="0"/>
+                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="85" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -235,11 +234,11 @@
                           <Component id="btnModificarTema" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnEliminarTema" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                       <Component id="jScrollPane4" min="-2" pref="108" max="-2" attributes="0"/>
-                      <EmptySpace pref="109" max="32767" attributes="0"/>
+                      <EmptySpace pref="116" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -281,6 +280,9 @@
                   <Font name="Gill Sans Ultra Bold Condensed" size="18" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="GUARDAR"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Cursor de Mano"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarTemaActionPerformed"/>
@@ -292,6 +294,9 @@
                   <Font name="Gill Sans Ultra Bold Condensed" size="18" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="BUSCAR"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Cursor de Mano"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBuscarTemaActionPerformed"/>
@@ -303,6 +308,9 @@
                   <Font name="Gill Sans Ultra Bold Condensed" size="18" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="MODIFICAR"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Cursor de Mano"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModificarTemaActionPerformed"/>
@@ -314,6 +322,9 @@
                   <Font name="Gill Sans Ultra Bold Condensed" size="18" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="ELIMINAR"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Cursor de Mano"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarTemaActionPerformed"/>
@@ -325,6 +336,9 @@
                   <Font name="Gill Sans Ultra Bold Condensed" size="18" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="LIMPIAR"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Cursor de Mano"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
@@ -731,6 +745,9 @@
                           <Font name="Gill Sans Ultra Bold Condensed" size="18" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="GUARDAR"/>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Cursor de Mano"/>
+                        </Property>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarMultipleActionPerformed"/>
@@ -742,6 +759,9 @@
                           <Font name="Gill Sans Ultra Bold Condensed" size="18" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="BUSCAR"/>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Cursor de Mano"/>
+                        </Property>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton7ActionPerformed"/>
@@ -753,6 +773,9 @@
                           <Font name="Gill Sans Ultra Bold Condensed" size="18" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="MODIFICAR"/>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Cursor de Mano"/>
+                        </Property>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
@@ -764,6 +787,9 @@
                           <Font name="Gill Sans Ultra Bold Condensed" size="18" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="ELIMINAR"/>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Cursor de Mano"/>
+                        </Property>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="jButton3">
@@ -772,6 +798,9 @@
                           <Font name="Gill Sans Ultra Bold Condensed" size="18" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="LIMPIAR"/>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Cursor de Mano"/>
+                        </Property>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
@@ -1020,6 +1049,9 @@
                           <Font name="Gill Sans Ultra Bold Condensed" size="18" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="GUARDAR"/>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Cursor de Mano"/>
+                        </Property>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarUnicaActionPerformed"/>
@@ -1031,6 +1063,9 @@
                           <Font name="Gill Sans Ultra Bold Condensed" size="18" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="BUSCAR"/>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Cursor de Mano"/>
+                        </Property>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBuscarUnicaActionPerformed"/>
@@ -1042,6 +1077,9 @@
                           <Font name="Gill Sans Ultra Bold Condensed" size="18" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="MODIFICAR"/>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Cursor de Mano"/>
+                        </Property>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
@@ -1053,6 +1091,9 @@
                           <Font name="Gill Sans Ultra Bold Condensed" size="18" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="ELIMINAR"/>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Cursor de Mano"/>
+                        </Property>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="cbCorrectaUnica">
@@ -1080,6 +1121,9 @@
                           <Font name="Gill Sans Ultra Bold Condensed" size="18" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="LIMPIAR"/>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Cursor de Mano"/>
+                        </Property>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
@@ -1127,6 +1171,9 @@
           <Font name="Gill Sans Ultra Bold Condensed" size="18" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="VOLVER"/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Cursor de Mano"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>

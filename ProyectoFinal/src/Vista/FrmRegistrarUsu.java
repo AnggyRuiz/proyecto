@@ -103,6 +103,7 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
         btnVolver.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         btnVolver.setForeground(new java.awt.Color(0, 153, 153));
         btnVolver.setText("VOLVER");
+        btnVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVolverActionPerformed(evt);
@@ -112,6 +113,7 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
         btnRegistrarse.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         btnRegistrarse.setForeground(new java.awt.Color(0, 153, 153));
         btnRegistrarse.setText("REGISTRASE");
+        btnRegistrarse.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnRegistrarse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarseActionPerformed(evt);
