@@ -11,18 +11,21 @@ package Modelo;
  */
 public class PreguntaMultiple {
 
-    String opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, idTipo;
-    int tema_idTema;
+    String opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado;
+    int tema_idTema, idTipo;
 
-    public PreguntaMultiple(String opcion1, String opcion2, String opcion3, String opcion4, String opcionesCorrectas, String enunciado, String idTipo, int tema_idTema) {
+    public PreguntaMultiple() {
+    }
+
+    public PreguntaMultiple(String opcion1, String opcion2, String opcion3, String opcion4, String opcionesCorrectas, String enunciado, int tema_idTema, int idTipo) {
         this.opcion1 = opcion1;
         this.opcion2 = opcion2;
         this.opcion3 = opcion3;
         this.opcion4 = opcion4;
         this.opcionesCorrectas = opcionesCorrectas;
         this.enunciado = enunciado;
-        this.idTipo = idTipo;
         this.tema_idTema = tema_idTema;
+        this.idTipo = idTipo;
     }
 
     public String getOpcion1() {
@@ -73,20 +76,20 @@ public class PreguntaMultiple {
         this.enunciado = enunciado;
     }
 
-    public String getIdTipo() {
-        return idTipo;
-    }
-
-    public void setIdTipo(String idTipo) {
-        this.idTipo = idTipo;
-    }
-
     public int getTema_idTema() {
         return tema_idTema;
     }
 
     public void setTema_idTema(int tema_idTema) {
         this.tema_idTema = tema_idTema;
+    }
+
+    public int getIdTipo() {
+        return idTipo;
+    }
+
+    public void setIdTipo(int idTipo) {
+        this.idTipo = idTipo;
     }
 
 }

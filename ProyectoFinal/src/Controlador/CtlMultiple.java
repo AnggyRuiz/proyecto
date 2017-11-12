@@ -34,9 +34,9 @@ public class CtlMultiple {
         return objeto;
     }
 
-    public boolean solicitudGuardar(String opcion1, String opcion2, String opcion3, String opcion4, String opcionesCorrectas, String enunciado, String idTipo, int tema_idTema) {
+    public boolean solicitudGuardar(String opcion1, String opcion2, String opcion3, String opcion4, String opcionesCorrectas, String enunciado, int tema_idTema, int idTipo) {
 
-        PreguntaMultiple multiple = new PreguntaMultiple(opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, idTipo, tema_idTema);
+        PreguntaMultiple multiple = new PreguntaMultiple(opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, tema_idTema, idTipo);
         DAOGenerico preguntaMDAO = new DAOGenerico();
         String objeto = convertirGson(multiple);
         return preguntaMDAO.guardar(objeto, tabla);
