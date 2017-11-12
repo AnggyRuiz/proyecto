@@ -24,6 +24,8 @@ public class FrmJuego extends javax.swing.JFrame {
      */
     CtlUnica controladorUnica = new CtlUnica();
     CtlMultiple controladorMultiple = new CtlMultiple();
+    ArrayList<JPanel> paneles;
+        int indice = 0;
 
     public FrmJuego() {
         initComponents();
@@ -36,7 +38,8 @@ public class FrmJuego extends javax.swing.JFrame {
         JLabel fondo = new JLabel();
         fondo.setIcon(uno);
         getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
-        fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
+        fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());        
+        paneles=new ArrayList<JPanel>();
         buttonGroup1.add(rdb1);
         buttonGroup1.add(rdb2);
         buttonGroup1.add(rdb3);
@@ -84,7 +87,7 @@ public class FrmJuego extends javax.swing.JFrame {
         jCheckBox3 = new javax.swing.JCheckBox();
         jCheckBox4 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
-        jButton2 = new javax.swing.JButton();
+        btnSiguiente1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -92,6 +95,7 @@ public class FrmJuego extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        btnSiguiente2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -189,10 +193,15 @@ public class FrmJuego extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("siguiente");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnSiguiente1.setText("siguiente");
+        btnSiguiente1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                btnSiguiente1ItemStateChanged(evt);
+            }
+        });
+        btnSiguiente1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnSiguiente1ActionPerformed(evt);
             }
         });
 
@@ -233,7 +242,7 @@ public class FrmJuego extends javax.swing.JFrame {
                 .addContainerGap(160, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(btnSiguiente1)
                 .addGap(81, 81, 81))
         );
         jPanel1Layout.setVerticalGroup(
@@ -274,7 +283,7 @@ public class FrmJuego extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jCheckBox4)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(btnSiguiente1)
                 .addContainerGap())
         );
 
@@ -300,6 +309,13 @@ public class FrmJuego extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel13.setText("Opción 4");
 
+        btnSiguiente2.setText("Siguiente");
+        btnSiguiente2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSiguiente2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -320,6 +336,10 @@ public class FrmJuego extends javax.swing.JFrame {
                                 .addComponent(jLabel12)
                                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(172, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnSiguiente2)
+                .addGap(71, 71, 71))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -336,7 +356,9 @@ public class FrmJuego extends javax.swing.JFrame {
                 .addComponent(jLabel12)
                 .addGap(29, 29, 29)
                 .addComponent(jLabel13)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnSiguiente2)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("2", jPanel2);
@@ -885,11 +907,20 @@ public class FrmJuego extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_rdb2ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnSiguiente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguiente1ActionPerformed
         // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
+        jPanel2.setVisible(true);
+    }//GEN-LAST:event_btnSiguiente1ActionPerformed
 
+    private void btnSiguiente2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguiente2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSiguiente2ActionPerformed
+
+    private void btnSiguiente1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_btnSiguiente1ItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSiguiente1ItemStateChanged
+
+    
     /**
      * @param args the command line arguments
      */
@@ -929,10 +960,11 @@ public class FrmJuego extends javax.swing.JFrame {
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnSiguiente1;
+    private javax.swing.JButton btnSiguiente2;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
