@@ -1,7 +1,7 @@
 
 package Controlador;
 
-import DAO.DaoGenericoo;
+import DAO.DAOGenerico;
 import Modelo.Tema;
 import com.google.gson.Gson;
 import java.sql.ResultSet;
@@ -33,7 +33,7 @@ public class CtlTema {
     public boolean SolicitudGuardar(int idTema, String descripcion) {
 
         Tema tema = new Tema(idTema, descripcion);
-        DaoGenericoo usuarioDAO = new DaoGenericoo();
+        DAOGenerico usuarioDAO = new DAOGenerico();
         String objeto = convertirGson(tema);
         return usuarioDAO.guardar(objeto, tabla);
     }
@@ -41,21 +41,21 @@ public class CtlTema {
     public ArrayList<String> SolicitudBuscar(int idTema) {
         
         Tema tema = new Tema(idTema, "");
-        DaoGenericoo temaDAO = new DaoGenericoo();
+        DAOGenerico temaDAO = new DAOGenerico();
         String objeto = convertirGson(tema);
         return temaDAO.buscar1(objeto, tabla, idTema);
     }
     
     public boolean SolicitudModificar(int idTema, String descripcion) {
         Tema tema = new Tema(idTema, descripcion);
-        DaoGenericoo temaDAO = new DaoGenericoo();
+        DAOGenerico temaDAO = new DAOGenerico();
         String objeto = convertirGson(tema);
         return temaDAO.modificar(objeto, tabla);
     }
     
     public boolean SolicitudEliminar(int idTema) {
         Tema tema = new Tema();
-        DaoGenericoo temaDAO = new DaoGenericoo();
+        DAOGenerico temaDAO = new DAOGenerico();
         String objeto = convertirGson(tema);
         return temaDAO.eliminar(objeto, tabla, idTema);
     }
@@ -67,7 +67,7 @@ public class CtlTema {
 
         modelTabla = new DefaultTableModel(new Object[][]{}, nombreColumnas);
 
-        DaoGenericoo usuarioDAO = new DaoGenericoo();
+        DAOGenerico usuarioDAO = new DAOGenerico();
         ResultSet atributos = usuarioDAO.listar(tabla);
 
         try {
@@ -83,17 +83,17 @@ public class CtlTema {
     }
     
     public String buscaValor(String nombre) {
-        DaoGenericoo DAO = new DaoGenericoo();
+        DAOGenerico DAO = new DAOGenerico();
         return DAO.buscarCombo(tabla, descripcion, id, nombre);
     }
     
     public static DefaultComboBoxModel solicitudListarCombo() {
-        DaoGenericoo DAO = new DaoGenericoo();
+        DAOGenerico DAO = new DAOGenerico();
         return DAO.llenarCombo(tabla, descripcion);
     }
     
     public String solicitudBuscarId(String enunciado) {
-        DaoGenericoo preguntaMDAO = new DaoGenericoo();
+        DAOGenerico preguntaMDAO = new DAOGenerico();
         return preguntaMDAO.buscarCombo(tabla, id, descripcion, enunciado);
     }
 }

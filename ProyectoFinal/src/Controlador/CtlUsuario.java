@@ -5,7 +5,7 @@
  */
 package Controlador;
 
-import DAO.DaoGenericoo;
+import DAO.DAOGenerico;
 import Modelo.Usuario;
 import com.google.gson.Gson;
 import java.util.ArrayList;
@@ -33,40 +33,40 @@ public class CtlUsuario {
     public boolean SolicitudGuardar(int codigo, String password, String nombre, String nombreUsuario, String correo, String telefono, String tipoUsuario, String semestre) {
 
         Usuario usuario = new Usuario(codigo, password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre);
-        DaoGenericoo usuarioDAO = new DaoGenericoo();
+        DAOGenerico usuarioDAO = new DAOGenerico();
         String objeto = convertirGson(usuario);
         return usuarioDAO.guardar(objeto, tabla);
     }
 
     public String solicitudVerificarUsuario(String nombre) {
-        DaoGenericoo DAO = new DaoGenericoo();
+        DAOGenerico DAO = new DAOGenerico();
         return DAO.VerificarUsuario(tabla, cb, nombre);
     }
 
     public ArrayList<String> solicitudVerificarContraseñaUsuario(String password) {
         Usuario usuario = new Usuario(0, password, "", "", "", "", "", "");
-        DaoGenericoo usuarioDAO = new DaoGenericoo();
+        DAOGenerico usuarioDAO = new DAOGenerico();
         String objeto = convertirGson(usuario);
         return usuarioDAO.buscar1(objeto, tabla, password);
     }
 
     public ArrayList<String> solicitudSet(int idUsu) {
         Usuario usuario = new Usuario(idUsu, "", "", "", "", "", "", "");
-        DaoGenericoo usuarioDAO = new DaoGenericoo();
+        DAOGenerico usuarioDAO = new DAOGenerico();
         String objeto = convertirGson(usuario);
         return usuarioDAO.buscar1(objeto, tabla, idUsu);
     }
 
     public boolean SolicitudModificar(int codigo, String password, String nombre, String nombreUsuario, String correo, String telefono, String tipoUsuario, String semestre) {
         Usuario usuario = new Usuario(codigo, password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre);
-        DaoGenericoo usuarioDAO = new DaoGenericoo();
+        DAOGenerico usuarioDAO = new DAOGenerico();
         String objeto = convertirGson(usuario);
         return usuarioDAO.modificar(objeto, tabla);
     }
 
     public boolean SolicitudEliminar(int cedulaUsuario) {
         Usuario usuario = new Usuario();
-        DaoGenericoo usuarioDAO = new DaoGenericoo();
+        DAOGenerico usuarioDAO = new DAOGenerico();
         String objeto = convertirGson(usuario);
         return usuarioDAO.eliminar(objeto, tabla, cedulaUsuario);
     }
