@@ -6,7 +6,7 @@
 package Controlador;
 
 import static Controlador.CtlMultiple.tabla;
-import DAO.DAOGenerico;
+import DAO.DaoGenericoo;
 import Modelo.PreguntaUnica;
 import com.google.gson.Gson;
 import java.util.ArrayList;
@@ -34,23 +34,23 @@ public class CtlUnica {
     public boolean SolicitudGuardar(String opcion1, String opcion2, String opcion3, String opcion4, String opcionCorrecta, String enunciado, int Tema_idTema, int idTipo) {
 
         PreguntaUnica unica = new PreguntaUnica(opcion1, opcion2, opcion3, opcion4, opcionCorrecta, enunciado, Tema_idTema, idTipo);
-        DAOGenerico usuarioDAO = new DAOGenerico();
+        DaoGenericoo usuarioDAO = new DaoGenericoo();
         String objeto = convertirGson(unica);
         return usuarioDAO.guardar(objeto, tabla);
     }
 
     public ArrayList solicitudBuscarFiltrado(String caracter, String nombreColumna) {
-        DAOGenerico preguntaUDAO = new DAOGenerico();
+        DaoGenericoo preguntaUDAO = new DaoGenericoo();
         return preguntaUDAO.buscarPreguntas(nombreColumna, tabla, caracter);
     }
 
     public ArrayList solicitudPreguntas(String enunciado) {
-        DAOGenerico preguntaMDAO = new DAOGenerico();
+        DaoGenericoo preguntaMDAO = new DaoGenericoo();
         return preguntaMDAO.setPreguntas(enunciado, tabla);
     }
 
     public ArrayList solicitudCargarPreguntas() {
-        DAOGenerico preguntaUDAO = new DAOGenerico();
+        DaoGenericoo preguntaUDAO = new DaoGenericoo();
         return preguntaUDAO.cargarPreguntas(tabla, id);
     }
 
