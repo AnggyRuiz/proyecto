@@ -128,6 +128,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTableTema = new javax.swing.JTable();
+        jLabel20 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jTabbedPane5 = new javax.swing.JTabbedPane();
         jPanel8 = new javax.swing.JPanel();
@@ -241,10 +242,10 @@ public class FrmRegistrar extends javax.swing.JFrame {
         jPanel5.setOpaque(false);
 
         jLabel1.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
-        jLabel1.setText("CÓDIGO:");
+        jLabel1.setText("CÓDIGO DEL TEMA:");
 
         jLabel2.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
-        jLabel2.setText("NOMBRE:");
+        jLabel2.setText("NOMBRE DEL TEMA:");
 
         txtCodigoTema.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
@@ -295,6 +296,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
             }
         });
 
+        jTableTema.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
         jTableTema.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -308,6 +310,9 @@ public class FrmRegistrar extends javax.swing.JFrame {
         ));
         jScrollPane4.setViewportView(jTableTema);
 
+        jLabel20.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel20.setText("TEMAS CREADOS:");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -315,14 +320,14 @@ public class FrmRegistrar extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
+                        .addGap(74, 74, 74)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2))
-                        .addGap(78, 78, 78)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtNombreTema, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
-                            .addComponent(txtCodigoTema)))
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1))
+                        .addGap(59, 59, 59)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNombreTema, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCodigoTema, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(53, 53, 53)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -334,11 +339,12 @@ public class FrmRegistrar extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(btnModificarTema)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnEliminarTema))))
+                                .addComponent(btnEliminarTema))
+                            .addComponent(jLabel20)))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(238, 238, 238)
                         .addComponent(jButton1)))
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -359,9 +365,11 @@ public class FrmRegistrar extends javax.swing.JFrame {
                     .addComponent(btnEliminarTema))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addGap(32, 32, 32)
+                .addGap(43, 43, 43)
+                .addComponent(jLabel20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("TEMAS", jPanel5);
@@ -373,18 +381,18 @@ public class FrmRegistrar extends javax.swing.JFrame {
         jPanel8.setOpaque(false);
 
         jLabel12.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
-        jLabel12.setText("TEMA:");
+        jLabel12.setText("TEMA DE LA PREGUNTA:");
 
         jLabel13.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
-        jLabel13.setText("ENUNCIADO:");
+        jLabel13.setText("ENUNCIADO PREGUNTA:");
 
         jLabel14.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
-        jLabel14.setText("OPCIONES:");
+        jLabel14.setText("OPCIONES DE RESPUESTA:");
 
         jLabel15.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
         jLabel15.setText("OPCIONES CORRECTAS:");
 
-        cbTemaMultiple.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        cbTemaMultiple.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
         cbTemaMultiple.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione un tema" }));
 
         txtEnunciadoMultiple.setColumns(20);
@@ -405,7 +413,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
             }
         });
 
-        cbCorrectas.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        cbCorrectas.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
         cbCorrectas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione el número de opciones correctas", "2", "3", "4" }));
         cbCorrectas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -478,6 +486,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton3)
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addComponent(btnGuardarMultiple)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -485,8 +494,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton9))
-                    .addComponent(jButton3))
+                        .addComponent(jButton9)))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(71, 71, 71)
@@ -504,15 +512,16 @@ public class FrmRegistrar extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(32, 32, 32)
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addGap(33, 33, 33)
                                 .addComponent(txt2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(txt3, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txt4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(29, 29, 29)
+                                .addComponent(txt4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(16, 16, 16))
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel16)
@@ -521,7 +530,6 @@ public class FrmRegistrar extends javax.swing.JFrame {
                                     .addComponent(jLabel19))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(cbCorrectas, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(txt2Multiple)
                                     .addGroup(jPanel8Layout.createSequentialGroup()
                                         .addGap(0, 0, Short.MAX_VALUE)
@@ -529,8 +537,9 @@ public class FrmRegistrar extends javax.swing.JFrame {
                                     .addGroup(jPanel8Layout.createSequentialGroup()
                                         .addComponent(txt3Multiple, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, Short.MAX_VALUE))
-                                    .addComponent(txt4Multiple))))
-                        .addContainerGap(64, Short.MAX_VALUE))))
+                                    .addComponent(txt4Multiple)))
+                            .addComponent(cbCorrectas, 0, 0, Short.MAX_VALUE))
+                        .addContainerGap(45, Short.MAX_VALUE))))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -590,13 +599,13 @@ public class FrmRegistrar extends javax.swing.JFrame {
         jPanel7.setOpaque(false);
 
         jLabel3.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
-        jLabel3.setText("TEMA:");
+        jLabel3.setText("TEMA DE LA PREGUNTA:");
 
         jLabel4.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
-        jLabel4.setText("ENUNCIADO:");
+        jLabel4.setText("ENUNCIADO PREGUNTA:");
 
         jLabel6.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
-        jLabel6.setText("OPCIONES:");
+        jLabel6.setText("OPCIONES DE REPUESTA:");
 
         jLabel7.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
         jLabel7.setText("OPCIÓN CORRECTA:");
@@ -613,8 +622,13 @@ public class FrmRegistrar extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
         jLabel11.setText("4.");
 
-        cbTemaUnica.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        cbTemaUnica.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una opción" }));
+        cbTemaUnica.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        cbTemaUnica.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione un tema" }));
+        cbTemaUnica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbTemaUnicaActionPerformed(evt);
+            }
+        });
 
         txtEnunciadoUnica.setColumns(20);
         txtEnunciadoUnica.setFont(new java.awt.Font("Monospaced", 0, 24)); // NOI18N
@@ -652,7 +666,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
         jButton6.setText("ELIMINAR");
         jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        cbCorrectaUnica.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        cbCorrectaUnica.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
         cbCorrectaUnica.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una opción correcta", "1", "2", "3", "4" }));
 
         jButton2.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
@@ -676,83 +690,75 @@ public class FrmRegistrar extends javax.swing.JFrame {
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel3))
-                                .addGap(116, 116, 116)
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
-                                    .addComponent(cbTemaUnica, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton2)
-                                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(jPanel7Layout.createSequentialGroup()
-                                            .addComponent(btnGuardarUnica)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(btnBuscarUnica)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jButton4)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(jButton6))))
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
-                        .addGap(205, 205, 205)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel8)
                             .addComponent(jLabel10)
-                            .addComponent(jLabel11))
-                        .addGap(36, 36, 36)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt4Unica)
-                            .addComponent(txt1Unica)
-                            .addComponent(txt2Unica)
-                            .addComponent(txt3Unica)
-                            .addComponent(cbCorrectaUnica, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(30, 30, 30))
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(jLabel6)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel8))
+                        .addGap(305, 305, 305))
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jButton2)
+                        .addGroup(jPanel7Layout.createSequentialGroup()
+                            .addComponent(btnGuardarUnica)
+                            .addGap(18, 18, 18)
+                            .addComponent(btnBuscarUnica)
+                            .addGap(18, 18, 18)
+                            .addComponent(jButton4)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jButton6))
+                        .addGroup(jPanel7Layout.createSequentialGroup()
+                            .addGap(28, 28, 28)
+                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel7Layout.createSequentialGroup()
+                                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel4)
+                                        .addComponent(jLabel3)
+                                        .addComponent(jLabel7))
+                                    .addGap(65, 65, 65)
+                                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(cbCorrectaUnica, 0, 274, Short.MAX_VALUE)
+                                        .addComponent(txt1Unica)
+                                        .addComponent(txt2Unica)
+                                        .addComponent(txt3Unica)
+                                        .addComponent(txt4Unica)
+                                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(cbTemaUnica, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 269, Short.MAX_VALUE))))
+                                .addComponent(jLabel6)))))
+                .addGap(30, 49, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(21, 21, 21)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(cbTemaUnica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
+                .addGap(29, 29, 29)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(1, 1, 1)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
+                        .addComponent(jLabel8)
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txt2Unica, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9))
-                        .addGap(19, 19, 19)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt3Unica, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel10)))
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txt1Unica, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel8)))
-                .addGap(6, 6, 6)
+                            .addComponent(jLabel9)
+                            .addComponent(txt2Unica, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(txt1Unica, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(txt3Unica, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txt4Unica, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11))
                 .addGap(18, 18, 18)
@@ -765,7 +771,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
                     .addComponent(btnBuscarUnica)
                     .addComponent(jButton4)
                     .addComponent(jButton6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(31, 31, 31)
                 .addComponent(jButton2)
                 .addGap(114, 114, 114))
         );
@@ -784,8 +790,8 @@ public class FrmRegistrar extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 558, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addComponent(jTabbedPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("PREGUNTAS", jPanel6);
@@ -1028,6 +1034,10 @@ public class FrmRegistrar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void cbTemaUnicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTemaUnicaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbTemaUnicaActionPerformed
+
     public void combo1() {
         cbTemaUnica.setModel(CtlTema.solicitudListarCombo());
         cbTemaMultiple.setModel(CtlTema.solicitudListarCombo());
@@ -1106,6 +1116,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
