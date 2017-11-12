@@ -42,11 +42,11 @@ public class FrmJuego extends javax.swing.JFrame {
         buttonGroup1.add(rdb3);
         buttonGroup1.add(rdb4);
 
-        ArrayList<String> cargarU = controladorUnica.solicitudCargarPreguntas();
+        ArrayList<Integer> cargarU = controladorUnica.solicitudCargarPreguntas();
         System.out.println(cargarU);
-        ArrayList<String> cargarM = controladorMultiple.solicitudCargarPreguntas();
+        ArrayList<Integer> cargarM = controladorMultiple.solicitudCargarPreguntas();
         System.out.println(cargarM);
-        ArrayList<String> cargarTodo = new ArrayList<>();
+        ArrayList<Integer> cargarTodo = new ArrayList<Integer>();
         for (int i = 0; i < cargarU.size(); i++) {
             cargarTodo.add(cargarU.get(i));
             cargarTodo.add(cargarM.get(i));
@@ -72,10 +72,10 @@ public class FrmJuego extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         lblEnunciado = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        lbl1 = new javax.swing.JLabel();
+        lbl2 = new javax.swing.JLabel();
+        lbl3 = new javax.swing.JLabel();
+        lbl4 = new javax.swing.JLabel();
         rdb1 = new javax.swing.JRadioButton();
         rdb3 = new javax.swing.JRadioButton();
         rdb4 = new javax.swing.JRadioButton();
@@ -170,17 +170,17 @@ public class FrmJuego extends javax.swing.JFrame {
         lblEnunciado.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         lblEnunciado.setText("Enunciado");
 
-        jLabel4.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
-        jLabel4.setText("Opción 1");
+        lbl1.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
+        lbl1.setText("Opción 1");
 
-        jLabel5.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
-        jLabel5.setText("Opción 2");
+        lbl2.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
+        lbl2.setText("Opción 2");
 
-        jLabel6.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
-        jLabel6.setText("Opción 3");
+        lbl3.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
+        lbl3.setText("Opción 3");
 
-        jLabel7.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
-        jLabel7.setText("Opción 4");
+        lbl4.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
+        lbl4.setText("Opción 4");
 
         rdb2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,10 +216,10 @@ public class FrmJuego extends javax.swing.JFrame {
                                 .addComponent(rdb3)))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(lbl3)
+                            .addComponent(lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl4, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(lblEnunciado, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addContainerGap(160, Short.MAX_VALUE))
@@ -230,13 +230,13 @@ public class FrmJuego extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
+                        .addComponent(lbl1)
                         .addGap(28, 28, 28)
-                        .addComponent(jLabel5)
+                        .addComponent(lbl2)
                         .addGap(38, 38, 38)
-                        .addComponent(jLabel6)
+                        .addComponent(lbl3)
                         .addGap(29, 29, 29)
-                        .addComponent(jLabel7))
+                        .addComponent(lbl4))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addGap(18, 18, 18)
@@ -874,18 +874,37 @@ public class FrmJuego extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public void cargarPreguntas(ArrayList<String> cargarT) {
+    public void cargarPreguntas(ArrayList<Integer> cargarT) {
         for (int i = 0; i < cargarT.size(); i++) {
-            ArrayList<String> pregunta = controladorMultiple.solicitudBuscar(cargarT.get(i));
+            System.out.println("entra");
+            ArrayList<String> pregunta = controladorMultiple.SolicitudBuscar(cargarT.get(i));
+            System.out.println(cargarT);
+            System.out.println(pregunta);
+
             if (pregunta.get(8).equals("1")) {
                 jCheckBox1.setVisible(false);
                 jCheckBox2.setVisible(false);
                 jCheckBox3.setVisible(false);
                 jCheckBox4.setVisible(false);
                 lblEnunciado.setText(pregunta.get(6));
-                
-            } else {
-                
+                lbl1.setText(pregunta.get(1));
+                lbl2.setText(pregunta.get(2));
+                lbl3.setText(pregunta.get(3));
+                lbl4.setText(pregunta.get(4));
+
+            } else if (pregunta.get(8).equals("2")) {
+                rdb1.setVisible(false);
+                rdb2.setVisible(false);
+                rdb3.setVisible(false);
+                rdb4.setVisible(false);
+                lblEnunciado.setText(pregunta.get(6));
+                lbl1.setText(pregunta.get(1));
+                lbl2.setText(pregunta.get(2));
+                lbl3.setText(pregunta.get(3));
+                lbl4.setText(pregunta.get(4));
+            }
+            {
+
             }
 
         }
@@ -930,7 +949,6 @@ public class FrmJuego extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
@@ -941,7 +959,6 @@ public class FrmJuego extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
@@ -952,10 +969,8 @@ public class FrmJuego extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
@@ -970,6 +985,10 @@ public class FrmJuego extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel lbl1;
+    private javax.swing.JLabel lbl2;
+    private javax.swing.JLabel lbl3;
+    private javax.swing.JLabel lbl4;
     private javax.swing.JLabel lblEnunciado;
     private javax.swing.JRadioButton rdb1;
     private javax.swing.JRadioButton rdb2;

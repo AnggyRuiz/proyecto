@@ -232,13 +232,13 @@ public class DaoGenerico extends Conexion {
     }
 
     public ArrayList cargarPreguntas(String tabla, String id) {
-        ArrayList<String> cargar = new ArrayList<>();
+        ArrayList<Integer> cargar = new ArrayList<>();
         String consulta = " SELECT " + id + " FROM " + tabla + " ORDER BY RAND() LIMIT 5";
         super.ejecutarRetorno(consulta);
         try {
             while (resultadoDB.next()) {
                 for (int i = 1; i < resultadoDB.getMetaData().getColumnCount() + 1; i++) {
-                    cargar.add(resultadoDB.getString(id));
+                    cargar.add(resultadoDB.getInt(id));
                 }
             }
         } catch (Exception e) {
@@ -252,13 +252,13 @@ public class DaoGenerico extends Conexion {
         ArrayList<String> buscar = new ArrayList<>();
         String consulta = " SELECT * FROM " + tabla + " WHERE " + id + " = " + id2;
         super.ejecutarRetorno(consulta);
+
         try {
             if (resultadoDB.next()) {
-                for (int i = 1; i < resultadoDB.getMetaData().getColumnCount()-1; i++) {
-                    buscar.add(resultadoDB.getString(""));
+                for (int i = 0; i < resultadoDB.getRow(); i++) {
+                    buscar.add(resultadoDB.getString(id));
                 }
             }
-
         } catch (Exception e) {
             System.out.println("algo fallo :v");
             System.out.println(consulta);

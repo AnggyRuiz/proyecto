@@ -912,7 +912,8 @@ public class FrmRegistrar extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnGuardarMultipleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarMultipleActionPerformed
-        int idTema;
+        int idTema, id ;
+        id = 0;
         String opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, cantidad;
         String tema = cbTemaMultiple.getSelectedItem() + "";
         idTema = Integer.parseInt(controladorTema.buscaValor(tema));
@@ -931,7 +932,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
         }
         enunciado = txtEnunciadoMultiple.getText();
 
-        if (controladorMultiple.solicitudGuardar(opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, idTema, 2)) {
+        if (controladorMultiple.solicitudGuardar(id, opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, idTema, 2)) {
             JOptionPane.showMessageDialog(null, "se ha registrado la pregunta");
             listar();
 //            limpiar();

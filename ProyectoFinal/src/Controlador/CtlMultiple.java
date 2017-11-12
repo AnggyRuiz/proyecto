@@ -34,9 +34,9 @@ public class CtlMultiple {
         return objeto;
     }
 
-    public boolean solicitudGuardar(String opcion1, String opcion2, String opcion3, String opcion4, String opcionesCorrectas, String enunciado, int tema_idTema, int idTipo) {
+    public boolean solicitudGuardar(int idPreguntaMultiple, String opcion1, String opcion2, String opcion3, String opcion4, String opcionesCorrectas, String enunciado, int tema_idTema, int idTipo) {
 
-        PreguntaMultiple multiple = new PreguntaMultiple(opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, tema_idTema, idTipo);
+        PreguntaMultiple multiple = new PreguntaMultiple(idPreguntaMultiple, opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, tema_idTema, idTipo);
         DaoGenerico preguntaMDAO = new DaoGenerico();
         String objeto = convertirGson(multiple);
         return preguntaMDAO.guardar(objeto, tabla);
@@ -72,8 +72,10 @@ public class CtlMultiple {
         return preguntaUDAO.cargarPreguntas(tabla, id);
     }
 
-    public ArrayList solicitudBuscar(String id2) {
-        DaoGenerico preguntaUDAO = new DaoGenerico();
-        return preguntaUDAO.buscar(tabla, id, id2);
+    public ArrayList<String> SolicitudBuscar(int idPreguntaM) {
+        PreguntaMultiple preguntaM = new PreguntaMultiple(idPreguntaM, "", "", "", "", "", "", 0, 0);
+        DaoGenerico temaDAO = new DaoGenerico();
+        String objeto = convertirGson(preguntaM);
+        return temaDAO.buscar1(objeto, tabla, idPreguntaM);
     }
 }
