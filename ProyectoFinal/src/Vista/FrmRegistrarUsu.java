@@ -131,6 +131,7 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
         });
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 0, 0));
         jLabel9.setText("La contraseña será su código");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
