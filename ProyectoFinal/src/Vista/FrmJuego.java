@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -25,7 +26,8 @@ public class FrmJuego extends javax.swing.JFrame {
     CtlUnica controladorUnica = new CtlUnica();
     CtlMultiple controladorMultiple = new CtlMultiple();
     ArrayList<JPanel> paneles;
-    int indice = 0;
+    int cont = 0;
+    ArrayList<Integer> cargarTodo = new ArrayList<Integer>();
 
     public FrmJuego() {
         initComponents();
@@ -49,11 +51,11 @@ public class FrmJuego extends javax.swing.JFrame {
         System.out.println(cargarU);
         ArrayList<Integer> cargarM = controladorMultiple.solicitudCargarPreguntas();
         System.out.println(cargarM);
-        ArrayList<Integer> cargarTodo = new ArrayList<Integer>();
         for (int i = 0; i < cargarU.size(); i++) {
             cargarTodo.add(cargarU.get(i));
             cargarTodo.add(cargarM.get(i));
         }
+        System.out.println(cargarTodo);
         cargarPreguntas(cargarTodo);
     }
 
@@ -279,6 +281,9 @@ public class FrmJuego extends javax.swing.JFrame {
 
     private void btnSiguiente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguiente1ActionPerformed
         // TODO add your handling code here:
+        cargarPreguntas(cargarTodo);
+
+
     }//GEN-LAST:event_btnSiguiente1ActionPerformed
 
     private void btnSiguiente1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_btnSiguiente1ItemStateChanged
@@ -293,17 +298,28 @@ public class FrmJuego extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public void cargarPreguntas(ArrayList<Integer> cargarT) {
-        for (int i = 0; i < cargarT.size(); i++) {
-            System.out.println("entra");
-            ArrayList<String> pregunta = controladorMultiple.SolicitudBuscar(cargarT.get(i));
-            System.out.println(cargarT);
-            System.out.println(pregunta);
+        System.out.println("entra");
+        ArrayList<String> pregunta = null;
+        if (cont < 10) {
+            int calc = cont % 2;
+            
+            if (calc == 0) {
+                pregunta = controladorUnica.SolicitudBuscarU(cargarT.get(cont));
+            } else {
+                pregunta = controladorMultiple.SolicitudBuscarM(cargarT.get(cont));
 
+            }
+            cont++;
             if (pregunta.get(8).equals("1")) {
+                System.out.println("aca es unica");
                 jCheckBox1.setVisible(false);
                 jCheckBox2.setVisible(false);
                 jCheckBox3.setVisible(false);
                 jCheckBox4.setVisible(false);
+                rdb1.setVisible(true);
+                rdb2.setVisible(true);
+                rdb3.setVisible(true);
+                rdb4.setVisible(true);
                 lblEnunciado.setText(pregunta.get(6));
                 lbl1.setText(pregunta.get(1));
                 lbl2.setText(pregunta.get(2));
@@ -311,6 +327,10 @@ public class FrmJuego extends javax.swing.JFrame {
                 lbl4.setText(pregunta.get(4));
 
             } else if (pregunta.get(8).equals("2")) {
+                jCheckBox1.setVisible(true);
+                jCheckBox2.setVisible(true);
+                jCheckBox3.setVisible(true);
+                jCheckBox4.setVisible(true);
                 rdb1.setVisible(false);
                 rdb2.setVisible(false);
                 rdb3.setVisible(false);
@@ -320,12 +340,12 @@ public class FrmJuego extends javax.swing.JFrame {
                 lbl2.setText(pregunta.get(2));
                 lbl3.setText(pregunta.get(3));
                 lbl4.setText(pregunta.get(4));
-            }
-            {
 
             }
-
+        } else {
+            JOptionPane.showMessageDialog(null, "ya ha completado sus 10 preguntas, termine el juego");
         }
+
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSiguiente1;

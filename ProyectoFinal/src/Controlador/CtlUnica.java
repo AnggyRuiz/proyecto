@@ -33,7 +33,7 @@ public class CtlUnica {
 
     public boolean SolicitudGuardar(String opcion1, String opcion2, String opcion3, String opcion4, String opcionCorrecta, String enunciado, int Tema_idTema, int idTipo) {
 
-        PreguntaUnica unica = new PreguntaUnica(opcion1, opcion2, opcion3, opcion4, opcionCorrecta, enunciado, Tema_idTema, idTipo);
+        PreguntaUnica unica = new PreguntaUnica(idTipo, opcion1, opcion2, opcion3, opcion4, opcionCorrecta, enunciado, Tema_idTema, idTipo);
         DaoGenerico usuarioDAO = new DaoGenerico();
         String objeto = convertirGson(unica);
         return usuarioDAO.guardar(objeto, tabla);
@@ -52,6 +52,13 @@ public class CtlUnica {
     public ArrayList solicitudCargarPreguntas() {
         DaoGenerico preguntaUDAO = new DaoGenerico();
         return preguntaUDAO.cargarPreguntas(tabla, id);
+    }
+
+    public ArrayList<String> SolicitudBuscarU(int idPreguntaM) {
+        PreguntaUnica preguntaU = new PreguntaUnica(idPreguntaM, "", "", "", "", "", "", 0, 0);
+        DaoGenerico temaDAO = new DaoGenerico();
+        String objeto = convertirGson(preguntaU);
+        return temaDAO.buscar1(objeto, tabla, idPreguntaM);
     }
 
 //    

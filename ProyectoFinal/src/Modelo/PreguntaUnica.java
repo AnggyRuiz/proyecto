@@ -11,13 +11,15 @@ package Modelo;
  */
 public class PreguntaUnica {
 
+    int idPreguntaUnica;
     String opcion1, opcion2, opcion3, opcion4, opcionCorrecta, enunciado;
     int Tema_idTema, idTipo;
 
     public PreguntaUnica() {
     }
 
-    public PreguntaUnica(String opcion1, String opcion2, String opcion3, String opcion4, String opcionCorrecta, String enunciado, int Tema_idTema, int idTipo) {
+    public PreguntaUnica(int idPreguntaUnica, String opcion1, String opcion2, String opcion3, String opcion4, String opcionCorrecta, String enunciado, int Tema_idTema, int idTipo) {
+        this.idPreguntaUnica = idPreguntaUnica;
         this.opcion1 = opcion1;
         this.opcion2 = opcion2;
         this.opcion3 = opcion3;
@@ -26,6 +28,14 @@ public class PreguntaUnica {
         this.enunciado = enunciado;
         this.Tema_idTema = Tema_idTema;
         this.idTipo = idTipo;
+    }
+
+    public int getIdPreguntaUnica() {
+        return idPreguntaUnica;
+    }
+
+    public void setIdPreguntaUnica(int idPreguntaUnica) {
+        this.idPreguntaUnica = idPreguntaUnica;
     }
 
     public String getOpcion1() {

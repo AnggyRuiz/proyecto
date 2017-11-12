@@ -9,6 +9,7 @@ import static Controlador.CtlUnica.id;
 import static Controlador.CtlUnica.tabla;
 import DAO.DaoGenerico;
 import Modelo.PreguntaMultiple;
+import Modelo.PreguntaUnica;
 import com.google.gson.Gson;
 import com.sun.org.apache.bcel.internal.generic.RETURN;
 import java.util.ArrayList;
@@ -72,10 +73,11 @@ public class CtlMultiple {
         return preguntaUDAO.cargarPreguntas(tabla, id);
     }
 
-    public ArrayList<String> SolicitudBuscar(int idPreguntaM) {
+    public ArrayList<String> SolicitudBuscarM(int idPreguntaM) {
         PreguntaMultiple preguntaM = new PreguntaMultiple(idPreguntaM, "", "", "", "", "", "", 0, 0);
         DaoGenerico temaDAO = new DaoGenerico();
         String objeto = convertirGson(preguntaM);
         return temaDAO.buscar1(objeto, tabla, idPreguntaM);
     }
+
 }
