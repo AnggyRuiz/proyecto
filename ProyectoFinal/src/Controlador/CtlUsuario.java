@@ -47,20 +47,27 @@ public class CtlUsuario {
         Usuario usuario = new Usuario(0, password, "", "", "", "", "", "");
         DAOGenerico usuarioDAO = new DAOGenerico();
         String objeto = convertirGson(usuario);
-        return usuarioDAO.buscar(objeto, tabla, password);
+        return usuarioDAO.buscar1(objeto, tabla, password);
     }
 
     public ArrayList<String> solicitudSet(int idUsu) {
         Usuario usuario = new Usuario(idUsu, "", "", "", "", "", "", "");
         DAOGenerico usuarioDAO = new DAOGenerico();
         String objeto = convertirGson(usuario);
-        return usuarioDAO.buscar(objeto, tabla, idUsu);
+        return usuarioDAO.buscar1(objeto, tabla, idUsu);
     }
-    
+
     public boolean SolicitudModificar(int codigo, String password, String nombre, String nombreUsuario, String correo, String telefono, String tipoUsuario, String semestre) {
         Usuario usuario = new Usuario(codigo, password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre);
         DAOGenerico usuarioDAO = new DAOGenerico();
         String objeto = convertirGson(usuario);
         return usuarioDAO.modificar(objeto, tabla);
+    }
+
+    public boolean SolicitudEliminar(int cedulaUsuario) {
+        Usuario usuario = new Usuario();
+        DAOGenerico usuarioDAO = new DAOGenerico();
+        String objeto = convertirGson(usuario);
+        return usuarioDAO.eliminar(objeto, tabla, cedulaUsuario);
     }
 }

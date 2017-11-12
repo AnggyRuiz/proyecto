@@ -326,6 +326,15 @@ public class FrmUsuario extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        int codigo = Integer.parseInt(lblCodigo.getText());
+        if (controladorUsuario.SolicitudEliminar(codigo)) {
+            JOptionPane.showMessageDialog(this, "su cuenta se ha eliminado exitosamente");
+            dispose();
+            new FrmPrincipal().setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(this, "Error al eliminar");
+        }
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btnVolverUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverUsuarioActionPerformed
@@ -336,11 +345,7 @@ public class FrmUsuario extends javax.swing.JFrame {
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         try {
-//            if (txtCodigoTema.getText().equals("") && txtNombreTema.getText().equals(" ")) {
-//                JOptionPane.showMessageDialog(null, "Primero debe buscar");
-//            } else {
-//            int codigo;
-            String password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre;    
+            String password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre;
             nombre = txtNombre.getText();
             nombreUsuario = txtNombreU.getText();
             correo = txtCorreo.getText();

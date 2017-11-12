@@ -66,7 +66,7 @@ public class DAOGenerico extends ClsConexion {
         return super.ejecutar(consulta);
     }
 
-    public ArrayList<String> buscar(String objeto, String tabla, Object id) {
+    public ArrayList<String> buscar1(String objeto, String tabla, Object id) {
         JsonParser parser = new JsonParser();
         JsonObject jobject = parser.parse(objeto).getAsJsonObject();
         Set<String> keys = jobject.keySet();
@@ -258,6 +258,7 @@ public class DAOGenerico extends ClsConexion {
             
         } catch (Exception e) {
             System.out.println("algo fallo :v");
+            System.out.println(consulta);
         }
         return buscar;
     }

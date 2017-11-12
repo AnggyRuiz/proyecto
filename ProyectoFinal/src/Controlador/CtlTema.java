@@ -43,7 +43,7 @@ public class CtlTema {
         Tema tema = new Tema(idTema, "");
         DAOGenerico temaDAO = new DAOGenerico();
         String objeto = convertirGson(tema);
-        return temaDAO.buscar(objeto, tabla, idTema);
+        return temaDAO.buscar1(objeto, tabla, idTema);
     }
     
     public boolean SolicitudModificar(int idTema, String descripcion) {
