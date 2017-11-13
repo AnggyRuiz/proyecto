@@ -5,10 +5,29 @@
  */
 package Controlador;
 
+import DAO.DaoGenerico;
+import Modelo.Juego;
+import com.google.gson.Gson;
+
 /**
  *
  * @author Gabriela Machado
  */
 public class CtlJuego {
- String Jueg;
+
+    public static String tabla = "juego";
+
+    public String convertirGson(Juego juego) {
+        Gson gson = new Gson();
+        String objeto = gson.toJson(juego);
+        return objeto;
+    }
+
+    public boolean SolicitudGuardar(int idJuego, int cantidadParticipantes, String fecha_Juego) {
+
+        Juego juego = new Juego(idJuego, cantidadParticipantes, fecha_Juego);
+        DaoGenerico juegoDAO = new DaoGenerico();
+        String objeto = convertirGson(juego);
+        return juegoDAO.guardar(objeto, tabla);
+    }
 }

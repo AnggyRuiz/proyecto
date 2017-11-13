@@ -2,7 +2,7 @@
 SQLyog Community v8.71 
 MySQL - 5.5.5-10.1.13-MariaDB : Database - proyecto
 *********************************************************************
-*/
+*/
 
 /*!40101 SET NAMES utf8 */;
 
@@ -36,13 +36,12 @@ CREATE TABLE `estadisticas` (
 DROP TABLE IF EXISTS `juego`;
 
 CREATE TABLE `juego` (
-  `idJuego` int(11) NOT NULL,
-  `cantidadParticipantes` varchar(45) DEFAULT NULL,
-  `Resumen_idResumen` int(11) NOT NULL,
+  `idJuego` int(11) NOT NULL AUTO_INCREMENT,
+  `cantidadParticipantes` int(11) DEFAULT NULL,
+  `fecha_Juego` varchar(50) NOT NULL,
   PRIMARY KEY (`idJuego`),
-  KEY `fk_Juego_Resumen1_idx` (`Resumen_idResumen`),
-  CONSTRAINT `fk_Juego_Resumen1` FOREIGN KEY (`Resumen_idResumen`) REFERENCES `resumen` (`idResumen`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  KEY `fk_Juego_Resumen1_idx` (`fecha_Juego`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 /*Data for the table `juego` */
 
