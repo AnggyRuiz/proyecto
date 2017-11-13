@@ -9,6 +9,7 @@ import Controlador.CtlMultiple;
 import Controlador.CtlUnica;
 import Modelo.RespuestaMultiple;
 import Modelo.RespuestaUnica;
+import static Vista.FrmIngresarJuego.idUsu;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -281,6 +282,7 @@ public class FrmJuego extends javax.swing.JFrame {
     private void btnSiguiente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguiente1ActionPerformed
         int n = 0;
         boolean a, b, c, d;
+        String enunciado = lblEnunciado.getText();
         if (pregunta.get(8).equals("1")) {
 
             a = rdb1.isSelected();
@@ -289,7 +291,9 @@ public class FrmJuego extends javax.swing.JFrame {
             d = rdb4.isSelected();
 
             if (a) {
-                respuestaU.get(n).setIdUsuario();
+                respuestaU.get(n).setIdUsuario(idUsu);
+                respuestaU.get(n).setIdPregunta(Integer.parseInt(controladorUnica.solicitudBuscarId(enunciado)));
+                respuestaU.get(n).setIdJuego(Integer.parseInt(controladorUnica.solicitudBuscarId(enunciado)));
                 n++;
             }
 

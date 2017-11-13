@@ -6,6 +6,8 @@
 package Vista;
 
 import Controlador.CtlUsuario;
+import Modelo.Juego;
+import com.sun.org.apache.bcel.internal.generic.AALOAD;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -37,7 +39,7 @@ public class FrmIngresarJuego extends javax.swing.JFrame {
         fondo.setIcon(uno);
         getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
         fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
-
+        ArrayList<Juego> juego = new ArrayList<>();
         
     }
 
@@ -139,6 +141,7 @@ public class FrmIngresarJuego extends javax.swing.JFrame {
         String contraseña, usuario, contraseña1 = null, usuario1 = null;
         contraseña = jpfPassword.getText();
         usuario = txtUsuario.getText();
+        
         ArrayList<String> usuarioA = controladorUsuario.solicitudVerificarContraseñaUsuario(contraseña);
         if (usuario.equals(controladorUsuario.solicitudVerificarUsuario(usuario))) {
             if (usuarioA.size() > 0) {
@@ -147,7 +150,7 @@ public class FrmIngresarJuego extends javax.swing.JFrame {
                     usuario1 = usuarioA.get(3);
                     idUsu = Integer.parseInt(usuarioA.get(0));
                 }
-
+                
             } else {
                 JOptionPane.showMessageDialog(null, "El usuario no ha sido encontrado");
             }

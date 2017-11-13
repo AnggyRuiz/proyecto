@@ -61,6 +61,10 @@ public class CtlUnica {
         return temaDAO.buscar1(objeto, tabla, idPreguntaM);
     }
 
+    public String solicitudBuscarId(String enunciado) {
+        DaoGenerico preguntaMDAO = new DaoGenerico();
+        return preguntaMDAO.buscarCombo(tabla, id, "enunciado", enunciado);
+    }
 //    
 //    public boolean SolicitudModificar(int idTema, String descripcion) {
 //        Tema tema = new Tema(idTema, descripcion);
