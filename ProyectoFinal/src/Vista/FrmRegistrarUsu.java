@@ -318,6 +318,10 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
         if (txtCodigo.getText().length() == 9) {
             evt.consume();
         }
+        int a = (int) evt.getKeyChar();
+        if (a >= 97 && a <= 122 || a >= 65 && a <= 90) {
+            evt.setKeyChar((char) KeyEvent.VK_CLEAR);
+        }
         txtCodigo.requestFocus();
         if (evt.getKeyChar() == KeyEvent.VK_ENTER) {
             btnRegistrarse.doClick();
