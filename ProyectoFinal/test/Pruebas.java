@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 
+import Vista.FrmRegistrarUsu;
+import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -15,7 +17,7 @@ import static org.junit.Assert.*;
  *
  * @author Yo
  */
-public class Pruebas {
+public class Pruebas extends TestCase{
     
     public Pruebas() {
     }
@@ -34,6 +36,11 @@ public class Pruebas {
     
     @After
     public void tearDown() {
+    }
+    
+    public void testOrden() {
+        assertEquals("10.0", FrmCalculadora.calculadora("5", "5", "+"));
+        assertEquals("10.0", CtlUsuario);
     }
 
     // TODO add test methods here.
