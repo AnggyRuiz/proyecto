@@ -171,6 +171,23 @@ public class DaoGenerico extends Conexion {
         }
         return id;
     }
+    
+    public String buscarCombo1(String tabla, String cb, String cbID, int nombre) {
+        String consulta = "SELECT " + cbID + " FROM " + tabla + " WHERE " + cb + " ='" + nombre + "'";
+        super.ejecutarRetorno(consulta);
+        System.out.println(consulta);
+        String id = "";
+        try {
+            if (resultadoDB.next()) {
+
+                id = (resultadoDB.getString(cbID));
+            }
+        } catch (SQLException ex) {
+            System.out.println("Esto se tosto");
+
+        }
+        return id;
+    }
 
     public String VerificarUsuario(String tabla, String cb, String nombre) {
         String consulta = " SELECT " + cb + " FROM " + tabla + " WHERE " + cb + " ='" + nombre + "'";
