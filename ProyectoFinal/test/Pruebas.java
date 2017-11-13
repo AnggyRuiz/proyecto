@@ -5,7 +5,6 @@
  */
 
 import Controlador.CtlUsuario;
-import DAO.DaoGenerico;
 import Vista.FrmRegistrarUsu;
 import junit.framework.TestCase;
 import org.junit.After;
@@ -40,8 +39,26 @@ public class Pruebas extends TestCase{
     public void tearDown() {
     }
     
-    public void testOrden() {
-        assertEquals("10.0", CtlUsuario.SolicitudGuardar(0, password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre));
+    public void testReferencia(){
+//        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "", "1234", "daniela", "daniela@hotmail.com", "3146517774", "2", "4"));
+    }
+    
+    public void testExistencia() {
+        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "", "Daniela Díaz", "danielad", "dani092012@hotmail.com", "3146517774", "2", "4"));
+        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "232016", "", "danielad", "dani092012@hotmail.com", "3146517774", "2", "4"));
+        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "232016", "Daniela Díaz", "", "dani092012@hotmail.com", "3146517774", "2", "4"));
+        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "232016", "Daniela Díaz", "danielad", "dani092012@hotmail.com", "3146517774", "2", ""));
+        
+        assertEquals(false, CtlUsuario.SolicitudGuardar(0, null, "Daniela Díaz", "danielad", "dani092012@hotmail.com", "3146517774", "2", "4"));
+        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "232016", null, "danielad", "dani092012@hotmail.com", "3146517774", "2", "4"));
+        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "232016", "Daniela Díaz", null, "dani092012@hotmail.com", "3146517774", "2", "4"));
+        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "232016", "Daniela Díaz", "danielad", "dani092012@hotmail.com", "3146517774", "2", null));
+        
+        assertEquals("danielad", CtlUsuario.solicitudVerificarUsuario("danielad"));
+        assertEquals("", CtlUsuario.solicitudVerificarUsuario(""));
+        assertEquals("", CtlUsuario.solicitudVerificarUsuario(null));
+        
+        assertEquals("[232016, 232016, Daniela Díaz, danielad, dani092012@hotmail.com, 3146517774, 2, 4]", CtlUsuario.solicitudVerificarContraseñaUsuario(""));
     }
 
     // TODO add test methods here.
