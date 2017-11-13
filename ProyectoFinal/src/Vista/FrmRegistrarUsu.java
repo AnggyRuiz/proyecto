@@ -7,11 +7,14 @@ package Vista;
 
 import Controlador.CtlUsuario;
 import Modelo.Usuario;
+import java.awt.Color;
+import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.border.LineBorder;
 
 /**
  *
@@ -65,6 +68,10 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         txtCodigo = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
 
         jLabel8.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 24)); // NOI18N
         jLabel8.setText("REGÍSTRATE");
@@ -91,14 +98,39 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
         jLabel6.setText("CONTRASEÑA:");
 
         txtNombre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreKeyTyped(evt);
+            }
+        });
 
         txtCorreo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtCorreo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCorreoKeyTyped(evt);
+            }
+        });
 
         txtTelefono.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTelefonoKeyTyped(evt);
+            }
+        });
 
         txtSemestre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtSemestre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtSemestreKeyTyped(evt);
+            }
+        });
 
         txtNombreU.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtNombreU.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreUKeyTyped(evt);
+            }
+        });
 
         btnVolver.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         btnVolver.setForeground(new java.awt.Color(0, 153, 153));
@@ -119,6 +151,11 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
                 btnRegistrarseActionPerformed(evt);
             }
         });
+        btnRegistrarse.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                btnRegistrarseKeyTyped(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         jLabel7.setText("CÓDIGO:");
@@ -134,6 +171,22 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(255, 0, 0));
         jLabel9.setText("La contraseña será su código");
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel10.setText("*");
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel11.setText("*");
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel12.setText("*");
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel13.setText("*");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -146,10 +199,10 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
                             .addComponent(jLabel2)
                             .addComponent(jLabel3)
                             .addComponent(jLabel4)
-                            .addComponent(jLabel5)
                             .addComponent(jLabel6)
                             .addComponent(jLabel7)
-                            .addComponent(jLabel1))
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel5))
                         .addGap(149, 149, 149)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(txtNombreU, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
@@ -163,7 +216,13 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
                         .addComponent(btnVolver)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnRegistrarse)))
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -171,11 +230,13 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
                 .addContainerGap(123, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -186,12 +247,16 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
                     .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtSemestre, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel4)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtSemestre, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtNombreU, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel5)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtNombreU, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
@@ -212,34 +277,99 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVolverActionPerformed
 
     private void btnRegistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarseActionPerformed
-        int codigo;
-        String nombre, nombreUsuario, password, correo, telefono, tipoUsuario, semestre;
-        codigo = Integer.parseInt(txtCodigo.getText());
-        nombre = txtNombre.getText();
-        nombreUsuario = txtNombreU.getText();
-        password = txtCodigo.getText();
-        correo = txtCorreo.getText();
-        telefono = txtTelefono.getText();
-        tipoUsuario = "2";
-        semestre = txtSemestre.getText();
-
-        if (controladorUsuario.SolicitudGuardar(codigo, password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre)) {
-            JOptionPane.showMessageDialog(null, "se ha registrado el Usuario");
-            limpiar();
-            FrmPrincipal.idUsu = codigo;
-            dispose();
-            new FrmUsuario().setVisible(true);
+        if (txtNombre.getText().isEmpty() || txtCodigo.getText().isEmpty() || txtNombreU.getText().isEmpty()
+                || txtSemestre.getText().isEmpty()) {
+            if (txtNombre.getText().isEmpty()) {
+                txtNombre.setBorder(new LineBorder(Color.red));
+            } else if (txtCodigo.getText().isEmpty()) {
+                txtCodigo.setBorder(new LineBorder(Color.red));
+            } else if (txtNombreU.getText().isEmpty()) {
+                txtNombreU.setBorder(new LineBorder(Color.red));
+            } else if (txtSemestre.getText().isEmpty()) {
+                txtSemestre.setBorder(new LineBorder(Color.red));
+            }
+            JOptionPane.showMessageDialog(null, "Por favor llene todos los campos obligarotios");
         } else {
-            JOptionPane.showMessageDialog(this, "El código o el nombre de usuario ya existe");
+            int codigo;
+            String nombre, nombreUsuario, password, correo, telefono, tipoUsuario, semestre;
+            codigo = Integer.parseInt(txtCodigo.getText());
+            nombre = txtNombre.getText();
+            nombreUsuario = txtNombreU.getText();
+            password = txtCodigo.getText();
+            correo = txtCorreo.getText();
+            telefono = txtTelefono.getText();
+            tipoUsuario = "2";
+            semestre = txtSemestre.getText();
+
+            if (controladorUsuario.SolicitudGuardar(codigo, password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre)) {
+                JOptionPane.showMessageDialog(null, "se ha registrado el Usuario");
+                limpiar();
+                FrmPrincipal.idUsu = codigo;
+                dispose();
+                new FrmUsuario().setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(this, "El código o el nombre de usuario ya existe");
+            }
         }
     }//GEN-LAST:event_btnRegistrarseActionPerformed
 
- 
+
     private void txtCodigoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoKeyTyped
         if (txtCodigo.getText().length() == 9) {
             evt.consume();
         }
+        txtCodigo.requestFocus();
+        if (evt.getKeyChar() == KeyEvent.VK_ENTER) {
+            btnRegistrarse.doClick();
+        }
     }//GEN-LAST:event_txtCodigoKeyTyped
+
+    private void btnRegistrarseKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnRegistrarseKeyTyped
+
+    }//GEN-LAST:event_btnRegistrarseKeyTyped
+
+    private void txtNombreUKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreUKeyTyped
+        txtNombreU.requestFocus();
+        if (evt.getKeyChar() == KeyEvent.VK_ENTER) {
+            btnRegistrarse.doClick();
+        }
+    }//GEN-LAST:event_txtNombreUKeyTyped
+
+    private void txtSemestreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSemestreKeyTyped
+        txtSemestre.requestFocus();
+        if (evt.getKeyChar() == KeyEvent.VK_ENTER) {
+            btnRegistrarse.doClick();
+        }
+    }//GEN-LAST:event_txtSemestreKeyTyped
+
+    private void txtTelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoKeyTyped
+        int a = (int) evt.getKeyChar();
+        if (a >= 97 && a <= 122 || a >= 65 && a <= 90) {
+            evt.setKeyChar((char) KeyEvent.VK_CLEAR);
+        }
+        txtTelefono.requestFocus();
+        if (evt.getKeyChar() == KeyEvent.VK_ENTER) {
+            btnRegistrarse.doClick();
+        }
+    }//GEN-LAST:event_txtTelefonoKeyTyped
+
+    private void txtCorreoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCorreoKeyTyped
+        txtCorreo.requestFocus();
+        if (evt.getKeyChar() == KeyEvent.VK_ENTER) {
+            btnRegistrarse.doClick();
+        }
+    }//GEN-LAST:event_txtCorreoKeyTyped
+
+    private void txtNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyTyped
+        int a = (int) evt.getKeyChar();
+        if (a >= 33 && a <= 64 || a >= 91 && a <= 96 || a >= 123 && a <= 128) {
+            evt.setKeyChar((char) KeyEvent.VK_CLEAR);
+        }
+        txtNombre.requestFocus();
+        if (evt.getKeyChar() == KeyEvent.VK_ENTER) {
+            btnRegistrarse.doClick();
+        }
+    }//GEN-LAST:event_txtNombreKeyTyped
 
     public void limpiar() {
         txtNombre.setText("");
@@ -290,6 +420,10 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
     private javax.swing.JButton btnRegistrarse;
     private javax.swing.JButton btnVolver;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

@@ -6,6 +6,7 @@
 package Vista;
 
 import Controlador.CtlUsuario;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -70,6 +71,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jLabel3.setText("CONTRASEÑA:");
 
         txtUsuario.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        txtUsuario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtUsuarioKeyTyped(evt);
+            }
+        });
 
         btnIngresar.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 36)); // NOI18N
         btnIngresar.setText("INGRESAR");
@@ -81,6 +87,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
         });
 
         jpfPassword.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jpfPassword.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jpfPasswordKeyTyped(evt);
+            }
+        });
 
         jButton1.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 36)); // NOI18N
         jButton1.setText("VOLVER");
@@ -178,6 +189,20 @@ public class FrmPrincipal extends javax.swing.JFrame {
         dispose();
         new FrmInicioJuego().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtUsuarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUsuarioKeyTyped
+        txtUsuario.requestFocus();
+        if (evt.getKeyChar() == KeyEvent.VK_ENTER){
+            btnIngresar.doClick();
+        }
+    }//GEN-LAST:event_txtUsuarioKeyTyped
+
+    private void jpfPasswordKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jpfPasswordKeyTyped
+        jpfPassword.requestFocus();
+        if (evt.getKeyChar() == KeyEvent.VK_ENTER){
+            btnIngresar.doClick();
+        }
+    }//GEN-LAST:event_jpfPasswordKeyTyped
 
     /**
      * @param args the command line arguments
