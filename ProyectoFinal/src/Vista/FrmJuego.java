@@ -295,9 +295,12 @@ public class FrmJuego extends javax.swing.JFrame {
 
             if (a) {
                 respuestaU.get(n).setIdUsuario(idUsu);
+                System.out.println(respuestaU.get(n).getIdUsuario());
                 respuestaU.get(n).setIdPregunta(Integer.parseInt(controladorUnica.solicitudBuscarId(enunciado)));
+                System.out.println(respuestaU.get(n).getIdPregunta());
                 respuestaU.get(n).setIdJuego(idj);
-                respuestaU.get(n).setIdRespuesta(idUsu);
+                System.out.println(respuestaU.get(n).getIdJuego());
+               // respuestaU.get(n).setIdRespuesta(idUsu);
                 n++;
             }
 
