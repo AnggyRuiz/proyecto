@@ -74,10 +74,10 @@ public class FrmBuscarPreguntas extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
-        jLabel1.setText("Enunciado:");
+        jLabel1.setText("Enunciado del tema:");
 
         jLabel2.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
-        jLabel2.setText("Código:");
+        jLabel2.setText("Código del tema:");
 
         jTableBuscar.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
         jTableBuscar.setModel(new javax.swing.table.DefaultTableModel(
