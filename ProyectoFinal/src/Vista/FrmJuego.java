@@ -284,19 +284,11 @@ public class FrmJuego extends javax.swing.JFrame {
             rdb2.isSelected();
             rdb3.isSelected();
             rdb4.isSelected();
-            System.out.println(rdb1.isSelected());
-            System.out.println(rdb2.isSelected());
-            System.out.println(rdb3.isSelected());
-            System.out.println(rdb4.isSelected());
         } else if (pregunta.get(8).equals("2")) {
             jCheckBox1.isSelected();
             jCheckBox2.isSelected();
             jCheckBox3.isSelected();
             jCheckBox4.isSelected();
-            System.out.println(jCheckBox1.isSelected());
-            System.out.println(jCheckBox2.isSelected());
-            System.out.println(jCheckBox3.isSelected());
-            System.out.println(jCheckBox4.isSelected());
         }
         cargarPreguntas(cargarTodo);
 
