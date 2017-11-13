@@ -34,8 +34,8 @@ public class FrmJuego extends javax.swing.JFrame {
     ArrayList<Integer> cargarTodo = new ArrayList<Integer>();
     ArrayList<RespuestaUnica> respuestaU = new ArrayList<>();
     ArrayList<RespuestaMultiple> respuestaM = new ArrayList<>();
-
     ArrayList<String> pregunta = null;
+    ArrayList<Integer> res;
 
     public FrmJuego() {
         initComponents();
@@ -282,10 +282,20 @@ public class FrmJuego extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSiguiente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguiente1ActionPerformed
-        
+
         int n = 0;
         boolean a, b, c, d;
         String enunciado = lblEnunciado.getText();
+        String respuesta = null, correcta;
+        int idRespuesta, idUsuario, idPregunta, idJuego;
+        idUsuario = idUsu;
+        idJuego = idj;
+        idPregunta = Integer.parseInt(controladorUnica.solicitudBuscarId(enunciado));
+        correcta = controladorUnica.solicitudBuscarCorrecta(idPregunta);         
+        res = controladorUnica.solicitarBuscarIdu();
+        idRespuesta = res.get(0)+1;
+        
+        RespuestaUnica respuest = new RespuestaUnica(idRespuesta, idUsuario, idPregunta, idJuego, respuesta, correcta);
         if (pregunta.get(8).equals("1")) {
 
             a = rdb1.isSelected();
@@ -293,23 +303,26 @@ public class FrmJuego extends javax.swing.JFrame {
             c = rdb3.isSelected();
             d = rdb4.isSelected();
 
+            
             if (a) {
-                respuestaU.get(n).setIdUsuario(idUsu);
-                System.out.println(respuestaU.get(n).getIdUsuario());
-                respuestaU.get(n).setIdPregunta(Integer.parseInt(controladorUnica.solicitudBuscarId(enunciado)));
-                System.out.println(respuestaU.get(n).getIdPregunta());
-                respuestaU.get(n).setIdJuego(idj);
-                System.out.println(respuestaU.get(n).getIdJuego());
-               // respuestaU.get(n).setIdRespuesta(idUsu);
-                n++;
+                respuesta = lbl1.getText();                
+                respuest.setRespuesta(respuesta);
+                System.out.println(respuest.getIdRespuesta()+"idres");
+                System.out.println(respuest.getIdUsuario());
+                System.out.println(respuest.getIdPregunta());
+                System.out.println(respuest.getIdJuego());
+                System.out.println(respuest.getRespuesta());
+                System.out.println(respuest.getCorrecta());
             }
 
-        } else if (pregunta.get(8).equals("2")) {
+        } else if (pregunta.get(
+                8).equals("2")) {
             jCheckBox1.isSelected();
             jCheckBox2.isSelected();
             jCheckBox3.isSelected();
             jCheckBox4.isSelected();
         }
+
         cargarPreguntas(cargarTodo);
 
     }//GEN-LAST:event_btnSiguiente1ActionPerformed
