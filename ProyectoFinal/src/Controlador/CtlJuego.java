@@ -19,7 +19,7 @@ public class CtlJuego {
     public static String tabla = "juego";
     public static String id = "idJuego";
 
-    public String convertirGson(Juego juego) {
+    public static String convertirGson(Juego juego) {
         Gson gson = new Gson();
         String objeto = gson.toJson(juego);
         return objeto;

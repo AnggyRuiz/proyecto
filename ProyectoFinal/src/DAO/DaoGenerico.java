@@ -264,6 +264,7 @@ public class DaoGenerico extends Conexion {
         }
         return buscarIdj;
     }
+
     public ArrayList buscar(String tabla, String id, String id2) {
         ArrayList<String> buscar = new ArrayList<>();
         String consulta = " SELECT * FROM " + tabla + " WHERE " + id + " = " + id2;

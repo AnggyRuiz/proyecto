@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 
+import Controlador.CtlUsuario;
+import DAO.DaoGenerico;
 import Vista.FrmRegistrarUsu;
 import junit.framework.TestCase;
 import org.junit.After;
@@ -39,8 +41,7 @@ public class Pruebas extends TestCase{
     }
     
     public void testOrden() {
-        assertEquals("10.0", FrmCalculadora.calculadora("5", "5", "+"));
-        assertEquals("10.0", CtlUsuario);
+        assertEquals("10.0", CtlUsuario.SolicitudGuardar(0, password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre));
     }
 
     // TODO add test methods here.

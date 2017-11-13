@@ -16,19 +16,19 @@ import java.sql.Statement;
  * @author Gabriela Machado
  */
 public class Conexion {
-    
-    protected String driver = "com.mysql.jdbc.Driver"; //nombre del driver
-    protected String connectString = "jdbc:mysql://localhost:3306/proyecto"; //ubicacion de la base de datos, para postgres esta es por defecto
-    protected String user = "root"; //usuario de la base de datos
-    protected String password = ""; //password de la base de datos
-    protected Connection conexionDB; // variable que permite la conexion
-    protected Statement sentenciaSQL; //permite la ejecucion de sentencias SQL
-    protected ResultSet resultadoDB;//almacena el resultado de una consulta
+
+    public static String driver = "com.mysql.jdbc.Driver"; //nombre del driver
+    public static String connectString = "jdbc:mysql://localhost:3306/proyecto"; //ubicacion de la base de datos, para postgres esta es por defecto
+    public static String user = "root"; //usuario de la base de datos
+    public static String password = ""; //password de la base de datos
+    public static Connection conexionDB; // variable que permite la conexion
+    public static Statement sentenciaSQL; //permite la ejecucion de sentencias SQL
+    public static ResultSet resultadoDB;//almacena el resultado de una consulta
 
     /**
      * Permite la conexion de la base de datos
-    */
-    public void conectar() {
+     */
+    public static void conectar() {
         try {
             Class.forName(driver); //se carga el driver en memoria
             conexionDB = DriverManager.getConnection(connectString, user, password);//conexion a la base de datos
@@ -42,7 +42,7 @@ public class Conexion {
     /**
      * Desconecta la conexion de la base de datos
      */
-    public void desconectar() {
+    public static void desconectar() {
         try {
             //sentenciaSQL.close();//cierra la consulta
             conexionDB.close();//cierra conexion
@@ -51,7 +51,7 @@ public class Conexion {
         }
     }
 
-    public boolean ejecutar(String sentencia) {
+    public static boolean ejecutar(String sentencia) {
         try {
             conectar();
             System.out.println(sentencia);
@@ -63,7 +63,7 @@ public class Conexion {
         return true;
     }
 
-    public void ejecutarRetorno(String sentencia) {
+    public static void ejecutarRetorno(String sentencia) {
         try {
             conectar();
             resultadoDB = sentenciaSQL.executeQuery(sentencia);
@@ -72,5 +72,5 @@ public class Conexion {
 
         }
     }
-    
+
 }
