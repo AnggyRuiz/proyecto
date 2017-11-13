@@ -282,7 +282,7 @@ public class FrmJuego extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSiguiente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguiente1ActionPerformed
-        
+
         int n = 0;
         boolean a, b, c, d;
         String enunciado = lblEnunciado.getText();
@@ -293,6 +293,7 @@ public class FrmJuego extends javax.swing.JFrame {
             c = rdb3.isSelected();
             d = rdb4.isSelected();
 
+            
             if (a) {
                 respuestaU.get(n).setIdUsuario(idUsu);
                 System.out.println(respuestaU.get(n).getIdUsuario());
@@ -300,16 +301,19 @@ public class FrmJuego extends javax.swing.JFrame {
                 System.out.println(respuestaU.get(n).getIdPregunta());
                 respuestaU.get(n).setIdJuego(idj);
                 System.out.println(respuestaU.get(n).getIdJuego());
-               // respuestaU.get(n).setIdRespuesta(idUsu);
+                // respuestaU.get(n).setIdRespuesta(idUsu);   
+
                 n++;
             }
 
-        } else if (pregunta.get(8).equals("2")) {
+        } else if (pregunta.get(
+                8).equals("2")) {
             jCheckBox1.isSelected();
             jCheckBox2.isSelected();
             jCheckBox3.isSelected();
             jCheckBox4.isSelected();
         }
+
         cargarPreguntas(cargarTodo);
 
     }//GEN-LAST:event_btnSiguiente1ActionPerformed
