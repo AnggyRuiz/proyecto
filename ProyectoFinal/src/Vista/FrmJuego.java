@@ -279,11 +279,7 @@ public class FrmJuego extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSiguiente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguiente1ActionPerformed
-        // TODO add your handling code here:
-
-        System.out.println(cargarTodo);
-        System.out.println(pregunta);
-        int n;
+        int n = 0;
         boolean a, b, c, d;
         if (pregunta.get(8).equals("1")) {
 
@@ -293,9 +289,9 @@ public class FrmJuego extends javax.swing.JFrame {
             d = rdb4.isSelected();
 
             if (a) {
-                respuestaU.get(n).get
+                respuestaU.get(n).getIdUsuario();
             }
-            
+
         } else if (pregunta.get(8).equals("2")) {
             jCheckBox1.isSelected();
             jCheckBox2.isSelected();
