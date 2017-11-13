@@ -10,6 +10,7 @@ import Controlador.CtlUnica;
 import Modelo.RespuestaMultiple;
 import Modelo.RespuestaUnica;
 import static Vista.FrmIngresarJuego.idUsu;
+import static Vista.FrmInicioJuego.idj;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -295,7 +296,8 @@ public class FrmJuego extends javax.swing.JFrame {
             if (a) {
                 respuestaU.get(n).setIdUsuario(idUsu);
                 respuestaU.get(n).setIdPregunta(Integer.parseInt(controladorUnica.solicitudBuscarId(enunciado)));
-                respuestaU.get(n).setIdJuego(Integer.parseInt(controladorUnica.solicitudBuscarId(enunciado)));
+                respuestaU.get(n).setIdJuego(idj);
+                respuestaU.get(n).setIdRespuesta(idUsu);
                 n++;
             }
 

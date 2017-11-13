@@ -248,6 +248,22 @@ public class DaoGenerico extends Conexion {
         return cargar;
     }
 
+    public ArrayList buscarIdj(String tabla, String id) {
+        ArrayList<Integer> buscarIdj = new ArrayList<>();
+        String consulta = " SELECT " + id + " FROM " + tabla + " ORDER BY (" + id + ")desc";
+        super.ejecutarRetorno(consulta);
+        try {
+            while (resultadoDB.next()) {
+                for (int i = 1; i < resultadoDB.getMetaData().getColumnCount() + 1; i++) {
+                    buscarIdj.add(resultadoDB.getInt(id));
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("algo fallo :v");
+            System.out.println(consulta);
+        }
+        return buscarIdj;
+    }
     public ArrayList buscar(String tabla, String id, String id2) {
         ArrayList<String> buscar = new ArrayList<>();
         String consulta = " SELECT * FROM " + tabla + " WHERE " + id + " = " + id2;

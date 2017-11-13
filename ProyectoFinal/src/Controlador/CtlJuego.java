@@ -8,6 +8,7 @@ package Controlador;
 import DAO.DaoGenerico;
 import Modelo.Juego;
 import com.google.gson.Gson;
+import java.util.ArrayList;
 
 /**
  *
@@ -16,6 +17,7 @@ import com.google.gson.Gson;
 public class CtlJuego {
 
     public static String tabla = "juego";
+    public static String id = "idJuego";
 
     public String convertirGson(Juego juego) {
         Gson gson = new Gson();
@@ -30,4 +32,11 @@ public class CtlJuego {
         String objeto = convertirGson(juego);
         return juegoDAO.guardar(objeto, tabla);
     }
+    
+    public ArrayList solicitarBuscarIdj(){
+        DaoGenerico preguntaUDAO = new DaoGenerico();
+        return preguntaUDAO.buscarIdj(tabla, id);
+    }
 }
+
+        

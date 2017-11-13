@@ -7,6 +7,7 @@ package Vista;
 
 import Controlador.CtlJuego;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -25,6 +26,7 @@ public class FrmInicioJuego extends javax.swing.JFrame {
      */
     CtlJuego controladorJuego;
     public static int idj = 0;
+    ArrayList<Integer> juego;
 
     public FrmInicioJuego() {
         initComponents();
@@ -38,7 +40,7 @@ public class FrmInicioJuego extends javax.swing.JFrame {
         getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
         fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
         controladorJuego = new CtlJuego();
-        idj++;
+        juego = new ArrayList<>();
     }
 
     /**
@@ -175,10 +177,13 @@ public class FrmInicioJuego extends javax.swing.JFrame {
         Date date = new Date();
         SimpleDateFormat formato = new SimpleDateFormat("YYYY/MM/d");
         fecha_Juego = formato.format(date);
-        idJuego = idj;
+    
         cantidadParticipantes = (int) (jSpinner1.getValue());
-
+        juego=controladorJuego.solicitarBuscarIdj();
+        idJuego = juego.get(0)+1;
+        System.out.println(juego);
         if (controladorJuego.SolicitudGuardar(idJuego, cantidadParticipantes, fecha_Juego)) {
+            idj = idJuego;
             dispose();
         } else {
             JOptionPane.showMessageDialog(this, "llórelo");
