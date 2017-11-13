@@ -141,7 +141,7 @@ public class FrmIngresarJuego extends javax.swing.JFrame {
         String contraseña, usuario, contraseña1 = null, usuario1 = null;
         contraseña = jpfPassword.getText();
         usuario = txtUsuario.getText();
-        
+         
         ArrayList<String> usuarioA = controladorUsuario.solicitudVerificarContraseñaUsuario(contraseña);
         if (usuario.equals(controladorUsuario.solicitudVerificarUsuario(usuario))) {
             if (usuarioA.size() > 0) {

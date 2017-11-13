@@ -24,6 +24,7 @@ public class FrmInicioJuego extends javax.swing.JFrame {
      * Creates new form FrmInicioJuego
      */
     CtlJuego controladorJuego;
+    public static int idj = 0;
 
     public FrmInicioJuego() {
         initComponents();
@@ -37,6 +38,7 @@ public class FrmInicioJuego extends javax.swing.JFrame {
         getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
         fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
         controladorJuego = new CtlJuego();
+        idj++;
     }
 
     /**
@@ -173,13 +175,13 @@ public class FrmInicioJuego extends javax.swing.JFrame {
         Date date = new Date();
         SimpleDateFormat formato = new SimpleDateFormat("YYYY/MM/d");
         fecha_Juego = formato.format(date);
-        idJuego = 0;
+        idJuego = idj;
         cantidadParticipantes = (int) (jSpinner1.getValue());
 
         if (controladorJuego.SolicitudGuardar(idJuego, cantidadParticipantes, fecha_Juego)) {
             dispose();
         } else {
-            JOptionPane.showMessageDialog(this, "llorelo");
+            JOptionPane.showMessageDialog(this, "llórelo");
         }
 
         new FrmIngresarJuego().setVisible(true);

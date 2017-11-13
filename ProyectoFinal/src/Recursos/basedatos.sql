@@ -36,7 +36,7 @@ CREATE TABLE `estadisticas` (
 DROP TABLE IF EXISTS `juego`;
 
 CREATE TABLE `juego` (
-  `idJuego` int(11) NOT NULL AUTO_INCREMENT,
+  `idJuego` int(11) NOT NULL,
   `cantidadParticipantes` int(11) DEFAULT NULL,
   `fecha_Juego` varchar(50) NOT NULL,
   PRIMARY KEY (`idJuego`),
