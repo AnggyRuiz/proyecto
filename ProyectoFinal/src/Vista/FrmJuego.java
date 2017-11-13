@@ -289,7 +289,8 @@ public class FrmJuego extends javax.swing.JFrame {
             d = rdb4.isSelected();
 
             if (a) {
-                respuestaU.get(n).getIdUsuario();
+                respuestaU.get(n).setIdUsuario();
+                n++;
             }
 
         } else if (pregunta.get(8).equals("2")) {
