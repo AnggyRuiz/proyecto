@@ -7,6 +7,8 @@ package Vista;
 
 import Controlador.CtlMultiple;
 import Controlador.CtlUnica;
+import Modelo.RespuestaMultiple;
+import Modelo.RespuestaUnica;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -28,6 +30,8 @@ public class FrmJuego extends javax.swing.JFrame {
     ArrayList<JPanel> paneles;
     int cont = 0;
     ArrayList<Integer> cargarTodo = new ArrayList<Integer>();
+    ArrayList<RespuestaUnica> respuestaU = new ArrayList<>();
+    ArrayList<RespuestaMultiple> respuestaM = new ArrayList<>();
 
     ArrayList<String> pregunta = null;
 
@@ -279,11 +283,19 @@ public class FrmJuego extends javax.swing.JFrame {
 
         System.out.println(cargarTodo);
         System.out.println(pregunta);
+        int n;
+        boolean a, b, c, d;
         if (pregunta.get(8).equals("1")) {
-            rdb1.isSelected();
-            rdb2.isSelected();
-            rdb3.isSelected();
-            rdb4.isSelected();
+
+            a = rdb1.isSelected();
+            b = rdb2.isSelected();
+            c = rdb3.isSelected();
+            d = rdb4.isSelected();
+
+            if (a) {
+                respuestaU.get(n).get
+            }
+            
         } else if (pregunta.get(8).equals("2")) {
             jCheckBox1.isSelected();
             jCheckBox2.isSelected();
