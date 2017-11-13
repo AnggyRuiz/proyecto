@@ -10,6 +10,7 @@ import Controlador.CtlTema;
 import Controlador.CtlUnica;
 import static Vista.FrmBuscarPreguntas.datos;
 import static Vista.FrmBuscarPreguntas.tipo;
+import java.awt.Color;
 import java.awt.Font;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.border.LineBorder;
 
 /**
  *
@@ -130,6 +132,8 @@ public class FrmRegistrar extends javax.swing.JFrame {
         jTableTema = new javax.swing.JTable();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jTabbedPane5 = new javax.swing.JTabbedPane();
         jPanel8 = new javax.swing.JPanel();
@@ -317,6 +321,14 @@ public class FrmRegistrar extends javax.swing.JFrame {
         jLabel21.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 16)); // NOI18N
         jLabel21.setText("Si desea crear preguntas diríjase a la otra pestaña");
 
+        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel22.setText("*");
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel23.setText("*");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -330,8 +342,14 @@ public class FrmRegistrar extends javax.swing.JFrame {
                             .addComponent(jLabel1))
                         .addGap(59, 59, 59)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtNombreTema, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCodigoTema, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(txtNombreTema, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(txtCodigoTema, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(53, 53, 53)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -351,7 +369,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(238, 238, 238)
                         .addComponent(jButton1)))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel21)
@@ -360,15 +378,21 @@ public class FrmRegistrar extends javax.swing.JFrame {
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(txtCodigoTema, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(txtCodigoTema, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addGap(71, 71, 71)
+                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(47, 47, 47)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtNombreTema, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(87, 87, 87)
+                    .addComponent(txtNombreTema, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(86, 86, 86)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardarTema)
                     .addComponent(btnBuscarTema)
@@ -738,9 +762,8 @@ public class FrmRegistrar extends javax.swing.JFrame {
                                         .addComponent(txt2Unica)
                                         .addComponent(txt3Unica)
                                         .addComponent(txt4Unica)
-                                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(cbTemaUnica, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 269, Short.MAX_VALUE))))
+                                        .addComponent(cbTemaUnica, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)))
                                 .addComponent(jLabel6)))))
                 .addGap(30, 49, Short.MAX_VALUE))
         );
@@ -797,7 +820,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addComponent(jTabbedPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 605, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 17, Short.MAX_VALUE))
+                .addGap(0, 19, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -849,19 +872,27 @@ public class FrmRegistrar extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void btnGuardarTemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarTemaActionPerformed
-        int idTema;
-        String descripcion;
-        idTema = Integer.parseInt(txtCodigoTema.getText());
-        descripcion = txtNombreTema.getText();
-
-        if (controladorTema.SolicitudGuardar(idTema, descripcion)) {
-            JOptionPane.showMessageDialog(null, "se ha registrado el tema");
-            listar();
-//            limpiar();
+        if (txtCodigoTema.getText().isEmpty() || txtNombreTema.getText().isEmpty()) {
+            if (txtCodigoTema.getText().isEmpty()) {
+                txtCodigoTema.setBorder(new LineBorder(Color.red));
+            } else if (txtNombreTema.getText().isEmpty()) {
+                txtNombreTema.setBorder(new LineBorder(Color.red));
+            }
+            JOptionPane.showMessageDialog(null, "Por favor llene todos los campos");
         } else {
-            JOptionPane.showMessageDialog(this, "El código o el nombre de usuario ya existe");
-        }
+            int idTema;
+            String descripcion;
+            idTema = Integer.parseInt(txtCodigoTema.getText());
+            descripcion = txtNombreTema.getText();
 
+            if (controladorTema.SolicitudGuardar(idTema, descripcion)) {
+                JOptionPane.showMessageDialog(null, "se ha registrado el tema");
+                listar();
+//            limpiar();
+            } else {
+                JOptionPane.showMessageDialog(this, "El código o el nombre de usuario ya existe");
+            }
+        }
         combo1();
     }//GEN-LAST:event_btnGuardarTemaActionPerformed
 
@@ -931,34 +962,39 @@ public class FrmRegistrar extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnGuardarMultipleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarMultipleActionPerformed
-        int idTema, id ;
-        id = 0;
-        String opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, cantidad;
-        String tema = cbTemaMultiple.getSelectedItem() + "";
-        idTema = Integer.parseInt(controladorTema.buscaValor(tema));
-        opcion1 = txt1Multiple.getText();
-        opcion2 = txt2Multiple.getText();
-        opcion3 = txt3Multiple.getText();
-        opcion4 = txt4Multiple.getText();
-        cantidad = cbCorrectas.getSelectedItem() + "";
-        opcionesCorrectas = null;
-        if ("2".equals(cantidad)) {
-            opcionesCorrectas = txt1.getText() + ";" + txt2.getText();
-        } else if ("3".equals(cantidad)) {
-            opcionesCorrectas = txt1.getText() + ";" + txt2.getText() + ";" + txt3.getText();
-        } else if ("4".equals(cantidad)) {
-            opcionesCorrectas = txt1.getText() + ";" + txt2.getText() + ";" + txt3.getText() + ";" + txt4.getText();
-        }
-        enunciado = txtEnunciadoMultiple.getText();
-
-        if (controladorMultiple.solicitudGuardar(id, opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, idTema, 2)) {
-            JOptionPane.showMessageDialog(null, "se ha registrado la pregunta");
-            listar();
-//            limpiar();
+        if (cbTemaMultiple.getSelectedIndex() == 0 || txtEnunciadoMultiple.getText().isEmpty()
+                || txt1Multiple.getText().isEmpty() || txt2Multiple.getText().isEmpty() || txt3Multiple.getText().isEmpty()
+                || txt4Multiple.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor llene todos los campos");
         } else {
-            JOptionPane.showMessageDialog(this, "Error al guardar");
-        }
+            int idTema, id;
+            id = 0;
+            String opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, cantidad;
+            String tema = cbTemaMultiple.getSelectedItem() + "";
+            idTema = Integer.parseInt(controladorTema.buscaValor(tema));
+            opcion1 = txt1Multiple.getText();
+            opcion2 = txt2Multiple.getText();
+            opcion3 = txt3Multiple.getText();
+            opcion4 = txt4Multiple.getText();
+            cantidad = cbCorrectas.getSelectedItem() + "";
+            opcionesCorrectas = null;
+            if ("2".equals(cantidad)) {
+                opcionesCorrectas = txt1.getText() + ";" + txt2.getText();
+            } else if ("3".equals(cantidad)) {
+                opcionesCorrectas = txt1.getText() + ";" + txt2.getText() + ";" + txt3.getText();
+            } else if ("4".equals(cantidad)) {
+                opcionesCorrectas = txt1.getText() + ";" + txt2.getText() + ";" + txt3.getText() + ";" + txt4.getText();
+            }
+            enunciado = txtEnunciadoMultiple.getText();
 
+            if (controladorMultiple.solicitudGuardar(id, opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, idTema, 2)) {
+                JOptionPane.showMessageDialog(null, "se ha registrado la pregunta");
+                listar();
+//            limpiar();
+            } else {
+                JOptionPane.showMessageDialog(this, "Error al guardar");
+            }
+        }
         combo1();
 
 //        
@@ -966,25 +1002,30 @@ public class FrmRegistrar extends javax.swing.JFrame {
     }//GEN-LAST:event_btnGuardarMultipleActionPerformed
 
     private void btnGuardarUnicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarUnicaActionPerformed
-        int idTema;
-        String opcion1, opcion2, opcion3, opcion4, opcionCorrecta, enunciado;
-        String tema = cbTemaUnica.getSelectedItem() + "";
-        idTema = Integer.parseInt(controladorTema.buscaValor(tema));
-        opcion1 = txt1Unica.getText();
-        opcion2 = txt2Unica.getText();
-        opcion3 = txt3Unica.getText();
-        opcion4 = txt4Unica.getText();
-        opcionCorrecta = cbCorrectaUnica.getSelectedItem() + "";
-        enunciado = txtEnunciadoUnica.getText();
-
-        if (controladorUnica.SolicitudGuardar(opcion1, opcion2, opcion3, opcion4, opcionCorrecta, enunciado, idTema, 1)) {
-            JOptionPane.showMessageDialog(null, "se ha registrado la pregunta");
-            listar();
-//            limpiar();
+        if (cbTemaUnica.getSelectedIndex() == 0 || txtEnunciadoUnica.getText().isEmpty() 
+                || txt1Unica.getText().isEmpty() || txt2Unica.getText().isEmpty() || txt3Unica.getText().isEmpty()
+                || txt4Unica.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor llene todos los campos");
         } else {
-            JOptionPane.showMessageDialog(this, "Error al guardar");
-        }
+            int idTema;
+            String opcion1, opcion2, opcion3, opcion4, opcionCorrecta, enunciado;
+            String tema = cbTemaUnica.getSelectedItem() + "";
+            idTema = Integer.parseInt(controladorTema.buscaValor(tema));
+            opcion1 = txt1Unica.getText();
+            opcion2 = txt2Unica.getText();
+            opcion3 = txt3Unica.getText();
+            opcion4 = txt4Unica.getText();
+            opcionCorrecta = cbCorrectaUnica.getSelectedItem() + "";
+            enunciado = txtEnunciadoUnica.getText();
 
+            if (controladorUnica.SolicitudGuardar(opcion1, opcion2, opcion3, opcion4, opcionCorrecta, enunciado, idTema, 1)) {
+                JOptionPane.showMessageDialog(null, "se ha registrado la pregunta");
+                listar();
+//            limpiar();
+            } else {
+                JOptionPane.showMessageDialog(this, "Error al guardar");
+            }
+        }
         combo1();
     }//GEN-LAST:event_btnGuardarUnicaActionPerformed
 
@@ -1131,6 +1172,8 @@ public class FrmRegistrar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
