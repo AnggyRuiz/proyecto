@@ -36,14 +36,16 @@ CREATE TABLE `estadisticas` (
 DROP TABLE IF EXISTS `juego`;
 
 CREATE TABLE `juego` (
-  `idJuego` int(11) NOT NULL,
+  `idJuego` int(11) NOT NULL AUTO_INCREMENT,
   `cantidadParticipantes` int(11) DEFAULT NULL,
   `fecha_Juego` varchar(50) NOT NULL,
   PRIMARY KEY (`idJuego`),
   KEY `fk_Juego_Resumen1_idx` (`fecha_Juego`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 /*Data for the table `juego` */
+
+insert  into `juego`(`idJuego`,`cantidadParticipantes`,`fecha_Juego`) values (0,2,'2017/11/13'),(1,2,'2017/11/13'),(2,2,'2017/11/13'),(3,4,'2017/11/13'),(4,1,'2017/11/13'),(5,0,'2017/11/13'),(6,0,'2017/11/13'),(7,0,'2017/11/13'),(8,0,'2017/11/13'),(9,0,'2017/11/13'),(10,1,'2017/11/13');
 
 /*Table structure for table `pregunta_juego` */
 
@@ -206,20 +208,20 @@ DROP TABLE IF EXISTS `usuario`;
 
 CREATE TABLE `usuario` (
   `codigo` int(11) NOT NULL,
-  `nombre` varchar(45) DEFAULT NULL,
-  `nombreUsuario` varchar(45) DEFAULT NULL,
+  `nombre` varchar(45) NOT NULL,
+  `nombreUsuario` varchar(45) NOT NULL,
   `password` varchar(45) DEFAULT NULL,
   `correo` varchar(45) DEFAULT NULL,
   `telefono` varchar(45) DEFAULT NULL,
-  `tipoUsuario` varchar(45) DEFAULT NULL,
-  `semestre` varchar(45) DEFAULT NULL,
+  `tipoUsuario` varchar(45) NOT NULL,
+  `semestre` varchar(45) NOT NULL,
   PRIMARY KEY (`codigo`),
   UNIQUE KEY `nombreUsuario` (`nombreUsuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `usuario` */
 
-insert  into `usuario`(`codigo`,`nombre`,`nombreUsuario`,`password`,`correo`,`telefono`,`tipoUsuario`,`semestre`) values (22,'alde','demar','22','AAAAAA','11111','2','4'),(88,'Daniela','88','88','88','88','2','88');
+insert  into `usuario`(`codigo`,`nombre`,`nombreUsuario`,`password`,`correo`,`telefono`,`tipoUsuario`,`semestre`) values (22,'alde','demar','22','AAAAAA','11111','2','4'),(88,'','88','88','88','88','2','88');
 
 /*Table structure for table `usuario_juego` */
 
