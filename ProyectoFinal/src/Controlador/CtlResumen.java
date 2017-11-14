@@ -18,12 +18,24 @@ public class CtlResumen {
     public static String cbID = "idResumen";
     public static String cb = "idJuego";
 
+    /**
+     * convertir el objeto a un Json.
+     *
+     * @param resumen: objeto de partida
+     * @return objeto
+     */
     public static String convertirGson(Resumen resumen) {
         Gson gson = new Gson();
         String objeto = gson.toJson(resumen);
         return objeto;
     }
 
+    /**
+     * manda el Json al Dao para guardarlo en la base de datos.
+     *
+     * @param resumen : objeto resumen
+     * @return objeto
+     */
     public static boolean solicitudGuardar(Resumen resumen) {
         DaoGenerico preguntaMDAO = new DaoGenerico();
         String objeto = convertirGson(resumen);
