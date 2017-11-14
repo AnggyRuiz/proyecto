@@ -32,7 +32,7 @@ public class FrmIngresarJuego extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setResizable(false);
-        controladorUsuario = new CtlUsuario();        
+        controladorUsuario = new CtlUsuario();
         System.out.println(this.getSize());
         ((JPanel) getContentPane()).setOpaque(false);
         ImageIcon uno = new ImageIcon(this.getClass().getResource("/Imagenes/nn_1.png"));
@@ -40,8 +40,7 @@ public class FrmIngresarJuego extends javax.swing.JFrame {
         fondo.setIcon(uno);
         getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
         fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
-        
-        
+
     }
 
     /**
@@ -152,7 +151,7 @@ public class FrmIngresarJuego extends javax.swing.JFrame {
         String contraseña, usuario, contraseña1 = null, usuario1 = null;
         contraseña = jpfPassword.getText();
         usuario = txtUsuario.getText();
-         
+
         ArrayList<String> usuarioA = controladorUsuario.solicitudVerificarContraseñaUsuario(contraseña);
         if (usuario.equals(controladorUsuario.solicitudVerificarUsuario(usuario))) {
             if (usuarioA.size() > 0) {
@@ -161,7 +160,7 @@ public class FrmIngresarJuego extends javax.swing.JFrame {
                     usuario1 = usuarioA.get(3);
                     idUsu = Integer.parseInt(usuarioA.get(0));
                 }
-                
+
             } else {
                 JOptionPane.showMessageDialog(null, "El usuario no ha sido encontrado");
             }
@@ -184,60 +183,18 @@ public class FrmIngresarJuego extends javax.swing.JFrame {
 
     private void txtUsuarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUsuarioKeyTyped
         txtUsuario.requestFocus();
-        if (evt.getKeyChar() == KeyEvent.VK_ENTER){
+        if (evt.getKeyChar() == KeyEvent.VK_ENTER) {
             btnIngresar.doClick();
         }
     }//GEN-LAST:event_txtUsuarioKeyTyped
 
     private void jpfPasswordKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jpfPasswordKeyTyped
         jpfPassword.requestFocus();
-        if (evt.getKeyChar() == KeyEvent.VK_ENTER){
+        if (evt.getKeyChar() == KeyEvent.VK_ENTER) {
             btnIngresar.doClick();
         }
     }//GEN-LAST:event_jpfPasswordKeyTyped
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmIngresarJuego.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
-
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmIngresarJuego.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
-
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmIngresarJuego.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
-
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmIngresarJuego.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new FrmIngresarJuego().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIngresar;
