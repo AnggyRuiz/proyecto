@@ -470,7 +470,7 @@ public class FrmJuego extends javax.swing.JFrame {
         
         
         
-        Resumen resumen = new Resumen(idUsu, idUsu, idUsu, buscarId);
+        Resumen resumen = new Resumen(0, idUsu, idUsu, buscarId);
         
         
 
