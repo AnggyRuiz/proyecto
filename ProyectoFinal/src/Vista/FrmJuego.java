@@ -421,7 +421,7 @@ public class FrmJuego extends javax.swing.JFrame {
 
     private void btnTerminarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTerminarJuegoActionPerformed
 
-        Resultado respuesta = new Resultado(idUsu, idUsu, campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10);
+        Resultado respuesta = new Resultado(idj, idUsu, campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10);
         
 
     }//GEN-LAST:event_btnTerminarJuegoActionPerformed
