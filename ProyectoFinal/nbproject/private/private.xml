@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/Vista/FrmIngresarJuego.java</file>
             <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/Controlador/CtlResumen.java</file>
             <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/DAO/DaoGenerico.java</file>
@@ -19,6 +20,27 @@
             <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/Controlador/CtlPartida.java</file>
             <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/Modelo/Resultado.java</file>
             <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/Controlador/CtlUnica.java</file>
+=======
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Controlador/CtlTema.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Controlador/CtlUnica.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Excepciones/NumeroMal.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/DAO/DaoGenerico.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Vista/FrmInicioJuego.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Vista/FrmJuego.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Controlador/CtlUsuario.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Controlador/CtlRespuestaUnica.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/test/Pruebas.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Vista/FrmIngresarJuego.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Controlador/CtlResumen.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Recursos/basedatos.sql</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Controlador/CtlPartida.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Controlador/CtlResultado.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Vista/FrmRegistrarUsu.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Vista/FrmPrincipal.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Controlador/CtlMultiple.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Controlador/CtlJuego.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Controlador/CtlRespuestaMultiple.java</file>
+>>>>>>> 2347da5b5bba84d4c8ff7917052abe141b39bbcd
         </group>
     </open-files>
 </project-private>
