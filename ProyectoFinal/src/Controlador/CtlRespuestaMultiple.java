@@ -31,7 +31,7 @@ public class CtlRespuestaMultiple {
         return preguntaUDAO.buscarIdj(tabla, id);
     }
 
-    public ArrayList solicitudRespuestas(String idRespuesta) {
+    public String solicitudRespuestas(String idRespuesta) {
         DaoGenerico preguntaUDAO = new DaoGenerico();
         return preguntaUDAO.verificarRespuesta(tabla, idRespuesta);
     }
