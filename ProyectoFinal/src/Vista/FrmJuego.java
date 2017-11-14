@@ -6,6 +6,7 @@
 package Vista;
 
 import Controlador.CtlMultiple;
+import Controlador.CtlRespuestaMultiple;
 import Controlador.CtlRespuestaUnica;
 import Controlador.CtlUnica;
 import Modelo.RespuestaMultiple;
@@ -31,13 +32,15 @@ public class FrmJuego extends javax.swing.JFrame {
     CtlUnica controladorUnica = new CtlUnica();
     CtlMultiple controladorMultiple = new CtlMultiple();
     CtlRespuestaUnica controladorRespuestaUnica = new CtlRespuestaUnica();
+    CtlRespuestaMultiple controladorRespuestaMultiple = new CtlRespuestaMultiple();
     ArrayList<JPanel> paneles;
     int cont = 0;
     ArrayList<Integer> cargarTodo = new ArrayList<Integer>();
     ArrayList<RespuestaUnica> respuestaU = new ArrayList<>();
     ArrayList<RespuestaMultiple> respuestaM = new ArrayList<>();
     ArrayList<String> pregunta = null;
-    ArrayList<Integer> res;
+    ArrayList<Integer> resU;
+    ArrayList<Integer> resM;
 
     public FrmJuego() {
         initComponents();
@@ -288,17 +291,18 @@ public class FrmJuego extends javax.swing.JFrame {
         int n = 0;
         boolean a, b, c, d;
         String enunciado = lblEnunciado.getText();
-        String respuesta = null, correcta;
-        int idRespuesta, idUsuario, idPregunta, idJuego;
+        String respuesta = null, correctaU, correctaM;
+        int idRespuesta, idUsuario, idPreguntaU, idPreguntaM, idJuego;
         idUsuario = idUsu;
         idJuego = idj;
-        idPregunta = Integer.parseInt(controladorUnica.solicitudBuscarId(enunciado));
-        correcta = controladorUnica.solicitudBuscarCorrecta(idPregunta);
-        res = controladorRespuestaUnica.solicitarBuscarIdu();
-        idRespuesta = res.get(0) + 1;
+        String esta = "";
 
-        RespuestaUnica respuest = new RespuestaUnica(idRespuesta, idUsuario, idPregunta, idJuego, respuesta, correcta);
         if (pregunta.get(8).equals("1")) {
+            idPreguntaU = Integer.parseInt(controladorUnica.solicitudBuscarId(enunciado));
+            correctaU = controladorUnica.solicitudBuscarCorrecta(idPreguntaU);
+            resU = controladorRespuestaUnica.solicitarBuscarIdu();
+            idRespuesta = resU.get(0) + 1;
+            RespuestaUnica respuest = new RespuestaUnica(idRespuesta, idUsuario, idPreguntaU, idJuego, respuesta, correctaU);
 
             a = rdb1.isSelected();
             b = rdb2.isSelected();
@@ -323,10 +327,79 @@ public class FrmJuego extends javax.swing.JFrame {
             }
 
         } else if (pregunta.get(8).equals("2")) {
-            jCheckBox1.isSelected();
-            jCheckBox2.isSelected();
-            jCheckBox3.isSelected();
-            jCheckBox4.isSelected();
+            idPreguntaM = Integer.parseInt(controladorMultiple.solicitudBuscarId(enunciado));
+            correctaM = controladorMultiple.solicitudBuscarCorrecta(idPreguntaM);
+            System.out.println("res es= "+correctaM);
+            resM = controladorRespuestaMultiple.solicitarBuscarIdu();
+            idRespuesta = resM.get(0) + 1;
+            RespuestaMultiple respuestM = new RespuestaMultiple(idRespuesta, idUsuario, idPreguntaM, idJuego, respuesta, correctaM);
+            a = jCheckBox1.isSelected();
+            b = jCheckBox2.isSelected();
+            c = jCheckBox3.isSelected();
+            d = jCheckBox4.isSelected();
+            if (a) {
+                if (b) {
+                    if (c) {
+                        if (d) {
+                            esta = "1;2;3;4";
+                        } else {
+                            esta = "1;2;3";
+                        }
+                    } else if (d) {
+                        esta = "1;2;4";
+                    } else {
+                        esta = "1;2";
+                    }
+                } else if (c) {
+                    if (d) {
+                        esta = "1;3;4";
+                    } else {
+                        esta = "1;3";
+                    }
+                } else if (d) {
+                    esta = "1;4";
+                }
+            } else if (b) {
+                if (c) {
+                    if (d) {
+                        esta = "2;3;4";
+                    } else {
+                        esta = "2;3";
+                    }
+                } else if (d) {
+                    esta = "2;4";
+                } else {
+                    System.out.println("maluco");
+                }
+            } else if (c) {
+                if (d) {
+                    esta = "3;4";
+                } else {
+                    System.out.println("maluco");
+                }
+            } else if (d) {
+                System.out.println("maluco");
+            } else {
+                System.out.println("omaigaaaaa");
+            }
+
+            if (a) {
+                respuesta = esta;
+                respuestM.setRespuesta(respuesta);
+                controladorRespuestaMultiple.SolicitudGuardar(respuestM);
+            } else if (b) {
+                respuesta = esta;
+                respuestM.setRespuesta(respuesta);
+                controladorRespuestaMultiple.SolicitudGuardar(respuestM);
+            } else if (c) {
+                respuesta = esta;
+                respuestM.setRespuesta(respuesta);
+                controladorRespuestaMultiple.SolicitudGuardar(respuestM);
+            } else if (d) {
+                respuesta = esta;
+                respuestM.setRespuesta(respuesta);
+                controladorRespuestaMultiple.SolicitudGuardar(respuestM);
+            }
         }
 
         cargarPreguntas(cargarTodo);

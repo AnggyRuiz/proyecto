@@ -79,5 +79,14 @@ public class CtlMultiple {
         String objeto = convertirGson(preguntaM);
         return temaDAO.buscar1(objeto, tabla, idPreguntaM);
     }
+    
+    public String solicitudBuscarId(String enunciado) {
+        DaoGenerico preguntaMDAO = new DaoGenerico();
+        return preguntaMDAO.buscarCombo(tabla, "enunciado", id, enunciado);
+    }
 
+    public String solicitudBuscarCorrecta(int idp) {
+        DaoGenerico preguntaMDAO = new DaoGenerico();
+        return preguntaMDAO.buscarCombo1(tabla, id, "opcionesCorrectas", idp);
+    } 
 }
