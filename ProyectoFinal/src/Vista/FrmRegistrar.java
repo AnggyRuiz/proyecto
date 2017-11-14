@@ -1018,7 +1018,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
             opcionCorrecta = cbCorrectaUnica.getSelectedItem() + "";
             enunciado = txtEnunciadoUnica.getText();
 
-            if (controladorUnica.SolicitudGuardar(opcion1, opcion2, opcion3, opcion4, opcionCorrecta, enunciado, idTema, 1)) {
+            if (controladorUnica.SolicitudGuardar(0, opcion1, opcion2, opcion3, opcion4, opcionCorrecta, enunciado, idTema, 1)) {
                 JOptionPane.showMessageDialog(null, "se ha registrado la pregunta");
                 listar();
 //            limpiar();
