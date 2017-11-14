@@ -6,7 +6,6 @@
 package Vista;
 
 import Controlador.CtlUsuario;
-import Excepciones.CorreoMal;
 import Excepciones.NumeroMal;
 import Modelo.Usuario;
 import java.awt.Color;
@@ -309,7 +308,7 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
                 tipoUsuario = "2";
                 semestre = txtSemestre.getText();
                 if (validateEmail(correo)) {
-                    if (telefono.equals("0") || telefono.equals("2")) {
+                    if (txtTelefono.getText().length() > 10 || txtTelefono.getText().length() < 7) {
                         throw new NumeroMal();
                     } else if (controladorUsuario.SolicitudGuardar(codigo, password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre)) {
                         JOptionPane.showMessageDialog(null, "se ha registrado el Usuario");

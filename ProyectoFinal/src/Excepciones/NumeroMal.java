@@ -1,9 +1,11 @@
 package Excepciones;
 
+import javax.swing.JOptionPane;
+
 
 public class NumeroMal extends Exception{
     
     public NumeroMal() {
-        super ("Excepción definida por el usuario: NÚMERO INCORRECTo.");
+        JOptionPane.showMessageDialog(null, "Excepción definida por el usuario: NÚMERO INCORRECTO.");
     }
 }
