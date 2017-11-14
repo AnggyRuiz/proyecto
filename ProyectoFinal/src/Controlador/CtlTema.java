@@ -24,13 +24,13 @@ public class CtlTema {
 
     }
 
-    public String convertirGson(Tema tema) {
+    public static String convertirGson(Tema tema) {
         Gson gson = new Gson();
         String objeto = gson.toJson(tema);
         return objeto;
     }
 
-    public boolean SolicitudGuardar(int idTema, String descripcion) {
+    public static boolean SolicitudGuardar(int idTema, String descripcion) {
 
         Tema tema = new Tema(idTema, descripcion);
         DaoGenerico usuarioDAO = new DaoGenerico();
@@ -38,7 +38,7 @@ public class CtlTema {
         return usuarioDAO.guardar(objeto, tabla);
     }
     
-    public ArrayList<String> SolicitudBuscar(int idTema) {
+    public static ArrayList<String> SolicitudBuscar(int idTema) {
         
         Tema tema = new Tema(idTema, "");
         DaoGenerico temaDAO = new DaoGenerico();
@@ -46,21 +46,21 @@ public class CtlTema {
         return temaDAO.buscar1(objeto, tabla, idTema);
     }
     
-    public boolean SolicitudModificar(int idTema, String descripcion) {
+    public static boolean SolicitudModificar(int idTema, String descripcion) {
         Tema tema = new Tema(idTema, descripcion);
         DaoGenerico temaDAO = new DaoGenerico();
         String objeto = convertirGson(tema);
         return temaDAO.modificar(objeto, tabla);
     }
     
-    public boolean SolicitudEliminar(int idTema) {
+    public static boolean SolicitudEliminar(int idTema) {
         Tema tema = new Tema();
         DaoGenerico temaDAO = new DaoGenerico();
         String objeto = convertirGson(tema);
         return temaDAO.eliminar(objeto, tabla, idTema);
     }
 
-    public DefaultTableModel solicitudListar() {
+    public static DefaultTableModel solicitudListar() {
 
         DefaultTableModel modelTabla;
         String nombreColumnas[] = {"Codigo", "Nombre"};
@@ -82,7 +82,7 @@ public class CtlTema {
         return modelTabla;
     }
     
-    public String buscaValor(String nombre) {
+    public static String buscaValor(String nombre) {
         DaoGenerico DAO = new DaoGenerico();
         return DAO.buscarCombo(tabla, descripcion, id, nombre);
     }
@@ -92,7 +92,7 @@ public class CtlTema {
         return DAO.llenarCombo(tabla, descripcion);
     }
     
-    public String solicitudBuscarId(String enunciado) {
+    public static String solicitudBuscarId(String enunciado) {
         DaoGenerico preguntaMDAO = new DaoGenerico();
         return preguntaMDAO.buscarCombo(tabla, id, descripcion, enunciado);
     }

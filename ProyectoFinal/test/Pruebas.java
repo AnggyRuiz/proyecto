@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import Controlador.CtlTema;
 import Controlador.CtlUsuario;
 import Vista.FrmRegistrarUsu;
 import junit.framework.TestCase;
@@ -40,7 +41,7 @@ public class Pruebas extends TestCase{
     }
     
     public void testReferencia(){
-//        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "", "1234", "daniela", "daniela@hotmail.com", "3146517774", "2", "4"));
+        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "", "1234", "daniela", "daniela@hotmail.com", "3146517774", "2", "4"));
     }
     
     public void testExistencia() {
@@ -54,19 +55,22 @@ public class Pruebas extends TestCase{
         assertEquals(false, CtlUsuario.SolicitudGuardar(0, "123", "Daniela", null, "dani@hotmail.com", "3146517774", "2", "4"));
         assertEquals(false, CtlUsuario.SolicitudGuardar(0, "123", "Daniela", "daniela", "dani@hotmail.com", "3146517774", "2", null));
         
-        assertEquals("danielad", CtlUsuario.solicitudVerificarUsuario("danielad"));
+        assertEquals("88", CtlUsuario.solicitudVerificarUsuario("88"));
         assertEquals("", CtlUsuario.solicitudVerificarUsuario(""));
         assertEquals("", CtlUsuario.solicitudVerificarUsuario(null));
         
         //assertEquals("", CtlUsuario.solicitudVerificarContraseñaUsuario(""));
         
-        assertEquals(false, CtlUsuario.SolicitudModificar(0, "0", null, "dani", "dani09@hotmail.com", "12345667", "2", "4"));
+//        assertEquals(false, CtlUsuario.SolicitudModificar(0, "", "", "", "", "", "", ""));
 //        assertEquals(false, CtlUsuario.SolicitudModificar(0, "123", "Daniela", "", "dani@hotmail.com", "3146517774", "2", "4"));
 //        assertEquals(false, CtlUsuario.SolicitudModificar(0, "123", "Daniela", "daniela", "dani@hotmail.com", "3146517774", "2", ""));
 //        
 //        assertEquals(false, CtlUsuario.SolicitudModificar(0, "123", null, "daniela", "dani@hotmail.com", "3146517774", "2", "4"));
 //        assertEquals(false, CtlUsuario.SolicitudModificar(0, "123", "Daniela", null, "dani@hotmail.com", "3146517774", "2", "4"));
 //        assertEquals(false, CtlUsuario.SolicitudModificar(0, "123", "Daniela", "daniela", "dani@hotmail.com", "3146517774", "2", null));
+
+        //assertEquals(false, CtlTema.SolicitudGuardar(0, ""));
+        assertEquals(false, CtlTema.SolicitudGuardar(0, null));
     }
 
     // TODO add test methods here.
