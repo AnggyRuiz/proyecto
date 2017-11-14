@@ -171,7 +171,7 @@ public class DaoGenerico extends Conexion {
         }
         return id;
     }
-    
+
     public String buscarCombo1(String tabla, String cb, String cbID, int nombre) {
         String consulta = "SELECT " + cbID + " FROM " + tabla + " WHERE " + cb + " ='" + nombre + "'";
         super.ejecutarRetorno(consulta);
@@ -189,25 +189,22 @@ public class DaoGenerico extends Conexion {
         return id;
     }
 
-    public String verificarRespuesta(String tabla, String idRespuesta) {
+    public ArrayList verificarRespuesta(String tabla, String idRespuesta) {
+        ArrayList<String> verRes = new ArrayList<>();
         String consulta = "SELECT * FROM " + tabla + " u WHERE u.respuesta = u.correcta "
                 + "AND idRespuesta ='" + idRespuesta + "'";
-     
         super.ejecutarRetorno(consulta);
-        System.out.println(consulta);
-        String respuesta = "";
-        String res = "";
         try {
-            if (resultadoDB.next()) {
-                respuesta = (resultadoDB.getString(idRespuesta));
-                res = "si";
-            }else{
-                res = "no";
+            while (resultadoDB.next()) {
+                for (int i = 0; i < resultadoDB.getMetaData().getColumnCount(); i++) {
+                    verRes.add(resultadoDB.getString(i));
+                }
             }
         } catch (SQLException ex) {
             System.out.println("Esto se tosto");
-        }        
-        return res;
+            System.out.println(consulta);
+        }
+        return verRes;
     }
 
     public ArrayList buscarPreguntas(String nombreColumna, String nombreTabla, String caracter) {
@@ -303,8 +300,8 @@ public class DaoGenerico extends Conexion {
         }
         return buscar;
     }
-    
-     public String verificarUsuario(String tabla, String cb, String nombre) {
+
+    public String verificarUsuario(String tabla, String cb, String nombre) {
         String consulta = "SELECT " + cb + " FROM " + tabla + " WHERE " + cb + " ='" + nombre + "'";
         super.ejecutarRetorno(consulta);
         System.out.println(consulta);

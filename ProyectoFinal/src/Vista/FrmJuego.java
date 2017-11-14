@@ -407,7 +407,7 @@ public class FrmJuego extends javax.swing.JFrame {
                 respuesta = esta;
                 respuestM.setRespuesta(respuesta);
                 controladorRespuestaMultiple.SolicitudGuardar(respuestM);
-                respuestaM.add(respuestM);                
+                respuestaM.add(respuestM);
             } else if (d) {
                 respuesta = esta;
                 respuestM.setRespuesta(respuesta);
@@ -432,32 +432,32 @@ public class FrmJuego extends javax.swing.JFrame {
     }//GEN-LAST:event_rdb2ActionPerformed
 
     private void btnTerminarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTerminarJuegoActionPerformed
-        String campo1 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(0).getIdRespuesta()+"");
-        String campo2 = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(0).getIdRespuesta()+"");
-        String campo3 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(1).getIdRespuesta()+"");
-        String campo4 = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(1).getIdRespuesta()+"");
-        String campo5 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(2).getIdRespuesta()+"");
-        String campo6 = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(2).getIdRespuesta()+"");
-        String campo7 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(3).getIdRespuesta()+"");
-        String campo8 = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(3).getIdRespuesta()+"");
-        String campo9 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(4).getIdRespuesta()+"");
-        String campo10 = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(4).getIdRespuesta()+"");
-        Resultado respuesta = new Resultado(idj, idUsu, campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10);
-        
-        
-            System.out.println(campo1);
-            System.out.println(campo2);
-            System.out.println(campo3);
-            System.out.println(campo4);
-            System.out.println(campo5);
-            System.out.println(campo6);
-            System.out.println(campo7);
-            System.out.println(campo8);
-            System.out.println(campo9);
-            System.out.println(campo10);
-        
+        ArrayList<String> arrayListCam = new ArrayList<>();
 
-        
+        arrayListCam = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(0).getIdRespuesta() + "");
+        arrayListCam = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(0).getIdRespuesta() + "");
+        arrayListCam = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(1).getIdRespuesta() + "");
+        arrayListCam = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(1).getIdRespuesta() + "");
+        arrayListCam = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(2).getIdRespuesta() + "");
+        arrayListCam = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(2).getIdRespuesta() + "");
+        arrayListCam = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(3).getIdRespuesta() + "");
+        arrayListCam = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(3).getIdRespuesta() + "");
+        arrayListCam = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(4).getIdRespuesta() + "");
+        arrayListCam = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(4).getIdRespuesta() + "");
+        Resultado respuesta = new Resultado(idj, idUsu, campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10);
+
+        System.out.println(campo1);
+        System.out.println(campo2);
+        System.out.println(campo3);
+        System.out.println(campo4);
+        System.out.println(campo5);
+        System.out.println(campo6);
+        System.out.println(campo7);
+        System.out.println(campo8);
+        System.out.println(campo9);
+        System.out.println(campo10);
+
+
     }//GEN-LAST:event_btnTerminarJuegoActionPerformed
 
     /**
