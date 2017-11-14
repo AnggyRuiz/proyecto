@@ -25,5 +25,10 @@ public class CtlResultado {
         String objeto = convertirGson(resultado);
         return preguntaMDAO.guardar(objeto, tabla);
     }
+    
+    public static String buscaValor(String nombre) {
+        DaoGenerico DAO = new DaoGenerico();
+        return DAO.buscarCombo(tabla, descripcion, id, nombre);
+    }
 
 }

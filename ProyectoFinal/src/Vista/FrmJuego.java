@@ -451,14 +451,17 @@ public class FrmJuego extends javax.swing.JFrame {
         Resultado resultado = new Resultado(0, idj, idUsu, campo1, campo2, campo3, campo4, campo5,
                 campo6, campo7, campo8, campo9, campo10);
 
+        controladorResultado.solicitudGuardarR(resultado);
+        int idr = controladorResultado.
+        
         Partida partida = new Partida(0, idj, respuestaU.get(0).getIdRespuesta() + "", respuestaM.get(0).getIdRespuesta() + "",
                 respuestaU.get(1).getIdRespuesta() + "", respuestaM.get(1).getIdRespuesta() + "",
                 respuestaU.get(2).getIdRespuesta() + "", respuestaM.get(2).getIdRespuesta() + "",
                 respuestaU.get(3).getIdRespuesta() + "", respuestaM.get(3).getIdRespuesta() + "",
                 respuestaU.get(4).getIdRespuesta() + "", respuestaM.get(4).getIdRespuesta() + "");
 
-       // controladorResultado.solicitudGuardarR(resultado);
-       controladorPartida.solicitudGuardar(partida);
+        // 
+        controladorPartida.solicitudGuardar(partida);
 
         controladorPartida.solicitudGuardar(partida);
         System.out.println(partida.getIdPartida());
