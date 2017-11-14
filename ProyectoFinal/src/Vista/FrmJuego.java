@@ -6,6 +6,7 @@
 package Vista;
 
 import Controlador.CtlMultiple;
+import Controlador.CtlRespuestaUnica;
 import Controlador.CtlUnica;
 import Modelo.RespuestaMultiple;
 import Modelo.RespuestaUnica;
@@ -29,6 +30,7 @@ public class FrmJuego extends javax.swing.JFrame {
      */
     CtlUnica controladorUnica = new CtlUnica();
     CtlMultiple controladorMultiple = new CtlMultiple();
+    CtlRespuestaUnica controladorRespuestaUnica = new CtlRespuestaUnica();
     ArrayList<JPanel> paneles;
     int cont = 0;
     ArrayList<Integer> cargarTodo = new ArrayList<Integer>();
@@ -291,10 +293,10 @@ public class FrmJuego extends javax.swing.JFrame {
         idUsuario = idUsu;
         idJuego = idj;
         idPregunta = Integer.parseInt(controladorUnica.solicitudBuscarId(enunciado));
-        correcta = controladorUnica.solicitudBuscarCorrecta(idPregunta);         
-        res = controladorUnica.solicitarBuscarIdu();
-        idRespuesta = res.get(0)+1;
-        
+        correcta = controladorUnica.solicitudBuscarCorrecta(idPregunta);
+        res = controladorRespuestaUnica.solicitarBuscarIdu();
+        idRespuesta = res.get(0) + 1;
+
         RespuestaUnica respuest = new RespuestaUnica(idRespuesta, idUsuario, idPregunta, idJuego, respuesta, correcta);
         if (pregunta.get(8).equals("1")) {
 
@@ -302,21 +304,25 @@ public class FrmJuego extends javax.swing.JFrame {
             b = rdb2.isSelected();
             c = rdb3.isSelected();
             d = rdb4.isSelected();
-
-            
             if (a) {
-                respuesta = lbl1.getText();                
+                respuesta = "1";
                 respuest.setRespuesta(respuesta);
-                System.out.println(respuest.getIdRespuesta()+"idres");
-                System.out.println(respuest.getIdUsuario());
-                System.out.println(respuest.getIdPregunta());
-                System.out.println(respuest.getIdJuego());
-                System.out.println(respuest.getRespuesta());
-                System.out.println(respuest.getCorrecta());
+                controladorRespuestaUnica.SolicitudGuardar(respuest);
+            } else if (b) {
+                respuesta = "2";
+                respuest.setRespuesta(respuesta);
+                controladorRespuestaUnica.SolicitudGuardar(respuest);
+            } else if (c) {
+                respuesta = "3";
+                respuest.setRespuesta(respuesta);
+                controladorRespuestaUnica.SolicitudGuardar(respuest);
+            } else if (d) {
+                respuesta = "4";
+                respuest.setRespuesta(respuesta);
+                controladorRespuestaUnica.SolicitudGuardar(respuest);
             }
 
-        } else if (pregunta.get(
-                8).equals("2")) {
+        } else if (pregunta.get(8).equals("2")) {
             jCheckBox1.isSelected();
             jCheckBox2.isSelected();
             jCheckBox3.isSelected();

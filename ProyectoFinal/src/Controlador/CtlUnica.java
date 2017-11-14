@@ -71,10 +71,7 @@ public class CtlUnica {
         return preguntaMDAO.buscarCombo1(tabla, id, "opcionCorrecta", idp);
     }
     
-    public ArrayList solicitarBuscarIdu(){
-        DaoGenerico preguntaUDAO = new DaoGenerico();
-        return preguntaUDAO.buscarIdj(tabla, id);
-    }
+    
 //    
 //    public boolean SolicitudModificar(int idTema, String descripcion) {
 //        Tema tema = new Tema(idTema, descripcion);
