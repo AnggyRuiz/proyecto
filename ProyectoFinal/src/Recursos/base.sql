@@ -2,7 +2,7 @@
 SQLyog Community v8.71 
 MySQL - 5.5.5-10.1.13-MariaDB : Database - proyecto
 *********************************************************************
-*/
+*/
 
 /*!40101 SET NAMES utf8 */;
 
@@ -36,16 +36,16 @@ CREATE TABLE `estadisticas` (
 DROP TABLE IF EXISTS `juego`;
 
 CREATE TABLE `juego` (
-  `idJuego` int(11) NOT NULL AUTO_INCREMENT,
+  `idJuego` int(11) NOT NULL,
   `cantidadParticipantes` int(11) DEFAULT NULL,
   `fecha_Juego` varchar(50) NOT NULL,
   PRIMARY KEY (`idJuego`),
   KEY `fk_Juego_Resumen1_idx` (`fecha_Juego`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `juego` */
 
-insert  into `juego`(`idJuego`,`cantidadParticipantes`,`fecha_Juego`) values (0,2,'2017/11/13'),(1,2,'2017/11/13'),(2,2,'2017/11/13'),(3,4,'2017/11/13'),(4,1,'2017/11/13'),(5,0,'2017/11/13'),(6,0,'2017/11/13'),(7,0,'2017/11/13'),(8,0,'2017/11/13'),(9,0,'2017/11/13'),(10,1,'2017/11/13');
+insert  into `juego`(`idJuego`,`cantidadParticipantes`,`fecha_Juego`) values (0,2,'2017/11/13'),(1,2,'2017/11/13'),(2,1,'2017/11/13'),(3,4,'2017/11/13'),(4,1,'2017/11/13'),(5,0,'2017/11/13'),(6,1,'2017/11/13'),(7,1,'2017/11/13'),(8,0,'2017/11/13'),(9,1,'2017/11/13'),(10,1,'2017/11/13'),(11,1,'2017/11/13'),(12,1,'2017/11/13'),(13,1,'2017/11/13'),(14,2,'2017/11/13'),(15,1,'2017/11/13'),(16,2,'2017/11/13'),(17,2,'2017/11/13'),(18,2,'2017/11/13'),(19,2,'2017/11/13'),(20,2,'2017/11/13'),(21,2,'2017/11/13'),(22,3,'2017/11/13'),(23,3,'2017/11/13'),(24,2,'2017/11/13');
 
 /*Table structure for table `pregunta_juego` */
 
@@ -115,7 +115,7 @@ CREATE TABLE `preguntaunica` (
 
 /*Data for the table `preguntaunica` */
 
-insert  into `preguntaunica`(`idPreguntaUnica`,`opcion1`,`opcion2`,`opcion3`,`opcion4`,`opcionCorrecta`,`enunciado`,`Tema_idTema`,`idTipo`) values (3,'chao','adios','Re hola','super hola','1','hola',4,1),(4,'chao','adios','Re hola','super hola','1','hola',4,1),(5,'chao','adios','Re hola','super hola','1','chao',4,1),(6,'chao','adios','Re hola','super hola','1','sisas',4,1),(7,'chao','adios','Re hola','super hola','1','nonas',4,1),(8,'si','mucho','Re mucho','super siiiii','4','alvarito me quiere?',4,1),(9,'si','mucho','Re mucho','super siiiii','1','alvarito no me quiere?',4,1),(10,'si','mucho','Re mucho','super siiiii','1','dani no me quiere?',4,1),(11,'si','mucho','Re mucho','super siiiii','1','el befo no me quiere?',4,1),(12,'si','mucho','Re mucho','super siiiii','1','la gaby no me quiere?',4,1);
+insert  into `preguntaunica`(`idPreguntaUnica`,`opcion1`,`opcion2`,`opcion3`,`opcion4`,`opcionCorrecta`,`enunciado`,`Tema_idTema`,`idTipo`) values (3,'chao','adios','Re hola','super hola','1','hola',4,1),(4,'chao','adios','Re hola','super hola','2','hola',4,1),(5,'chao','adios','Re hola','super hola','3','chao',4,1),(6,'chao','adios','Re hola','super hola','4','sisas',4,1),(7,'chao','adios','Re hola','super hola','1','nonas',4,1),(8,'si','mucho','Re mucho','super siiiii','4','alvarito me quiere?',4,1),(9,'si','mucho','Re mucho','super siiiii','2','alvarito no me quiere?',4,1),(10,'si','mucho','Re mucho','super siiiii','3','dani no me quiere?',4,1),(11,'si','mucho','Re mucho','super siiiii','2','el befo no me quiere?',4,1),(12,'si','mucho','Re mucho','super siiiii','4','la gaby no me quiere?',4,1);
 
 /*Table structure for table `respuestamultiple` */
 
@@ -139,6 +139,8 @@ CREATE TABLE `respuestamultiple` (
 
 /*Data for the table `respuestamultiple` */
 
+insert  into `respuestamultiple`(`idRespuesta`,`idUsuario`,`idPregunta`,`idJuego`,`respuesta`,`correcta`) values (4,88,13,23,'1;4','1;4'),(6,88,5,23,'2;3;4','1;2'),(7,88,3,23,'2;4','1;2'),(8,88,12,23,'1;2','1;2'),(9,88,5,24,'1;3','1;2'),(10,88,3,24,'1;2','1;2'),(11,88,13,24,'1;2;3','1;4'),(12,88,9,24,'1;2','1;2'),(13,88,11,24,'1;2;4','1;2');
+
 /*Table structure for table `respuestaunica` */
 
 DROP TABLE IF EXISTS `respuestaunica`;
@@ -160,6 +162,8 @@ CREATE TABLE `respuestaunica` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `respuestaunica` */
+
+insert  into `respuestaunica`(`idRespuesta`,`idUsuario`,`idPregunta`,`idJuego`,`respuesta`,`correcta`) values (1,88,8,14,'1','4'),(2,88,9,23,'2','2'),(3,88,11,23,'4','2'),(4,88,5,23,'3','3'),(5,88,7,23,'1','1'),(6,88,10,23,'1','3'),(7,88,10,24,'3','3'),(8,88,3,24,'2','1'),(9,88,7,24,'4','1'),(10,88,5,24,'2','3'),(11,88,12,24,'4','4');
 
 /*Table structure for table `resumen` */
 
