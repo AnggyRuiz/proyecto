@@ -189,11 +189,11 @@ public class FrmJuego extends javax.swing.JFrame {
                                     .addComponent(lbl2, javax.swing.GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE)
                                     .addComponent(lbl3)
                                     .addComponent(lbl4, javax.swing.GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE)
-                                    .addComponent(lbl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                    .addComponent(lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addComponent(jLabel2)))
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addContainerGap(116, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(btnSiguiente1)
@@ -206,7 +206,7 @@ public class FrmJuego extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(lblEnunciado, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(rdb4)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -432,18 +432,16 @@ public class FrmJuego extends javax.swing.JFrame {
     }//GEN-LAST:event_rdb2ActionPerformed
 
     private void btnTerminarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTerminarJuegoActionPerformed
-        ArrayList<String> arrayListCam = new ArrayList<>();
-
-        arrayListCam = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(0).getIdRespuesta() + "");
-        arrayListCam = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(0).getIdRespuesta() + "");
-        arrayListCam = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(1).getIdRespuesta() + "");
-        arrayListCam = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(1).getIdRespuesta() + "");
-        arrayListCam = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(2).getIdRespuesta() + "");
-        arrayListCam = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(2).getIdRespuesta() + "");
-        arrayListCam = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(3).getIdRespuesta() + "");
-        arrayListCam = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(3).getIdRespuesta() + "");
-        arrayListCam = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(4).getIdRespuesta() + "");
-        arrayListCam = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(4).getIdRespuesta() + "");
+        String campo1 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(0).getIdRespuesta() + "");
+        String campo2 = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(0).getIdRespuesta() + "");
+        String campo3 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(1).getIdRespuesta() + "");
+        String campo4 = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(1).getIdRespuesta() + "");
+        String campo5 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(2).getIdRespuesta() + "");
+        String campo6 = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(2).getIdRespuesta() + "");
+        String campo7 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(3).getIdRespuesta() + "");
+        String campo8 = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(3).getIdRespuesta() + "");
+        String campo9 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(4).getIdRespuesta() + "");
+        String campo10 = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(4).getIdRespuesta() + "");
         Resultado respuesta = new Resultado(idj, idUsu, campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10);
 
         System.out.println(campo1);
