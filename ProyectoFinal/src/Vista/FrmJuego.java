@@ -330,7 +330,8 @@ public class FrmJuego extends javax.swing.JFrame {
                 respuest.setRespuesta(respuesta);
                 controladorRespuestaUnica.SolicitudGuardar(respuest);
             }
-
+            buttonGroup1.clearSelection();
+            buttonGroup2.clearSelection();
         } else if (pregunta.get(8).equals("2")) {
             idPreguntaM = Integer.parseInt(controladorMultiple.solicitudBuscarId(enunciado));
             correctaM = controladorMultiple.solicitudBuscarCorrecta(idPreguntaM);
@@ -406,7 +407,10 @@ public class FrmJuego extends javax.swing.JFrame {
                 controladorRespuestaMultiple.SolicitudGuardar(respuestM);
             }
         }
-
+        jCheckBox1.setSelected(false);
+        jCheckBox2.setSelected(false);
+        jCheckBox3.setSelected(false);
+        jCheckBox4.setSelected(false);
         cargarPreguntas(cargarTodo);
 
     }//GEN-LAST:event_btnSiguiente1ActionPerformed
@@ -421,8 +425,7 @@ public class FrmJuego extends javax.swing.JFrame {
 
     private void btnTerminarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTerminarJuegoActionPerformed
 
-        Resultado respuesta = new Resultado(idj, idUsu, campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10);
-        
+//        Resultado respuesta = new Resultado(idj, idUsu, campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10);
 
     }//GEN-LAST:event_btnTerminarJuegoActionPerformed
 
