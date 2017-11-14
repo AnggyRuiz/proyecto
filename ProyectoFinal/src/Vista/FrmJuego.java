@@ -6,9 +6,12 @@
 package Vista;
 
 import Controlador.CtlMultiple;
+import Controlador.CtlPartida;
 import Controlador.CtlRespuestaMultiple;
 import Controlador.CtlRespuestaUnica;
+import Controlador.CtlResultado;
 import Controlador.CtlUnica;
+import Modelo.Partida;
 import Modelo.RespuestaMultiple;
 import Modelo.RespuestaUnica;
 import Modelo.Resultado;
@@ -34,6 +37,8 @@ public class FrmJuego extends javax.swing.JFrame {
     CtlMultiple controladorMultiple = new CtlMultiple();
     CtlRespuestaUnica controladorRespuestaUnica = new CtlRespuestaUnica();
     CtlRespuestaMultiple controladorRespuestaMultiple = new CtlRespuestaMultiple();
+    CtlResultado controladorResultado = new CtlResultado();
+    CtlPartida controladorPartida = new CtlPartida();
     ArrayList<JPanel> paneles;
     int cont = 0;
     ArrayList<Integer> cargarTodo = new ArrayList<Integer>();
@@ -432,6 +437,7 @@ public class FrmJuego extends javax.swing.JFrame {
     }//GEN-LAST:event_rdb2ActionPerformed
 
     private void btnTerminarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTerminarJuegoActionPerformed
+
         String campo1 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(0).getIdRespuesta() + "");
         String campo2 = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(0).getIdRespuesta() + "");
         String campo3 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(1).getIdRespuesta() + "");
@@ -442,18 +448,31 @@ public class FrmJuego extends javax.swing.JFrame {
         String campo8 = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(3).getIdRespuesta() + "");
         String campo9 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(4).getIdRespuesta() + "");
         String campo10 = controladorRespuestaMultiple.solicitudRespuestas(respuestaM.get(4).getIdRespuesta() + "");
-        Resultado respuesta = new Resultado(idj, idUsu, campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10);
+        Resultado resultado = new Resultado(0, idj, idUsu, campo1, campo2, campo3, campo4, campo5,
+                campo6, campo7, campo8, campo9, campo10);
 
-        System.out.println(campo1);
-        System.out.println(campo2);
-        System.out.println(campo3);
-        System.out.println(campo4);
-        System.out.println(campo5);
-        System.out.println(campo6);
-        System.out.println(campo7);
-        System.out.println(campo8);
-        System.out.println(campo9);
-        System.out.println(campo10);
+        Partida partida = new Partida(0, idj, respuestaU.get(0).getIdRespuesta() + "", respuestaM.get(0).getIdRespuesta() + "",
+                respuestaU.get(1).getIdRespuesta() + "", respuestaM.get(1).getIdRespuesta() + "",
+                respuestaU.get(2).getIdRespuesta() + "", respuestaM.get(2).getIdRespuesta() + "",
+                respuestaU.get(3).getIdRespuesta() + "", respuestaM.get(3).getIdRespuesta() + "",
+                respuestaU.get(4).getIdRespuesta() + "", respuestaM.get(4).getIdRespuesta() + "");
+
+       // controladorResultado.solicitudGuardarR(resultado);
+       controladorPartida.solicitudGuardar(partida);
+
+        controladorPartida.solicitudGuardar(partida);
+        System.out.println(partida.getIdPartida());
+        System.out.println(partida.getIdResultado());
+        System.out.println(partida.getPregunta1());
+        System.out.println(partida.getPregunta2());
+        System.out.println(partida.getPregunta3());
+        System.out.println(partida.getPregunta4());
+        System.out.println(partida.getPregunta5());
+        System.out.println(partida.getPregunta6());
+        System.out.println(partida.getPregunta7());
+        System.out.println(partida.getPregunta8());
+        System.out.println(partida.getPregunta9());
+        System.out.println(partida.getPregunta10());
 
 
     }//GEN-LAST:event_btnTerminarJuegoActionPerformed
