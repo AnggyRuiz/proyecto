@@ -44,21 +44,29 @@ public class Pruebas extends TestCase{
     }
     
     public void testExistencia() {
-        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "", "Daniela Díaz", "danielad", "dani092012@hotmail.com", "3146517774", "2", "4"));
-        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "232016", "", "danielad", "dani092012@hotmail.com", "3146517774", "2", "4"));
-        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "232016", "Daniela Díaz", "", "dani092012@hotmail.com", "3146517774", "2", "4"));
-        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "232016", "Daniela Díaz", "danielad", "dani092012@hotmail.com", "3146517774", "2", ""));
+        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "", "Daniela", "daniela", "dani@hotmail.com", "3146517774", "2", "4"));
+        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "123", "", "daniela", "dani@hotmail.com", "3146517774", "2", "4"));
+        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "123", "Daniela", "daniela", "dani@hotmail.com", "3146517774", "2", ""));
+        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "123", "Daniela", "", "dani@hotmail.com", "3146517774", "2", "4"));
         
-        assertEquals(false, CtlUsuario.SolicitudGuardar(0, null, "Daniela Díaz", "danielad", "dani092012@hotmail.com", "3146517774", "2", "4"));
-        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "232016", null, "danielad", "dani092012@hotmail.com", "3146517774", "2", "4"));
-        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "232016", "Daniela Díaz", null, "dani092012@hotmail.com", "3146517774", "2", "4"));
-        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "232016", "Daniela Díaz", "danielad", "dani092012@hotmail.com", "3146517774", "2", null));
+        assertEquals(false, CtlUsuario.SolicitudGuardar(0, null, "Daniela", "daniela", "dani@hotmail.com", "3146517774", "2", "4"));
+        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "123", null, "daniela", "dani@hotmail.com", "3146517774", "2", "4"));
+        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "123", "Daniela", null, "dani@hotmail.com", "3146517774", "2", "4"));
+        assertEquals(false, CtlUsuario.SolicitudGuardar(0, "123", "Daniela", "daniela", "dani@hotmail.com", "3146517774", "2", null));
         
         assertEquals("danielad", CtlUsuario.solicitudVerificarUsuario("danielad"));
         assertEquals("", CtlUsuario.solicitudVerificarUsuario(""));
         assertEquals("", CtlUsuario.solicitudVerificarUsuario(null));
         
-        assertEquals("[232016, 232016, Daniela Díaz, danielad, dani092012@hotmail.com, 3146517774, 2, 4]", CtlUsuario.solicitudVerificarContraseñaUsuario(""));
+        //assertEquals("", CtlUsuario.solicitudVerificarContraseñaUsuario(""));
+        
+        assertEquals(false, CtlUsuario.SolicitudModificar(0, "123", "", "dani", "dani09@hotmail.com", "12345667", "2", "4"));
+//        assertEquals(false, CtlUsuario.SolicitudModificar(0, "123", "Daniela", "", "dani@hotmail.com", "3146517774", "2", "4"));
+//        assertEquals(false, CtlUsuario.SolicitudModificar(0, "123", "Daniela", "daniela", "dani@hotmail.com", "3146517774", "2", ""));
+//        
+//        assertEquals(false, CtlUsuario.SolicitudModificar(0, "123", null, "daniela", "dani@hotmail.com", "3146517774", "2", "4"));
+//        assertEquals(false, CtlUsuario.SolicitudModificar(0, "123", "Daniela", null, "dani@hotmail.com", "3146517774", "2", "4"));
+//        assertEquals(false, CtlUsuario.SolicitudModificar(0, "123", "Daniela", "daniela", "dani@hotmail.com", "3146517774", "2", null));
     }
 
     // TODO add test methods here.
