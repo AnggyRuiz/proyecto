@@ -464,15 +464,13 @@ public class FrmJuego extends javax.swing.JFrame {
                 respuestaU.get(1).getIdRespuesta() + "", respuestaM.get(1).getIdRespuesta() + "",
                 respuestaU.get(2).getIdRespuesta() + "", respuestaM.get(2).getIdRespuesta() + "",
                 respuestaU.get(3).getIdRespuesta() + "", respuestaM.get(3).getIdRespuesta() + "",
-                respuestaU.get(4).getIdRespuesta() + "", respuestaM.get(4).getIdRespuesta() + "");
+                respuestaU.get(4).getIdRespuesta() + "", respuestaM.get(4).getIdRespuesta() + "", idj);
 
         controladorPartida.solicitudGuardar(partida);
-        
-        
-        
-        Resumen resumen = new Resumen(0, idUsu, idUsu, buscarId);
-        
-        
+        int idPar = Integer.parseInt(controladorPartida.buscaValor(idj));
+        Resumen resumen = new Resumen(0, idPar, buscarId, idUsu);
+        controladorResumen.solicitudGuardar(resumen);
+        new FrmUsuario().setVisible(true);
 
 
     }//GEN-LAST:event_btnTerminarJuegoActionPerformed

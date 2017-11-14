@@ -1,22 +1,17 @@
-
 package Modelo;
 
-/**
- *
- * @author Gabriela Machado
- */
 public class Resumen {
-    
-    int idResumen, idPregunta, idRespuesta, idUsuario;
 
-    public Resumen(int idResumen, int idPregunta, int idRespuesta, int idUsuario) {
-        this.idResumen = idResumen;
-        this.idPregunta = idPregunta;
-        this.idRespuesta = idRespuesta;
-        this.idUsuario = idUsuario;
-    }
+    int idResumen, idPartida, idResultado, idUsuario;
 
     public Resumen() {
+    }
+
+    public Resumen(int idResumen, int idPartida, int idResultado, int idUsuario) {
+        this.idResumen = idResumen;
+        this.idPartida = idPartida;
+        this.idResultado = idResultado;
+        this.idUsuario = idUsuario;
     }
 
     public int getIdResumen() {
@@ -27,20 +22,20 @@ public class Resumen {
         this.idResumen = idResumen;
     }
 
-    public int getIdPregunta() {
-        return idPregunta;
+    public int getIdPartida() {
+        return idPartida;
     }
 
-    public void setIdPregunta(int idPregunta) {
-        this.idPregunta = idPregunta;
+    public void setIdPartida(int idPartida) {
+        this.idPartida = idPartida;
     }
 
-    public int getIdRespuesta() {
-        return idRespuesta;
+    public int getIdResultado() {
+        return idResultado;
     }
 
-    public void setIdRespuesta(int idRespuesta) {
-        this.idRespuesta = idRespuesta;
+    public void setIdResultado(int idResultado) {
+        this.idResultado = idResultado;
     }
 
     public int getIdUsuario() {
@@ -50,6 +45,5 @@ public class Resumen {
     public void setIdUsuario(int idUsuario) {
         this.idUsuario = idUsuario;
     }
-    
-    
+
 }

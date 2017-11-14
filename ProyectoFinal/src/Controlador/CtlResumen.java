@@ -16,6 +16,7 @@ import com.google.gson.Gson;
 public class CtlResumen {
     public static String tabla = "resumen";
     public static String cbID = "idResumen";
+    public static String cb = "idJuego";
 
     public static String convertirGson(Resumen resumen) {
         Gson gson = new Gson();

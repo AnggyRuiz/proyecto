@@ -12,6 +12,7 @@ public class CtlPartida {
 
     public static String tabla = "partida";
     public static String cbID = "idPartida";
+    public static String cb = "idJuego";
 
     public static String convertirGson(Partida partida) {
         Gson gson = new Gson();
@@ -25,4 +26,8 @@ public class CtlPartida {
         return preguntaMDAO.guardar(objeto, tabla);
     }
 
+    public static String buscaValor(int nombre) {
+        DaoGenerico DAO = new DaoGenerico();
+        return DAO.buscarCombo1(tabla, cb, cbID, nombre);
+    }
 }

@@ -9,11 +9,12 @@ public class Partida {
     int idPartida, idResultado;
     String pregunta1, pregunta2, pregunta3, pregunta4, pregunta5, pregunta6, pregunta7, pregunta8,
             pregunta9, pregunta10;
+    int idJuego;
 
     public Partida() {
     }
 
-    public Partida(int idPartida, int idResultado, String pregunta1, String pregunta2, String pregunta3, String pregunta4, String pregunta5, String pregunta6, String pregunta7, String pregunta8, String pregunta9, String pregunta10) {
+    public Partida(int idPartida, int idResultado, String pregunta1, String pregunta2, String pregunta3, String pregunta4, String pregunta5, String pregunta6, String pregunta7, String pregunta8, String pregunta9, String pregunta10, int idJuego) {
         this.idPartida = idPartida;
         this.idResultado = idResultado;
         this.pregunta1 = pregunta1;
@@ -26,6 +27,7 @@ public class Partida {
         this.pregunta8 = pregunta8;
         this.pregunta9 = pregunta9;
         this.pregunta10 = pregunta10;
+        this.idJuego = idJuego;
     }
 
     public int getIdPartida() {
@@ -122,6 +124,14 @@ public class Partida {
 
     public void setPregunta10(String pregunta10) {
         this.pregunta10 = pregunta10;
+    }
+
+    public int getIdJuego() {
+        return idJuego;
+    }
+
+    public void setIdJuego(int idJuego) {
+        this.idJuego = idJuego;
     }
 
 }
