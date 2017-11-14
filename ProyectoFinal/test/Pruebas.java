@@ -60,15 +60,15 @@ public class Pruebas extends TestCase {
         assertEquals(false, CtlTema.SolicitudGuardar(0, ""));
         assertEquals(false, CtlTema.SolicitudGuardar(0, null));
         
-        assertEquals(false, CtlUnica.SolicitudGuardar("", "1", "2", "3", "Hola", "1", 0, 0));
-        assertEquals(false, CtlUnica.SolicitudGuardar("", "", "2", "3", "", "1", 0, 0));
-        assertEquals(false, CtlUnica.SolicitudGuardar("0", "1", "", "3", "Hola", "1", 0, 0));
-        assertEquals(false, CtlUnica.SolicitudGuardar("0", "1", "", "3", "Hola", "", 0, 0));
+        assertEquals(false, CtlUnica.SolicitudGuardar(0, "", "1", "2", "3", "Hola", "1", 0, 0));
+        assertEquals(false, CtlUnica.SolicitudGuardar(0, "", "", "2", "3", "", "1", 0, 0));
+        assertEquals(false, CtlUnica.SolicitudGuardar(0, "0", "1", "", "3", "Hola", "1", 0, 0));
+        assertEquals(false, CtlUnica.SolicitudGuardar(0, "0", "1", "", "3", "Hola", "", 0, 0));
         
-        assertEquals(false, CtlUnica.SolicitudGuardar(null, "1", "2", "3", "Hola", "1", 0, 0));
-        assertEquals(false, CtlUnica.SolicitudGuardar(null, null, "2", "3", "", "1", 0, 0));
-        assertEquals(false, CtlUnica.SolicitudGuardar("0", "1", null, "3", "Hola", "1", 0, 0));
-        assertEquals(false, CtlUnica.SolicitudGuardar("0", "1", null, "3", "Hola", null, 0, 0));
+        assertEquals(false, CtlUnica.SolicitudGuardar(0, null, "1", "2", "3", "Hola", "1", 0, 0));
+        assertEquals(false, CtlUnica.SolicitudGuardar(0, null, null, "2", "3", null, "1", 0, 0));
+        assertEquals(false, CtlUnica.SolicitudGuardar(0, "0", "1", null, "3", "Hola", "1", 0, 0));
+        assertEquals(false, CtlUnica.SolicitudGuardar(0, "0", "1", null, "3", "Hola", null, 0, 0));
         
         assertEquals(false, CtlMultiple.solicitudGuardar(0, opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, 0, 0));
 
