@@ -35,8 +35,8 @@ public class CtlRespuestaUnica {
         DaoGenerico preguntaUDAO = new DaoGenerico();
         return preguntaUDAO.buscarIdj(tabla, id);
     }
-    
-    public String solicitudRespuestas(String i){
+
+    public ArrayList solicitudRespuestas(String i) {
         DaoGenerico preguntaUDAO = new DaoGenerico();
         return preguntaUDAO.verificarRespuesta(tabla, i);
     }
