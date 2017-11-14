@@ -91,7 +91,7 @@ public class CtlTema {
     /**
      * lista todos los temas que están en la base de datos.
      *
-     * @param : ninguno
+     * @param ninguno
      * @return lista
      */
     public static DefaultTableModel solicitudListar() {
