@@ -94,7 +94,10 @@ public class Pruebas extends TestCase {
         assertEquals(true, CtlTema.SolicitudModificar(0, ""));
         assertEquals(true, CtlTema.SolicitudModificar(0, null));
         
-        assertEquals("[0, ] ", CtlTema.SolicitudBuscar(0));
+    }
+    
+    public void testConformidad(){
+        assertEquals("EL ", CtlUsuario.SolicitudGuardar(0, "", "", "", "", "31543980099", "2", ""));
     }
 
     // TODO add test methods here.
