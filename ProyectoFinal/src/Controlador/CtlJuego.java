@@ -19,12 +19,25 @@ public class CtlJuego {
     public static String tabla = "juego";
     public static String id = "idJuego";
 
+    
+    /**
+     * convertir el objeto a un Json.
+     *
+     * @param juego: objeto de Juego
+     * @return objeto
+     */
     public static String convertirGson(Juego juego) {
         Gson gson = new Gson();
         String objeto = gson.toJson(juego);
         return objeto;
     }
 
+    /**
+     * manda el Json al Dao para guardarlo en la base de datos.
+     *
+     * @param idJuego,cantidadParticipantes,fecha_juego : objeto Juego
+     * @return objeto
+     */
     public boolean SolicitudGuardar(int idJuego, int cantidadParticipantes, String fecha_Juego) {
 
         Juego juego = new Juego(idJuego, cantidadParticipantes, fecha_Juego);
@@ -33,6 +46,12 @@ public class CtlJuego {
         return juegoDAO.guardar(objeto, tabla);
     }
     
+    /**
+     * Manda el id del juego que quiere buscar.
+     *
+     * @param ninguno
+     * @return objeto
+     */
     public ArrayList solicitarBuscarIdj(){
         DaoGenerico preguntaUDAO = new DaoGenerico();
         return preguntaUDAO.buscarIdj(tabla, id);
