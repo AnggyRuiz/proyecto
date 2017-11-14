@@ -279,7 +279,7 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
         dispose();
-        new FrmPrincipal().setVisible(true);
+        new FrmInicioJuego().setVisible(true);
     }//GEN-LAST:event_btnVolverActionPerformed
 
     private void btnRegistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarseActionPerformed
