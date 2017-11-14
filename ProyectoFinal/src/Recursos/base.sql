@@ -2,7 +2,8 @@
 SQLyog Community v8.71 
 MySQL - 5.5.5-10.1.13-MariaDB : Database - proyecto
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -249,3 +250,39 @@ CREATE TABLE `usuario_juego` (
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+CREATE TABLE resultado (
+idResultado INT AUTO_INCREMENT,
+idJuego INT (11),
+idUsuario INT (11),
+campo1 VARCHAR (10),
+campo2 VARCHAR (10),
+campo3 VARCHAR (10),
+campo4 VARCHAR (10),
+campo5 VARCHAR (10),
+campo6 VARCHAR (10),
+campo7 VARCHAR (10),
+campo8 VARCHAR (10),
+campo9 VARCHAR (10),
+campo10 VARCHAR (10),
+PRIMARY KEY (idResultado),
+FOREIGN KEY (idJuego) REFERENCES juego (idJuego),
+FOREIGN KEY (idUsuario) REFERENCES usuario (codigo)
+);
+
+CREATE TABLE partida (
+idPartida INT AUTO_INCREMENT,
+idResultado INT (11),
+pregunta1 VARCHAR (50),
+pregunta2 VARCHAR (50),
+pregunta3 VARCHAR (50),
+pregunta4 VARCHAR (50),
+pregunta5 VARCHAR (50),
+pregunta6 VARCHAR (50),
+pregunta7 VARCHAR (50),
+pregunta8 VARCHAR (50),
+pregunta9 VARCHAR (50),
+pregunta10 VARCHAR (50),
+PRIMARY KEY (idPartida),
+FOREIGN KEY (idResultado) REFERENCES resultado (idResultado)
+);
