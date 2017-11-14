@@ -11,6 +11,7 @@ import Controlador.CtlRespuestaUnica;
 import Controlador.CtlUnica;
 import Modelo.RespuestaMultiple;
 import Modelo.RespuestaUnica;
+import Modelo.Resultado;
 import static Vista.FrmIngresarJuego.idUsu;
 import static Vista.FrmInicioJuego.idj;
 import java.util.ArrayList;
@@ -333,7 +334,7 @@ public class FrmJuego extends javax.swing.JFrame {
         } else if (pregunta.get(8).equals("2")) {
             idPreguntaM = Integer.parseInt(controladorMultiple.solicitudBuscarId(enunciado));
             correctaM = controladorMultiple.solicitudBuscarCorrecta(idPreguntaM);
-            System.out.println("res es= "+correctaM);
+            System.out.println("res es= " + correctaM);
             resM = controladorRespuestaMultiple.solicitarBuscarIdu();
             idRespuesta = resM.get(0) + 1;
             RespuestaMultiple respuestM = new RespuestaMultiple(idRespuesta, idUsuario, idPreguntaM, idJuego, respuesta, correctaM);
@@ -419,7 +420,10 @@ public class FrmJuego extends javax.swing.JFrame {
     }//GEN-LAST:event_rdb2ActionPerformed
 
     private void btnTerminarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTerminarJuegoActionPerformed
+
+        Resultado respuesta = new Resultado(idUsu, idUsu, campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10);
         
+
     }//GEN-LAST:event_btnTerminarJuegoActionPerformed
 
     /**
