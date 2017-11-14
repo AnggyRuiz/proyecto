@@ -506,6 +506,7 @@ public class FrmJuego extends javax.swing.JFrame {
 
             }
         } else {
+            btnSiguiente1.setVisible(false);
             JOptionPane.showMessageDialog(null, "ya ha completado sus 10 preguntas, termine el juego");
         }
 
