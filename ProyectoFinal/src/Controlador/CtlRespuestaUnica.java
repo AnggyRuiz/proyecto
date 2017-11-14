@@ -35,5 +35,10 @@ public class CtlRespuestaUnica {
         DaoGenerico preguntaUDAO = new DaoGenerico();
         return preguntaUDAO.buscarIdj(tabla, id);
     }
+    
+    public String solicitudRespuestas(String i){
+        DaoGenerico preguntaUDAO = new DaoGenerico();
+        return preguntaUDAO.VerificarUsuario(tabla, id, i);
+    }
 
 }

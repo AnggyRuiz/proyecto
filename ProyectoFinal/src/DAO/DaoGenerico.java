@@ -299,6 +299,23 @@ public class DaoGenerico extends Conexion {
         }
         return buscar;
     }
+    
+     public String verificarRespuesta(String tabla, String cb, String cbID, String nombre) {
+        String consulta = "SELECT " + cbID + " FROM " + tabla + " WHERE " + cb + " ='" + nombre + "'";
+        super.ejecutarRetorno(consulta);
+        System.out.println(consulta);
+        String id = "";
+        try {
+            if (resultadoDB.next()) {
+
+                id = (resultadoDB.getString(cbID));
+            }
+        } catch (SQLException ex) {
+            System.out.println("Esto se tosto");
+
+        }
+        return id;
+    }
 
 //    public ArrayList<String> verificarContraseña(String objeto, String tabla, String cb, String cbP, Object contraseña) {
 //        JsonParser parser = new JsonParser();

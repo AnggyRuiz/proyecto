@@ -317,18 +317,22 @@ public class FrmJuego extends javax.swing.JFrame {
                 respuesta = "1";
                 respuest.setRespuesta(respuesta);
                 controladorRespuestaUnica.SolicitudGuardar(respuest);
+                respuestaU.add(respuest);
             } else if (b) {
                 respuesta = "2";
                 respuest.setRespuesta(respuesta);
                 controladorRespuestaUnica.SolicitudGuardar(respuest);
+                respuestaU.add(respuest);
             } else if (c) {
                 respuesta = "3";
                 respuest.setRespuesta(respuesta);
                 controladorRespuestaUnica.SolicitudGuardar(respuest);
+                respuestaU.add(respuest);
             } else if (d) {
                 respuesta = "4";
                 respuest.setRespuesta(respuesta);
                 controladorRespuestaUnica.SolicitudGuardar(respuest);
+                respuestaU.add(respuest);
             }
             buttonGroup1.clearSelection();
             buttonGroup2.clearSelection();
@@ -393,18 +397,22 @@ public class FrmJuego extends javax.swing.JFrame {
                 respuesta = esta;
                 respuestM.setRespuesta(respuesta);
                 controladorRespuestaMultiple.SolicitudGuardar(respuestM);
+                respuestaM.add(respuestM);
             } else if (b) {
                 respuesta = esta;
                 respuestM.setRespuesta(respuesta);
                 controladorRespuestaMultiple.SolicitudGuardar(respuestM);
+                respuestaM.add(respuestM);
             } else if (c) {
                 respuesta = esta;
                 respuestM.setRespuesta(respuesta);
                 controladorRespuestaMultiple.SolicitudGuardar(respuestM);
+                respuestaM.add(respuestM);                
             } else if (d) {
                 respuesta = esta;
                 respuestM.setRespuesta(respuesta);
                 controladorRespuestaMultiple.SolicitudGuardar(respuestM);
+                respuestaM.add(respuestM);
             }
         }
         jCheckBox1.setSelected(false);
@@ -424,8 +432,17 @@ public class FrmJuego extends javax.swing.JFrame {
     }//GEN-LAST:event_rdb2ActionPerformed
 
     private void btnTerminarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTerminarJuegoActionPerformed
-
-//        Resultado respuesta = new Resultado(idj, idUsu, campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10);
+        String campo1 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(0).getIdRespuesta()+"");
+        String campo2 = controladorRespuesta.solicitudRespuestas(respuestaU.get(0).getIdRespuesta()+"");
+        String campo3 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(1).getIdRespuesta()+"");
+        String campo4 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(0).getIdRespuesta()+"");
+        String campo5 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(2).getIdRespuesta()+"");
+        String campo6 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(0).getIdRespuesta()+"");
+        String campo7 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(3).getIdRespuesta()+"");
+        String campo8 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(0).getIdRespuesta()+"");
+        String campo9 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(4).getIdRespuesta()+"");
+        String campo10 = controladorRespuestaUnica.solicitudRespuestas(respuestaU.get(0).getIdRespuesta()+"");
+        Resultado respuesta = new Resultado(idj, idUsu, campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10);
 
     }//GEN-LAST:event_btnTerminarJuegoActionPerformed
 
