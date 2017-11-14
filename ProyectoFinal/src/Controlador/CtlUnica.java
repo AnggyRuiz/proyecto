@@ -25,13 +25,13 @@ public class CtlUnica {
     public static String cb = "descripcion";
     public static String id = "idPreguntaUnica";
 
-    public String convertirGson(PreguntaUnica unica) {
+    public static String convertirGson(PreguntaUnica unica) {
         Gson gson = new Gson();
         String objeto = gson.toJson(unica);
         return objeto;
     }
 
-    public boolean SolicitudGuardar(String opcion1, String opcion2, String opcion3, String opcion4, String opcionCorrecta, String enunciado, int Tema_idTema, int idTipo) {
+    public static boolean SolicitudGuardar(String opcion1, String opcion2, String opcion3, String opcion4, String opcionCorrecta, String enunciado, int Tema_idTema, int idTipo) {
 
         PreguntaUnica unica = new PreguntaUnica(idTipo, opcion1, opcion2, opcion3, opcion4, opcionCorrecta, enunciado, Tema_idTema, idTipo);
         DaoGenerico usuarioDAO = new DaoGenerico();
@@ -39,34 +39,34 @@ public class CtlUnica {
         return usuarioDAO.guardar(objeto, tabla);
     }
 
-    public ArrayList solicitudBuscarFiltrado(String caracter, String nombreColumna) {
+    public static ArrayList solicitudBuscarFiltrado(String caracter, String nombreColumna) {
         DaoGenerico preguntaUDAO = new DaoGenerico();
         return preguntaUDAO.buscarPreguntas(nombreColumna, tabla, caracter);
     }
 
-    public ArrayList solicitudPreguntas(String enunciado) {
+    public static ArrayList solicitudPreguntas(String enunciado) {
         DaoGenerico preguntaMDAO = new DaoGenerico();
         return preguntaMDAO.setPreguntas(enunciado, tabla);
     }
 
-    public ArrayList solicitudCargarPreguntas() {
+    public static ArrayList solicitudCargarPreguntas() {
         DaoGenerico preguntaUDAO = new DaoGenerico();
         return preguntaUDAO.cargarPreguntas(tabla, id);
     }
 
-    public ArrayList<String> SolicitudBuscarU(int idPreguntaM) {
+    public static ArrayList<String> SolicitudBuscarU(int idPreguntaM) {
         PreguntaUnica preguntaU = new PreguntaUnica(idPreguntaM, "", "", "", "", "", "", 0, 0);
         DaoGenerico temaDAO = new DaoGenerico();
         String objeto = convertirGson(preguntaU);
         return temaDAO.buscar1(objeto, tabla, idPreguntaM);
     }
 
-    public String solicitudBuscarId(String enunciado) {
+    public static String solicitudBuscarId(String enunciado) {
         DaoGenerico preguntaMDAO = new DaoGenerico();
         return preguntaMDAO.buscarCombo(tabla, "enunciado", id, enunciado);
     }
     
-    public String solicitudBuscarCorrecta(int idp) {
+    public static String solicitudBuscarCorrecta(int idp) {
         DaoGenerico preguntaMDAO = new DaoGenerico();
         return preguntaMDAO.buscarCombo1(tabla, id, "opcionCorrecta", idp);
     }
