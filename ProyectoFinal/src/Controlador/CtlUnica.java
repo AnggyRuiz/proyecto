@@ -31,9 +31,9 @@ public class CtlUnica {
         return objeto;
     }
 
-    public static boolean SolicitudGuardar(String opcion1, String opcion2, String opcion3, String opcion4, String opcionCorrecta, String enunciado, int Tema_idTema, int idTipo) {
+    public static boolean SolicitudGuardar(int idPreguntaUnica, String opcion1, String opcion2, String opcion3, String opcion4, String opcionCorrecta, String enunciado, int Tema_idTema, int idTipo) {
 
-        PreguntaUnica unica = new PreguntaUnica(idTipo, opcion1, opcion2, opcion3, opcion4, opcionCorrecta, enunciado, Tema_idTema, idTipo);
+        PreguntaUnica unica = new PreguntaUnica(idPreguntaUnica, opcion1, opcion2, opcion3, opcion4, opcionCorrecta, enunciado, Tema_idTema, idTipo);
         DaoGenerico usuarioDAO = new DaoGenerico();
         String objeto = convertirGson(unica);
         return usuarioDAO.guardar(objeto, tabla);
