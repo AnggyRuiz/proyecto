@@ -96,9 +96,7 @@ public class Pruebas extends TestCase {
         
     }
     
-    public void testConformidad(){
-        assertEquals("EL ", CtlUsuario.SolicitudGuardar(0, "", "", "", "", "31543980099", "2", ""));
-    }
+    
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:

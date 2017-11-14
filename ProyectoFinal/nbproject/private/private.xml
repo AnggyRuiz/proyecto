@@ -3,21 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/Vista/FrmIngresarJuego.java</file>
-            <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/Recursos/basedatos.sql</file>
-            <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/DAO/DaoGenerico.java</file>
-            <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/Vista/FrmRegistrar.java</file>
-            <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/Vista/FrmPrincipal.java</file>
-            <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/Vista/FrmRegistrarUsu.java</file>
-            <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/Modelo/Conexion.java</file>
-            <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/Vista/FrmJuego.java</file>
-            <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/Controlador/CtlRespuestaMultiple.java</file>
-            <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/Modelo/RespuestaUnica.java</file>
-            <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/Controlador/CtlUsuario.java</file>
-            <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/Vista/FrmInicioJuego.java</file>
-            <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/test/Pruebas.java</file>
-            <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/Controlador/CtlJuego.java</file>
-            <file>file:/C:/Users/Yo/Desktop/acá/proyecto/ProyectoFinal/src/Modelo/PreguntaUnica.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Controlador/CtlTema.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Recursos/base.sql</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/src/Controlador/CtlUsuario.java</file>
+            <file>file:/C:/Users/JHON%20JAIRO%20DIAZ/proyecto/ProyectoFinal/test/Pruebas.java</file>
         </group>
     </open-files>
 </project-private>
