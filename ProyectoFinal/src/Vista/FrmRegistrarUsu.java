@@ -6,9 +6,13 @@
 package Vista;
 
 import Controlador.CtlUsuario;
+import Excepciones.CorreoMal;
+import Excepciones.NumeroMal;
 import Modelo.Usuario;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
@@ -26,6 +30,8 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
      * Creates new form FrmRegistrar
      */
     CtlUsuario controladorUsuario;
+    private static final String PATTERN_EMAIL = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+            + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
     public FrmRegistrarUsu() {
         initComponents();
@@ -291,29 +297,48 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
             }
             JOptionPane.showMessageDialog(null, "Por favor llene todos los campos obligarotios");
         } else {
-            int codigo;
-            String nombre, nombreUsuario, password, correo, telefono, tipoUsuario, semestre;
-            codigo = Integer.parseInt(txtCodigo.getText());
-            nombre = txtNombre.getText();
-            nombreUsuario = txtNombreU.getText();
-            password = txtCodigo.getText();
-            correo = txtCorreo.getText();
-            telefono = txtTelefono.getText();
-            tipoUsuario = "2";
-            semestre = txtSemestre.getText();
-
-            if (controladorUsuario.SolicitudGuardar(codigo, password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre)) {
-                JOptionPane.showMessageDialog(null, "se ha registrado el Usuario");
-                limpiar();
-                FrmPrincipal.idUsu = codigo;
-                dispose();
-                new FrmUsuario().setVisible(true);
-            } else {
-                JOptionPane.showMessageDialog(this, "El código o el nombre de usuario ya existe");
+            try {
+                int codigo;
+                String nombre, nombreUsuario, password, correo, telefono, tipoUsuario, semestre;
+                codigo = Integer.parseInt(txtCodigo.getText());
+                nombre = txtNombre.getText();
+                nombreUsuario = txtNombreU.getText();
+                password = txtCodigo.getText();
+                correo = txtCorreo.getText();
+                telefono = txtTelefono.getText();
+                tipoUsuario = "2";
+                semestre = txtSemestre.getText();
+                if (validateEmail(correo)) {
+                    if (telefono.equals("0") || telefono.equals("2")) {
+                        throw new NumeroMal();
+                    } else if (controladorUsuario.SolicitudGuardar(codigo, password, nombre, nombreUsuario, correo, telefono, tipoUsuario, semestre)) {
+                        JOptionPane.showMessageDialog(null, "se ha registrado el Usuario");
+                        limpiar();
+                        FrmPrincipal.idUsu = codigo;
+                        dispose();
+                        new FrmUsuario().setVisible(true);
+                    } else {
+                        JOptionPane.showMessageDialog(this, "El código o el nombre de usuario ya existe");
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(null, "Por favor ingrese bien su correo");
+                }
+            } catch (NumeroMal cm) {
+                System.out.println("\n" + cm.getMessage());
             }
         }
     }//GEN-LAST:event_btnRegistrarseActionPerformed
 
+    public static boolean validateEmail(String correo) {
+
+        // Compiles the given regular expression into a pattern.
+        Pattern pattern = Pattern.compile(PATTERN_EMAIL);
+
+        // Match the given input against this pattern
+        Matcher matcher = pattern.matcher(correo);
+        return matcher.matches();
+
+    }
 
     private void txtCodigoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoKeyTyped
         if (txtCodigo.getText().length() == 9) {
