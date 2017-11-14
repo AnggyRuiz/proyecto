@@ -12,6 +12,7 @@ public class CtlResultado {
 
     public static String tabla = "resultado";
     public static String cbID = "idResultado";
+    public static String cb = "idJuego";
 
     public static String convertirGson(Resultado resultado) {
         Gson gson = new Gson();
@@ -25,10 +26,10 @@ public class CtlResultado {
         String objeto = convertirGson(resultado);
         return preguntaMDAO.guardar(objeto, tabla);
     }
-    
-    public static String buscaValor(String nombre) {
+
+    public static String buscaValor(int nombre) {
         DaoGenerico DAO = new DaoGenerico();
-        return DAO.buscarCombo(tabla, descripcion, id, nombre);
+        return DAO.buscarCombo1(tabla, cb, cbID, nombre);
     }
 
 }

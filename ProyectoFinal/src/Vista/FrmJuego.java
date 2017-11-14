@@ -37,8 +37,8 @@ public class FrmJuego extends javax.swing.JFrame {
     CtlMultiple controladorMultiple = new CtlMultiple();
     CtlRespuestaUnica controladorRespuestaUnica = new CtlRespuestaUnica();
     CtlRespuestaMultiple controladorRespuestaMultiple = new CtlRespuestaMultiple();
-    CtlResultado controladorResultado = new CtlResultado();
-    CtlPartida controladorPartida = new CtlPartida();
+    CtlResultado controladorResultado;
+    CtlPartida controladorPartida;
     ArrayList<JPanel> paneles;
     int cont = 0;
     ArrayList<Integer> cargarTodo = new ArrayList<Integer>();
@@ -65,6 +65,8 @@ public class FrmJuego extends javax.swing.JFrame {
         buttonGroup1.add(rdb2);
         buttonGroup1.add(rdb3);
         buttonGroup1.add(rdb4);
+        controladorResultado = new CtlResultado();
+        controladorPartida = new CtlPartida();
         ArrayList<Integer> cargarU = controladorUnica.solicitudCargarPreguntas();
         System.out.println(cargarU);
         ArrayList<Integer> cargarM = controladorMultiple.solicitudCargarPreguntas();
@@ -452,16 +454,13 @@ public class FrmJuego extends javax.swing.JFrame {
                 campo6, campo7, campo8, campo9, campo10);
 
         controladorResultado.solicitudGuardarR(resultado);
-        int idr = controladorResultado.
-        
-        Partida partida = new Partida(0, idj, respuestaU.get(0).getIdRespuesta() + "", respuestaM.get(0).getIdRespuesta() + "",
+        int buscarId = Integer.parseInt(controladorResultado.buscaValor(idj));
+
+        Partida partida = new Partida(0, buscarId, respuestaU.get(0).getIdRespuesta() + "", respuestaM.get(0).getIdRespuesta() + "",
                 respuestaU.get(1).getIdRespuesta() + "", respuestaM.get(1).getIdRespuesta() + "",
                 respuestaU.get(2).getIdRespuesta() + "", respuestaM.get(2).getIdRespuesta() + "",
                 respuestaU.get(3).getIdRespuesta() + "", respuestaM.get(3).getIdRespuesta() + "",
                 respuestaU.get(4).getIdRespuesta() + "", respuestaM.get(4).getIdRespuesta() + "");
-
-        // 
-        controladorPartida.solicitudGuardar(partida);
 
         controladorPartida.solicitudGuardar(partida);
         System.out.println(partida.getIdPartida());
