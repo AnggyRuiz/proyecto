@@ -77,6 +77,50 @@ public class FrmUsuario extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel10 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        lbl1 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
         btnVolverUsuario = new javax.swing.JButton();
 
         jTextField2.setText("jTextField2");
@@ -272,6 +316,292 @@ public class FrmUsuario extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("HISTORIAL", jPanel3);
 
+        jPanel2.setOpaque(false);
+
+        jLabel8.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel8.setText("1.");
+
+        jLabel11.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel11.setText("2.");
+
+        jLabel12.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel12.setText("3.");
+
+        jLabel13.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel13.setText("4.");
+
+        jLabel14.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel14.setText("5.");
+
+        jLabel15.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel15.setText("6.");
+
+        jLabel16.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel16.setText("7.");
+
+        jLabel17.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel17.setText("8.");
+
+        jLabel18.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel18.setText("9.");
+
+        jLabel19.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel19.setText("10.");
+
+        jLabel20.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel20.setText("9.");
+
+        jLabel21.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel21.setText("10.");
+
+        lbl1.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        lbl1.setText("1.");
+
+        jLabel23.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel23.setText("2.");
+
+        jLabel24.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel24.setText("3.");
+
+        jLabel25.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel25.setText("4.");
+
+        jLabel26.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel26.setText("5.");
+
+        jLabel27.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel27.setText("6.");
+
+        jLabel28.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel28.setText("7.");
+
+        jLabel29.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel29.setText("8.");
+
+        jLabel30.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel30.setText("Pregunta");
+
+        jLabel31.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel31.setText("Respuesta");
+
+        jLabel32.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel32.setText("Correcta");
+
+        jLabel33.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel33.setText("9.");
+
+        jLabel34.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel34.setText("10.");
+
+        jLabel35.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel35.setText("1.");
+
+        jLabel36.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel36.setText("2.");
+
+        jLabel37.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel37.setText("3.");
+
+        jLabel38.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel38.setText("4.");
+
+        jLabel39.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel39.setText("5.");
+
+        jLabel40.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel40.setText("6.");
+
+        jLabel41.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel41.setText("7.");
+
+        jLabel42.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel42.setText("8.");
+
+        jLabel43.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel43.setText("9.");
+
+        jLabel44.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel44.setText("10.");
+
+        jLabel45.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel45.setText("1.");
+
+        jLabel46.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel46.setText("2.");
+
+        jLabel47.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel47.setText("3.");
+
+        jLabel48.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel48.setText("4.");
+
+        jLabel49.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel49.setText("5.");
+
+        jLabel50.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel50.setText("6.");
+
+        jLabel51.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel51.setText("7.");
+
+        jLabel52.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel52.setText("8.");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(83, 83, 83)
+                        .addComponent(jLabel30))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel19)
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel17)
+                            .addComponent(jLabel16)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel8))
+                        .addGap(42, 42, 42)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel21)
+                            .addComponent(jLabel20)
+                            .addComponent(jLabel29)
+                            .addComponent(jLabel28)
+                            .addComponent(jLabel27)
+                            .addComponent(jLabel26)
+                            .addComponent(jLabel25)
+                            .addComponent(jLabel24)
+                            .addComponent(jLabel23)
+                            .addComponent(lbl1))))
+                .addGap(129, 129, 129)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel31)
+                    .addComponent(jLabel34)
+                    .addComponent(jLabel33)
+                    .addComponent(jLabel42)
+                    .addComponent(jLabel41)
+                    .addComponent(jLabel40)
+                    .addComponent(jLabel39)
+                    .addComponent(jLabel38)
+                    .addComponent(jLabel37)
+                    .addComponent(jLabel36)
+                    .addComponent(jLabel35))
+                .addGap(83, 83, 83)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel44)
+                    .addComponent(jLabel43)
+                    .addComponent(jLabel52)
+                    .addComponent(jLabel51)
+                    .addComponent(jLabel50)
+                    .addComponent(jLabel49)
+                    .addComponent(jLabel48)
+                    .addComponent(jLabel47)
+                    .addComponent(jLabel46)
+                    .addComponent(jLabel45)
+                    .addComponent(jLabel32))
+                .addContainerGap(182, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel30)
+                    .addComponent(jLabel31)
+                    .addComponent(jLabel32))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(43, 43, 43)
+                        .addComponent(jLabel11)
+                        .addGap(34, 34, 34)
+                        .addComponent(jLabel12)
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel13)
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel14)
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel15)
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel16)
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel17)
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel18))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(lbl1)
+                        .addGap(43, 43, 43)
+                        .addComponent(jLabel23)
+                        .addGap(34, 34, 34)
+                        .addComponent(jLabel24)
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel25)
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel26)
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel27)
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel28)
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel29)
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel20))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel35)
+                        .addGap(43, 43, 43)
+                        .addComponent(jLabel36)
+                        .addGap(34, 34, 34)
+                        .addComponent(jLabel37)
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel38)
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel39)
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel40)
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel41)
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel42)
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel33))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel45)
+                        .addGap(43, 43, 43)
+                        .addComponent(jLabel46)
+                        .addGap(34, 34, 34)
+                        .addComponent(jLabel47)
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel48)
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel49)
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel50)
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel51)
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel52)
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel43)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel34, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel44, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("JUEGO", jPanel2);
+
         btnVolverUsuario.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
         btnVolverUsuario.setText("CERRAR SESIÓN");
         btnVolverUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -402,19 +732,63 @@ public class FrmUsuario extends javax.swing.JFrame {
     private javax.swing.JButton btnVolverUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JLabel lbl1;
     private javax.swing.JLabel lblCodigo;
     private javax.swing.JLabel lblNombreUsu;
     private javax.swing.JTextField txtCorreo;
