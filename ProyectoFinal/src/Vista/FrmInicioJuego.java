@@ -26,6 +26,7 @@ public class FrmInicioJuego extends javax.swing.JFrame {
      */
     CtlJuego controladorJuego;
     public static int idj = 0;
+    public static int cantidad = 0;
     ArrayList<Integer> juego;
 
     public FrmInicioJuego() {
@@ -180,6 +181,7 @@ public class FrmInicioJuego extends javax.swing.JFrame {
         fecha_Juego = formato.format(date);
     
         cantidadParticipantes = (int) (jSpinner1.getValue());
+        cantidad = cantidadParticipantes;
         juego=controladorJuego.solicitarBuscarIdj();
         idJuego = juego.get(0)+1;
         System.out.println(juego);
