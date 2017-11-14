@@ -6,6 +6,10 @@
 package Vista;
 
 import Controlador.CtlUsuario;
+import static Vista.FrmJuego.partida;
+import static Vista.FrmJuego.respuestaM;
+import static Vista.FrmJuego.respuestaU;
+import static Vista.FrmJuego.resultado;
 import static Vista.FrmPrincipal.idUsu;
 import java.awt.Color;
 import java.util.ArrayList;
@@ -42,6 +46,39 @@ public class FrmUsuario extends javax.swing.JFrame {
         fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
         btnModificar.setToolTipText("<html><h3>Primero cambie lo que desea modificar,</h3><h3>luego de click<h3></html>");
         buscarUsuario(id2);
+        if (idUsu == 0) {
+            lbl1.setText(partida.getPregunta1());
+            jLabel23.setText(partida.getPregunta2());
+            jLabel24.setText(partida.getPregunta3());
+            jLabel25.setText(partida.getPregunta4());
+            jLabel26.setText(partida.getPregunta5());
+            jLabel27.setText(partida.getPregunta6());
+            jLabel28.setText(partida.getPregunta7());
+            jLabel29.setText(partida.getPregunta8());
+            jLabel20.setText(partida.getPregunta9());
+            jLabel21.setText(partida.getPregunta10());
+            jLabel35.setText(respuestaU.get(0).getRespuesta());
+            jLabel45.setText(respuestaU.get(0).getCorrecta());
+            jLabel36.setText(respuestaM.get(0).getRespuesta());
+            jLabel46.setText(respuestaM.get(0).getCorrecta());
+            jLabel38.setText(respuestaM.get(1).getRespuesta());
+            jLabel48.setText(respuestaM.get(1).getCorrecta());
+            jLabel40.setText(respuestaM.get(2).getRespuesta());
+            jLabel50.setText(respuestaM.get(2).getCorrecta());
+            jLabel42.setText(respuestaM.get(3).getRespuesta());
+            jLabel52.setText(respuestaM.get(3).getCorrecta());
+            jLabel34.setText(respuestaM.get(4).getRespuesta());
+            jLabel44.setText(respuestaM.get(4).getCorrecta());
+            jLabel37.setText(respuestaU.get(1).getRespuesta());
+            jLabel47.setText(respuestaU.get(1).getCorrecta());
+            jLabel39.setText(respuestaU.get(2).getRespuesta());
+            jLabel49.setText(respuestaU.get(2).getCorrecta());
+            jLabel41.setText(respuestaU.get(3).getRespuesta());
+            jLabel51.setText(respuestaU.get(3).getCorrecta());
+            jLabel33.setText(respuestaU.get(4).getRespuesta());
+            jLabel43.setText(respuestaU.get(4).getCorrecta());
+            
+        }
     }
 
     /**
@@ -664,10 +701,10 @@ public class FrmUsuario extends javax.swing.JFrame {
             } else if (txtNombreApellido.getText().isEmpty() && txtSemestreU.getText().isEmpty()) {
                 txtNombreApellido.setBorder(new LineBorder(Color.red));
                 txtSemestreU.setBorder(new LineBorder(Color.red));
-            } else if (txtNombreUsu.getText().isEmpty() && txtSemestreU.getText().isEmpty()){
+            } else if (txtNombreUsu.getText().isEmpty() && txtSemestreU.getText().isEmpty()) {
                 txtNombreUsu.setBorder(new LineBorder(Color.red));
                 txtSemestreU.setBorder(new LineBorder(Color.red));
-            }else if (txtNombreApellido.getText().isEmpty()) {
+            } else if (txtNombreApellido.getText().isEmpty()) {
                 txtNombreApellido.setBorder(new LineBorder(Color.red));
             } else if (txtNombreUsu.getText().isEmpty()) {
                 txtNombreUsu.setBorder(new LineBorder(Color.red));

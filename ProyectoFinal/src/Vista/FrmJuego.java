@@ -45,11 +45,13 @@ public class FrmJuego extends javax.swing.JFrame {
     ArrayList<JPanel> paneles;
     int cont = 0;
     ArrayList<Integer> cargarTodo = new ArrayList<Integer>();
-    ArrayList<RespuestaUnica> respuestaU = new ArrayList<>();
-    ArrayList<RespuestaMultiple> respuestaM = new ArrayList<>();
+    public static ArrayList<RespuestaUnica> respuestaU = new ArrayList<>();
+    public static ArrayList<RespuestaMultiple> respuestaM = new ArrayList<>();
     ArrayList<String> pregunta = null;
     ArrayList<Integer> resU;
     ArrayList<Integer> resM;
+    public static Partida partida;
+    public static Resultado resultado;
 
     public FrmJuego() {
         initComponents();
@@ -71,6 +73,8 @@ public class FrmJuego extends javax.swing.JFrame {
         controladorResultado = new CtlResultado();
         controladorPartida = new CtlPartida();
         controladorResumen = new CtlResumen();
+        partida = new Partida();
+        resultado = new Resultado();
         ArrayList<Integer> cargarU = controladorUnica.solicitudCargarPreguntas();
         System.out.println(cargarU);
         ArrayList<Integer> cargarM = controladorMultiple.solicitudCargarPreguntas();

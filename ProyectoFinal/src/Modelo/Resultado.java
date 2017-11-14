@@ -9,6 +9,9 @@ public class Resultado {
     int idresultado, idJuego, idUsuario;
     String campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10;
 
+    public Resultado() {
+    }
+
     public Resultado(int idresultado, int idJuego, int idUsuario, String campo1, String campo2, String campo3, String campo4, String campo5, String campo6, String campo7, String campo8, String campo9, String campo10) {
         this.idresultado = idresultado;
         this.idJuego = idJuego;
@@ -129,5 +132,4 @@ public class Resultado {
         this.campo10 = campo10;
     }
 
-   
 }
