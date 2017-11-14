@@ -60,7 +60,7 @@ public class Pruebas extends TestCase{
         
         //assertEquals("", CtlUsuario.solicitudVerificarContraseñaUsuario(""));
         
-        assertEquals(false, CtlUsuario.SolicitudModificar(0, "123", "", "dani", "dani09@hotmail.com", "12345667", "2", "4"));
+        assertEquals(false, CtlUsuario.SolicitudModificar(0, "0", null, "dani", "dani09@hotmail.com", "12345667", "2", "4"));
 //        assertEquals(false, CtlUsuario.SolicitudModificar(0, "123", "Daniela", "", "dani@hotmail.com", "3146517774", "2", "4"));
 //        assertEquals(false, CtlUsuario.SolicitudModificar(0, "123", "Daniela", "daniela", "dani@hotmail.com", "3146517774", "2", ""));
 //        
