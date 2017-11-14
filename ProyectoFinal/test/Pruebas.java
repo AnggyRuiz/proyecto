@@ -70,7 +70,13 @@ public class Pruebas extends TestCase {
         assertEquals(false, CtlUnica.SolicitudGuardar(0, "0", "1", null, "3", "Hola", "1", 0, 0));
         assertEquals(false, CtlUnica.SolicitudGuardar(0, "0", "1", null, "3", "Hola", null, 0, 0));
         
-        assertEquals(false, CtlMultiple.solicitudGuardar(0, opcion1, opcion2, opcion3, opcion4, opcionesCorrectas, enunciado, 0, 0));
+        assertEquals(false, CtlMultiple.solicitudGuardar(0, "", "", "Pues sí", "Pues no", "", "", 0, 0));
+        assertEquals(false, CtlMultiple.solicitudGuardar(0, "No", "", "", "Pues no", "Holi", "", 0, 0));
+        assertEquals(false, CtlMultiple.solicitudGuardar(0, "Si", "", "Pues sí", "", "", "Ay", 0, 0));
+        
+        assertEquals(false, CtlMultiple.solicitudGuardar(0, null, null, "Pues sí", "Pues no", null, null, 0, 0));
+        assertEquals(false, CtlMultiple.solicitudGuardar(0, "No", null, null, "Pues no", "Holi", null, 0, 0));
+        assertEquals(false, CtlMultiple.solicitudGuardar(0, "Si", null, "Pues sí", null, null, "Ay", 0, 0));
 
         assertEquals("88", CtlUsuario.solicitudVerificarUsuario("88"));
         assertEquals("", CtlUsuario.solicitudVerificarUsuario(""));
