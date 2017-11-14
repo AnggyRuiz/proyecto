@@ -1,4 +1,3 @@
-
 package Controlador;
 
 import DAO.DaoGenerico;
@@ -11,7 +10,7 @@ import java.util.ArrayList;
  * @author Gabriela Machado
  */
 public class CtlRespuestaMultiple {
-    
+
     public static String tabla = "respuestaMultiple";
     public static String id = "idRespuesta";
 
@@ -31,11 +30,10 @@ public class CtlRespuestaMultiple {
         DaoGenerico preguntaUDAO = new DaoGenerico();
         return preguntaUDAO.buscarIdj(tabla, id);
     }
-    
-    public String solicitudRespuestas(String idRespuesta){
+
+    public String solicitudRespuestas(String idRespuesta) {
         DaoGenerico preguntaUDAO = new DaoGenerico();
-        return preguntaUDAO.VerificarUsuario(tabla, id, idRespuesta);
+        return preguntaUDAO.verificarRespuesta(tabla, idRespuesta);
     }
 
-    
 }

@@ -38,7 +38,7 @@ public class CtlRespuestaUnica {
     
     public String solicitudRespuestas(String i){
         DaoGenerico preguntaUDAO = new DaoGenerico();
-        return preguntaUDAO.VerificarUsuario(tabla, id, i);
+        return preguntaUDAO.verificarRespuesta(tabla, i);
     }
 
 }

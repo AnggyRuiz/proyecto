@@ -57,7 +57,7 @@ public class CtlUsuario {
      */
     public static String solicitudVerificarUsuario(String nombre) {
         DaoGenerico DAO = new DaoGenerico();
-        return DAO.VerificarUsuario(tabla, cb, nombre);
+        return DAO.verificarUsuario(tabla, cb, nombre);
     }
 
     /**

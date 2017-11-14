@@ -189,21 +189,25 @@ public class DaoGenerico extends Conexion {
         return id;
     }
 
-    public String VerificarUsuario(String tabla, String cb, String nombre) {
-        String consulta = " SELECT " + cb + " FROM " + tabla + " WHERE " + cb + " ='" + nombre + "'";
+    public String verificarRespuesta(String tabla, String idRespuesta) {
+        String consulta = "SELECT * FROM " + tabla + " u WHERE u.respuesta = u.correcta "
+                + "AND idRespuesta ='" + idRespuesta + "'";
+     
         super.ejecutarRetorno(consulta);
         System.out.println(consulta);
-        String nombreUsuario = "";
+        String respuesta = "";
+        String res = "";
         try {
             if (resultadoDB.next()) {
-
-                nombreUsuario = (resultadoDB.getString(cb));
+                respuesta = (resultadoDB.getString(idRespuesta));
+                res = "si";
+            }else{
+                res = "no";
             }
         } catch (SQLException ex) {
             System.out.println("Esto se tosto");
-
-        }
-        return nombreUsuario;
+        }        
+        return res;
     }
 
     public ArrayList buscarPreguntas(String nombreColumna, String nombreTabla, String caracter) {
@@ -300,15 +304,15 @@ public class DaoGenerico extends Conexion {
         return buscar;
     }
     
-     public String verificarRespuesta(String tabla, String cb, String cbID, String nombre) {
-        String consulta = "SELECT " + cbID + " FROM " + tabla + " WHERE " + cb + " ='" + nombre + "'";
+     public String verificarUsuario(String tabla, String cb, String nombre) {
+        String consulta = "SELECT " + cb + " FROM " + tabla + " WHERE " + cb + " ='" + nombre + "'";
         super.ejecutarRetorno(consulta);
         System.out.println(consulta);
         String id = "";
         try {
             if (resultadoDB.next()) {
 
-                id = (resultadoDB.getString(cbID));
+                id = (resultadoDB.getString(cb));
             }
         } catch (SQLException ex) {
             System.out.println("Esto se tosto");
