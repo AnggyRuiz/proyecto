@@ -10,11 +10,13 @@ import Controlador.CtlPartida;
 import Controlador.CtlRespuestaMultiple;
 import Controlador.CtlRespuestaUnica;
 import Controlador.CtlResultado;
+import Controlador.CtlResumen;
 import Controlador.CtlUnica;
 import Modelo.Partida;
 import Modelo.RespuestaMultiple;
 import Modelo.RespuestaUnica;
 import Modelo.Resultado;
+import Modelo.Resumen;
 import static Vista.FrmIngresarJuego.idUsu;
 import static Vista.FrmInicioJuego.idj;
 import java.util.ArrayList;
@@ -39,6 +41,7 @@ public class FrmJuego extends javax.swing.JFrame {
     CtlRespuestaMultiple controladorRespuestaMultiple = new CtlRespuestaMultiple();
     CtlResultado controladorResultado;
     CtlPartida controladorPartida;
+    CtlResumen controladorResumen;
     ArrayList<JPanel> paneles;
     int cont = 0;
     ArrayList<Integer> cargarTodo = new ArrayList<Integer>();
@@ -67,6 +70,7 @@ public class FrmJuego extends javax.swing.JFrame {
         buttonGroup1.add(rdb4);
         controladorResultado = new CtlResultado();
         controladorPartida = new CtlPartida();
+        controladorResumen = new CtlResumen();
         ArrayList<Integer> cargarU = controladorUnica.solicitudCargarPreguntas();
         System.out.println(cargarU);
         ArrayList<Integer> cargarM = controladorMultiple.solicitudCargarPreguntas();
@@ -463,18 +467,12 @@ public class FrmJuego extends javax.swing.JFrame {
                 respuestaU.get(4).getIdRespuesta() + "", respuestaM.get(4).getIdRespuesta() + "");
 
         controladorPartida.solicitudGuardar(partida);
-        System.out.println(partida.getIdPartida());
-        System.out.println(partida.getIdResultado());
-        System.out.println(partida.getPregunta1());
-        System.out.println(partida.getPregunta2());
-        System.out.println(partida.getPregunta3());
-        System.out.println(partida.getPregunta4());
-        System.out.println(partida.getPregunta5());
-        System.out.println(partida.getPregunta6());
-        System.out.println(partida.getPregunta7());
-        System.out.println(partida.getPregunta8());
-        System.out.println(partida.getPregunta9());
-        System.out.println(partida.getPregunta10());
+        
+        
+        
+        Resumen resumen = new Resumen(idUsu, idUsu, idUsu, buscarId);
+        
+        
 
 
     }//GEN-LAST:event_btnTerminarJuegoActionPerformed
