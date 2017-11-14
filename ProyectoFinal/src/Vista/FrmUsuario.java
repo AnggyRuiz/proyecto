@@ -369,6 +369,12 @@ public class FrmUsuario extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnModificarActionPerformed
 
+    /**
+     * Carga en la vista los datos del usuario.
+     *
+     * @param codigo: Cedula del usuario
+     * @return nada
+     */
     public void buscarUsuario(int id) {
 
         ArrayList<String> usuarioB = controladorUsuario.solicitudSet(id);

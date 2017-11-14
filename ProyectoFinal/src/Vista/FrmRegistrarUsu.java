@@ -376,6 +376,12 @@ public class FrmRegistrarUsu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtNombreKeyTyped
 
+    /**
+     * Limpia lo que hay en las cajas de texto.
+     *
+     * @param : ninguno
+     * @return nada
+     */
     public void limpiar() {
         txtNombre.setText("");
         txtNombreU.setText("");

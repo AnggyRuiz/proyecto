@@ -1092,12 +1092,24 @@ public class FrmRegistrar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cbTemaUnicaActionPerformed
 
+    /**
+     * trae los temas que hay en la base de datos que obtuvo del método solicitudListarCombo.
+     *
+     * @param : ninguno
+     * @return nada
+     */
     public void combo1() {
         cbTemaUnica.setModel(CtlTema.solicitudListarCombo());
         cbTemaMultiple.setModel(CtlTema.solicitudListarCombo());
 
     }
 
+    /**
+     * Lista todos los temas que hay en la base de datos.
+     *
+     * @param : ninguno
+     * @return nada
+     */
     private void listar() {
         jTableTema.setModel(controladorTema.solicitudListar());
     }
