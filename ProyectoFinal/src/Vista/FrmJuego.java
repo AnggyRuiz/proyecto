@@ -486,7 +486,7 @@ public class FrmJuego extends javax.swing.JFrame {
                 rdb3.setVisible(true);
                 rdb4.setVisible(true);
                 lblEnunciado.setText(pregunta.get(6));
-                lbl1.setText("<html>"+pregunta.get(1)+"</html");
+                lbl1.setText(pregunta.get(1));
                 lbl2.setText(pregunta.get(2));
                 lbl3.setText(pregunta.get(3));
                 lbl4.setText(pregunta.get(4));
