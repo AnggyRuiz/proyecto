@@ -24,14 +24,24 @@ public class CtlTema {
 
     }
 
-    /*Este método lo que hace es convertir el objeto a un Json*/
+    /**
+     * convertir el objeto a un Json.
+     *
+     * @param tema: objeto de Tema
+     * @return objeto
+     */
     public static String convertirGson(Tema tema) {
         Gson gson = new Gson();
         String objeto = gson.toJson(tema);
         return objeto;
     }
 
-    /*Este método manda el Json al Dao para guardarlo en la base de datos*/
+    /**
+     * manda el Json al Dao para guardarlo en la base de datos.
+     *
+     * @param idTema,descripcion: objeto de Tema
+     * @return objeto
+     */
     public static boolean SolicitudGuardar(int idTema, String descripcion) {
         Tema tema = new Tema(idTema, descripcion);
         DaoGenerico usuarioDAO = new DaoGenerico();
@@ -39,7 +49,12 @@ public class CtlTema {
         return usuarioDAO.guardar(objeto, tabla);
     }
     
-    /*Este metodo manda el objeto al dao para buscar si existe o no*/
+    /**
+     * manda el objeto al dao para buscar si existe o no en la base de datos.
+     *
+     * @param idTema: codigo de Tema
+     * @return objeto
+     */
     public static ArrayList<String> SolicitudBuscar(int idTema) {        
         Tema tema = new Tema(idTema, "");
         DaoGenerico temaDAO = new DaoGenerico();
@@ -47,7 +62,12 @@ public class CtlTema {
         return temaDAO.buscar1(objeto, tabla, idTema);
     }
     
-    /*Este método obtiene lo que el objeto ya tenía y lo manda al dao para que modifique*/
+    /**
+     * obtiene lo que el objeto ya tenía y lo manda al dao para que modifique.
+     *
+     * @param idTema,cescripcion: objeto de Tema
+     * @return objeto
+     */
     public static boolean SolicitudModificar(int idTema, String descripcion) {
         Tema tema = new Tema(idTema, descripcion);
         DaoGenerico temaDAO = new DaoGenerico();
@@ -55,7 +75,12 @@ public class CtlTema {
         return temaDAO.modificar(objeto, tabla);
     }
     
-    /*Este método manda el Json al dao para que lo elimine*/
+    /**
+     * manda el Json al dao para que lo elimine.
+     *
+     * @param idTema: codigo de Tema
+     * @return objeto
+     */
     public static boolean SolicitudEliminar(int idTema) {
         Tema tema = new Tema();
         DaoGenerico temaDAO = new DaoGenerico();
@@ -63,7 +88,12 @@ public class CtlTema {
         return temaDAO.eliminar(objeto, tabla, idTema);
     }
 
-    /*Este método lista todos los temas que están en la base de datos*/
+    /**
+     * lista todos los temas que están en la base de datos.
+     *
+     * @param : ninguno
+     * @return lista
+     */
     public static DefaultTableModel solicitudListar() {
 
         DefaultTableModel modelTabla;
@@ -86,19 +116,34 @@ public class CtlTema {
         return modelTabla;
     }
     
-    /*Este método trae el id del tema*/
+    /**
+     * trae el id del tema.
+     *
+     * @param nombre: nombre del Tema
+     * @return idTema
+     */
     public static String buscaValor(String nombre) {
         DaoGenerico DAO = new DaoGenerico();
         return DAO.buscarCombo(tabla, descripcion, id, nombre);
     }
     
-    /*Este método va al dao y trae todos los datos de la base de datos*/
+    /**
+     * va al dao y trae todos los datos de la base de datos.
+     *
+     * @param : ninguno
+     * @return objeto
+     */
     public static DefaultComboBoxModel solicitudListarCombo() {
         DaoGenerico DAO = new DaoGenerico();
         return DAO.llenarCombo(tabla, descripcion);
     }
     
-    /*Este método trae el id que tenga ese enunciado*/
+    /**
+     * trae el id que tenga ese enunciado.
+     *
+     * @param enunciado: Enunciado del tema
+     * @return idTema
+     */
     public static String solicitudBuscarId(String enunciado) {
         DaoGenerico preguntaMDAO = new DaoGenerico();
         return preguntaMDAO.buscarCombo(tabla, id, descripcion, enunciado);
