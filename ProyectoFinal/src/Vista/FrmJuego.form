@@ -168,11 +168,11 @@
                                               <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="lbl1" alignment="0" min="-2" pref="345" max="-2" attributes="0"/>
-                                              <Component id="lbl2" min="-2" pref="397" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="lbl2" pref="397" max="32767" attributes="0"/>
                                               <Component id="lbl3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lbl4" min="-2" pref="397" max="-2" attributes="0"/>
+                                              <Component id="lbl4" pref="397" max="32767" attributes="0"/>
+                                              <Component id="lbl1" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>

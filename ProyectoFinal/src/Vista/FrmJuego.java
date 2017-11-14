@@ -185,11 +185,11 @@ public class FrmJuego extends javax.swing.JFrame {
                                     .addComponent(jCheckBox2)
                                     .addComponent(jCheckBox1))
                                 .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lbl2, javax.swing.GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE)
                                     .addComponent(lbl3)
-                                    .addComponent(lbl4, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(lbl4, javax.swing.GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE)
+                                    .addComponent(lbl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addComponent(jLabel2)))
@@ -486,7 +486,7 @@ public class FrmJuego extends javax.swing.JFrame {
                 rdb3.setVisible(true);
                 rdb4.setVisible(true);
                 lblEnunciado.setText(pregunta.get(6));
-                lbl1.setText(pregunta.get(1));
+                lbl1.setText("<html>"+pregunta.get(1)+"</html");
                 lbl2.setText(pregunta.get(2));
                 lbl3.setText(pregunta.get(3));
                 lbl4.setText(pregunta.get(4));
